@@ -16,11 +16,17 @@ This package is designed to provide OpenAPI specification defintions for the [`r
 
 A test API client is provided that executes the requests on XRPL.org.
 
+Display example request:
+
 ```
+$ cd cmd/rippledapiexample
 $ go run main.go --method account_info
 ```
 
+Display example request and response:
+
 ```
+$ cd cmd/rippledapiexample
 $ go run main.go --method account_info --exec
 ```
 

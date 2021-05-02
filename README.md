@@ -7,7 +7,7 @@
 
 This package is designed to provide[`rippled` server](https://github.com/ripple/rippled) utilities including:
 
-* OpenAPI specifcation
+* OpenAPI specifcation: partial OAS3 specification files are provided
 * Simple JSON RPC request handling
 
 ## Models

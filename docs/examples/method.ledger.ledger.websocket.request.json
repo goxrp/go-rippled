@@ -1,0 +1,10 @@
+{
+	"id": 14,
+	"command": "ledger",
+	"ledger_index": "validated",
+	"full": false,
+	"accounts": false,
+	"transactions": false,
+	"expand": false,
+	"owner_funds": false
+}

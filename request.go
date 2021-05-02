@@ -14,6 +14,7 @@ type JsonRpcRequest struct {
 	Params []map[string]interface{} `json:"params"`
 }
 
+// BuildJsonRpcRequestBody merges a `rippled` API methid with JSON RPC API request params.
 func BuildJsonRpcRequestBody(rippledMethod string, paramsBodyBytes []byte) (JsonRpcRequest, error) {
 	jrpcReq := JsonRpcRequest{Method: rippledMethod}
 	if len(paramsBodyBytes) > 0 {
@@ -27,6 +28,8 @@ func BuildJsonRpcRequestBody(rippledMethod string, paramsBodyBytes []byte) (Json
 	return jrpcReq, nil
 }
 
+// DoApiJsonRpcSplit sends a JSON RPC API request to the specified `rippled` server using
+// an API method and request params.
 func DoApiJsonRpcSplit(jrpcURL, rippledMethod string, paramsBodyBytes []byte) (*http.Response, error) {
 	jrpcReq, err := BuildJsonRpcRequestBody(rippledMethod, paramsBodyBytes)
 	if err != nil {

@@ -1,0 +1,40 @@
+{
+	"id": 1,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"account": "r9cZA1mLK5R5Am25ArfXFmqgNwjZgnfk59",
+		"lines": [
+			{
+				"account": "r3vi7mWxru9rJCxETCyA1CHvzL96eZWx5z",
+				"balance": "0",
+				"currency": "ASP",
+				"limit": "0",
+				"limit_peer": "10",
+				"quality_in": 0,
+				"quality_out": 0
+			},
+			{
+				"account": "r3vi7mWxru9rJCxETCyA1CHvzL96eZWx5z",
+				"balance": "0",
+				"currency": "XAU",
+				"limit": "0",
+				"limit_peer": "0",
+				"no_ripple": true,
+				"no_ripple_peer": true,
+				"quality_in": 0,
+				"quality_out": 0
+			},
+			{
+				"account": "rMwjYedjc7qqtKYVLiAccJSmCwih4LnE2q",
+				"balance": "3.497605752725159",
+				"currency": "USD",
+				"limit": "5",
+				"limit_peer": "0",
+				"no_ripple": true,
+				"quality_in": 0,
+				"quality_out": 0
+			}
+		]
+	}
+}

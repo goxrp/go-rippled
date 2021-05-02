@@ -1,11 +1,11 @@
-package rippledopenapispec
+package rippledopenapi
 
 import (
 	"fmt"
 	"path/filepath"
 	"strings"
 
-	"github.com/grokify/rippled-openapi-spec/docs/examples"
+	"github.com/go-xrp/rippled-openapi/docs/examples"
 )
 
 const (

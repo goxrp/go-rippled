@@ -6,10 +6,11 @@ import (
 	"log"
 	"net/http"
 
-	rippledopenapispec "github.com/grokify/rippled-openapi-spec"
 	"github.com/grokify/simplego/encoding/jsonutil"
 	"github.com/grokify/simplego/net/http/httpsimple"
 	"github.com/jessevdk/go-flags"
+
+	rippledopenapi "github.com/go-xrp/rippled-openapi"
 )
 
 type Options struct {
@@ -29,7 +30,7 @@ func main() {
 		log.Fatal(err)
 	}
 
-	bytes, err := rippledopenapispec.ExampleJsonRequest(opts.Method)
+	bytes, err := rippledopenapi.ExampleJsonRequest(opts.Method)
 	if err != nil {
 		log.Fatal(err)
 	}

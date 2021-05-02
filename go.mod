@@ -1,4 +1,4 @@
-module github.com/grokify/rippled-openapi-spec
+module github.com/go-xrp/rippled-openapi
 
 go 1.16
 

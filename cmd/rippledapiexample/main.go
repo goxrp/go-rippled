@@ -10,7 +10,7 @@ import (
 	"github.com/grokify/simplego/net/http/httpsimple"
 	"github.com/jessevdk/go-flags"
 
-	rippledopenapi "github.com/go-xrp/rippled-openapi"
+	"github.com/go-xrp/go-rippled/data"
 )
 
 type Options struct {
@@ -30,16 +30,13 @@ func main() {
 		log.Fatal(err)
 	}
 
-	bytes, err := rippledopenapi.ExampleJsonRequest(opts.Method)
+	bytes, err := data.ExampleJsonRequest(opts.Method)
 	if err != nil {
 		log.Fatal(err)
 	}
 	fmt.Println(string(bytes))
 
 	if len(opts.Exec) > 0 {
-		//sc := httpsimple.SimpleClient{
-		//	BaseURL: RippledJsonRpcUrl}
-
 		req := httpsimple.SimpleRequest{
 			Method: http.MethodPost,
 			URL:    RippledJsonRpcUrl,

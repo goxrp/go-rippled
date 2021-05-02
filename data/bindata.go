@@ -42,7 +42,7 @@
 // method.ledger.ledger_data.websocket.response.binary-true.json
 // model.offer.json
 // model.paychannel.json
-package examples
+package data
 
 import (
 	"bytes"

@@ -1,11 +1,9 @@
-package rippledopenapi
+package data
 
 import (
 	"fmt"
 	"path/filepath"
 	"strings"
-
-	"github.com/go-xrp/rippled-openapi/docs/examples"
 )
 
 const (
@@ -22,7 +20,7 @@ const (
 )
 
 func examplespath(filename string) string {
-	return filepath.Join("docs/examples", filename)
+	return filepath.Join("./", filename)
 }
 
 var methodToAccount = map[string]string{
@@ -57,5 +55,5 @@ func ExampleJsonRequest(method string) ([]byte, error) {
 	if err != nil {
 		return []byte{}, err
 	}
-	return examples.Asset(filename)
+	return Asset(filename)
 }

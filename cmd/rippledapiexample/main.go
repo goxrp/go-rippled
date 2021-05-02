@@ -37,16 +37,16 @@ func main() {
 	fmt.Println(string(bytes))
 
 	if len(opts.Exec) > 0 {
-		sc := httpsimple.SimpleClient{
-			BaseURL: RippledJsonRpcUrl}
+		//sc := httpsimple.SimpleClient{
+		//	BaseURL: RippledJsonRpcUrl}
 
 		req := httpsimple.SimpleRequest{
 			Method: http.MethodPost,
-			URL:    "",
+			URL:    RippledJsonRpcUrl,
 			Body:   bytes,
 			IsJSON: true}
 
-		resp, err := sc.Do(req)
+		resp, err := httpsimple.Do(req)
 		if err != nil {
 			log.Fatal(err)
 		}

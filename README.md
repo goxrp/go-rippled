@@ -7,6 +7,23 @@
 
 This package is designed to provide OpenAPI specification defintions for the [`rippled` server](https://github.com/ripple/rippled).
 
+## Models
+
+* [AccountRoot](spec.model.accountroot.json)
+* [PayChannel](spec.model.paychannel.json)
+
+## Test Client
+
+A test API client is provided that executes the requests on XRPL.org.
+
+```
+$ go run main.go --method account_info
+```
+
+```
+$ go run main.go --method account_info --exec
+```
+
  [build-status-svg]: https://github.com/go-xrp/rippled-openapi/workflows/go%20build/badge.svg?branch=master
  [build-status-url]: https://github.com/go-xrp/rippled-openapi/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/go-xrp/rippled-openapi

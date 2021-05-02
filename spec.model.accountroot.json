@@ -1,0 +1,150 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Rippled REST API",
+    "version": "1.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "components": {
+    "schemas": {
+      "AccountRoot": {
+        "description": "The `AccountRoot` object type describes a single [account](https://xrpl.org/accounts.html), its settings, and XRP balance.",
+        "type": "object",
+        "x-examples": {
+          "example-1": {
+            "Account": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+            "AccountTxnID": "0D5FB50FA65C9FE1538FD7E398FFFE9D1908DFA4576D8D7A020040686F93C77D",
+            "Balance": "148446663",
+            "Domain": "6D64756F31332E636F6D",
+            "EmailHash": "98B4375E1D753E5B91627516F6D70977",
+            "Flags": 8388608,
+            "LedgerEntryType": "AccountRoot",
+            "MessageKey": "0000000000000000000000070000000300",
+            "OwnerCount": 3,
+            "PreviousTxnID": "0D5FB50FA65C9FE1538FD7E398FFFE9D1908DFA4576D8D7A020040686F93C77D",
+            "PreviousTxnLgrSeq": 14091160,
+            "Sequence": 336,
+            "TransferRate": 1004999999,
+            "index": "13F1A95D7AAB7108D5CE7EEAF504B2894B8C674E6D68499076441C4837282BF8"
+          }
+        },
+        "properties": {
+          "Account": {
+            "type": "string",
+            "format": "rippled-AccountID",
+            "description": "The identifying (classic) address of this [account](https://xrpl.org/accounts.html)."
+          },
+          "AccountTxnID": {
+            "type": "string",
+            "format": "rippled-Hash256",
+            "description": "(Optional) The identifying hash of the transaction most recently sent by this account. This field must be enabled to use the [`AccountTxnID` transaction field](https://xrpl.org/transaction-common-fields.html#accounttxnid). To enable it, send an [AccountSet transaction with the `asfAccountTxnID` flag enabled](https://xrpl.org/accountset.html#accountset-flags)."
+          },
+          "Balance": {
+            "type": "string",
+            "format": "rippled-Amount",
+            "description": "The account's current [XRP balance in drops](https://xrpl.org/basic-data-types.html#specifying-currency-amounts), represented as a string."
+          },
+          "Domain": {
+            "type": "string",
+            "format": "rippled-Blob",
+            "description": "(Optional) A domain associated with this account. In JSON, this is the hexadecimal for the ASCII representation of the domain. [Cannot be more than 256 bytes in length](https://github.com/ripple/rippled/blob/55dc7a252e08a0b02cd5aa39e9b4777af3eafe77/src/ripple/app/tx/impl/SetAccount.h#L34)."
+          },
+          "EmailHash": {
+            "type": "string",
+            "format": "rippled-Hash128",
+            "description": "(Optional) The md5 hash of an email address. Clients can use this to look up an avatar through services such as [Gravatar](https://en.gravatar.com/)."
+          },
+          "Flags": {
+            "type": "integer",
+            "format": "uint32",
+            "description": "A bit-map of boolean flags enabled for this account."
+          },
+          "LedgerEntryType": {
+            "type": "string",
+            "format": "uint16",
+            "description": "The value `0x0061`, mapped to the string `AccountRoot`, indicates that this is an AccountRoot object."
+          },
+          "MessageKey": {
+            "type": "string",
+            "format": "rippled-Blob",
+            "description": "(Optional) A public key that may be used to send encrypted messages to this account. In JSON, uses hexadecimal. Must be exactly 33 bytes, with the first byte indicating the key type: `0x02` or `0x03` for secp256k1 keys, `0xED` for Ed25519 keys."
+          },
+          "OwnerCount": {
+            "type": "integer",
+            "description": "The number of objects this account owns in the ledger, which contributes to its owner reserve.",
+            "format": "uint32"
+          },
+          "PreviousTxnID": {
+            "type": "string",
+            "description": "The identifying hash of the transaction that most recently modified this object.",
+            "format": "rippled-Hash256"
+          },
+          "PreviousTxnLgrSeq": {
+            "type": "integer",
+            "description": "The index of the ledger that contains the transaction that most recently modified this object.",
+            "format": "uint32"
+          },
+          "RegularKey": {
+            "type": "string",
+            "format": "rippled-AccountID",
+            "description": "(Optional) The address of a [key pair](https://xrpl.org/cryptographic-keys.html) that can be used to sign transactions for this account instead of the master key. Use a [SetRegularKey transaction](https://xrpl.org/setregularkey.html) to change this value."
+          },
+          "Sequence": {
+            "type": "integer",
+            "description": "The sequence number of the next valid transaction for this account. (Each account starts with Sequence = 1 and increases each time a transaction is made.)",
+            "format": "uint32"
+          },
+          "TicketCount": {
+            "type": "integer",
+            "format": "uint32",
+            "description": "(Optional) How many [Tickets](https://xrpl.org/tickets.html) this account owns in the ledger. This is updated automatically to ensure that the account stays within the hard limit of 250 Tickets at a time. This field is omitted if the account has zero Tickets. (Added by the [TicketBatch amendment](https://xrpl.org/known-amendments.html#ticketbatch))"
+          },
+          "TicketSize": {
+            "type": "integer",
+            "format": "uint8",
+            "description": "(Optional) How many significant digits to use for exchange rates of Offers involving currencies issued by this address. Valid values are `3` to `15`, inclusive. (Added by the [TickSize amendment](https://xrpl.org/known-amendments.html#ticksize).)"
+          },
+          "TransferRate": {
+            "type": "integer",
+            "format": "uint32",
+            "description": "(Optional) A [transfer fee](https://xrpl.org/transfer-fees.html) to charge other users for sending currency issued by this account to each other."
+          },
+          "WalletLocator": {
+            "type": "string",
+            "format": "rippled-Hash256",
+            "description": "(Optional) DEPRECATED. Do not use."
+          },
+          "WalletSize": {
+            "type": "integer",
+            "format": "uint32",
+            "description": "(Optional) DEPRECATED. Do not use."
+          },
+          "index": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "Account",
+          "AccountTxnID",
+          "Balance",
+          "Domain",
+          "EmailHash",
+          "Flags",
+          "LedgerEntryType",
+          "MessageKey",
+          "OwnerCount",
+          "PreviousTxnID",
+          "PreviousTxnLgrSeq",
+          "Sequence",
+          "TransferRate",
+          "index"
+        ]
+      }
+    }
+  }
+}

@@ -12,7 +12,7 @@
   "components": {
     "schemas": {
       "PayChannel": {
-        "description": "",
+        "description": "The `PayChannel` object type represents a payment channel. Payment channels enable small, rapid off-ledger payments of XRP that can be later reconciled with the consensus ledger. A payment channel holds a balance of XRP that can only be paid out to a specific destination address until the channel is closed. Any unspent XRP is returned to the channel's owner (the source address that created and funded it) when the channel closes.",
         "type": "object",
         "properties": {
           "Account": {
@@ -128,7 +128,8 @@
             "PreviousTxnLgrSeq": 14524914,
             "index": "96F76F27D8A327FC48753167EC04A46AA0E382E6F57F32FD12274144D00F1797"
           }
-        }
+        },
+        "title": ""
       }
     }
   }

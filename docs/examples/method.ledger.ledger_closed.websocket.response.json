@@ -1,0 +1,9 @@
+{
+	"id": 1,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"ledger_hash": "17ACB57A0F73B5160713E81FE72B2AC9F6064541004E272BD09F257D57C30C02",
+		"ledger_index": 6643099
+	}
+}

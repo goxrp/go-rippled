@@ -1,11 +1,14 @@
-# Rippled OpenAPI
+# Go Rippled
 
 [![Build Status][build-status-svg]][build-status-url]
 [![Go Report Card][goreport-svg]][goreport-url]
 [![Docs][docs-godoc-svg]][docs-godoc-url]
 [![License][license-svg]][license-url]
 
-This package is designed to provide OpenAPI specification defintions for the [`rippled` server](https://github.com/ripple/rippled).
+This package is designed to provide[`rippled` server](https://github.com/ripple/rippled) utilities including:
+
+* OpenAPI specifcation
+* Simple JSON RPC request handling
 
 ## Models
 

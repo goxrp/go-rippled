@@ -1,0 +1,8 @@
+{
+	"id": 2,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"ledger_current_index": 6643240
+	}
+}

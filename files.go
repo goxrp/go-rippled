@@ -31,6 +31,9 @@ var methodToAccount = map[string]string{
 	"account_info":       "account",
 	"account_lines":      "account",
 	"ledger":             "ledger",
+	"ledger_closed":      "ledger",
+	"ledger_current":     "ledger",
+	"ledger_data":        "ledger",
 }
 
 func GetMethodCategory(method string) string {

@@ -5,8 +5,7 @@ go 1.16
 require (
 	github.com/andybalholm/brotli v1.0.2 // indirect
 	github.com/aws/aws-lambda-go v1.23.0 // indirect
-	github.com/go-bindata/go-bindata v3.1.2+incompatible // indirect
-	github.com/go-xrp/ripple-network v0.0.2 // indirect
+	github.com/go-xrp/ripple-network v0.0.2
 	github.com/grokify/simplego v0.0.23
 	github.com/jessevdk/go-flags v1.5.0
 	github.com/json-iterator/go v1.1.11 // indirect

@@ -1,0 +1,15 @@
+{
+	"result": {
+		"ledger_hash": "F43A801ED4562FA744A35755B86BE898D91C5643BF499924EA3C69491B8C28D1",
+		"ledger_index": 56843649,
+		"receive_currencies": [
+			"USD"
+		],
+		"send_currencies": [
+			"NGN",
+			"TRC"
+		],
+		"status": "success",
+		"validated": true
+	}
+}

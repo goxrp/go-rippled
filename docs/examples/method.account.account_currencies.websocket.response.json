@@ -1,0 +1,30 @@
+{
+	"result": {
+		"ledger_index": 11775844,
+		"receive_currencies": [
+			"BTC",
+			"CNY",
+			"DYM",
+			"EUR",
+			"JOE",
+			"MXN",
+			"USD",
+			"015841551A748AD2C1F76FF6ECB0CCCD00000000"
+		],
+		"send_currencies": [
+			"ASP",
+			"BTC",
+			"CHF",
+			"CNY",
+			"DYM",
+			"EUR",
+			"JOE",
+			"JPY",
+			"MXN",
+			"USD"
+		],
+		"validated": true
+	},
+	"status": "success",
+	"type": "response"
+}

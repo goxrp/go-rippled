@@ -58,6 +58,4 @@ func ExampleJsonRequest(method string) ([]byte, error) {
 		return []byte{}, err
 	}
 	return examples.Asset(filename)
-	//fpath := filepath.Join("docs/examples", filename)
-	//return ioutil.ReadFile(fpath)
 }

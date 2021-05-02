@@ -132,16 +132,12 @@
           "Account",
           "AccountTxnID",
           "Balance",
-          "Domain",
-          "EmailHash",
           "Flags",
           "LedgerEntryType",
-          "MessageKey",
           "OwnerCount",
           "PreviousTxnID",
           "PreviousTxnLgrSeq",
           "Sequence",
-          "TransferRate",
           "index"
         ]
       }

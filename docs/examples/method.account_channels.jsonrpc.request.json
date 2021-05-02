@@ -1,0 +1,10 @@
+{
+	"method": "account_channels",
+	"params": [
+		{
+			"account": "rN7n7otQDd6FczFgLdSqtcsAUxDkw6fzRH",
+			"destination_account": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+			"ledger_index": "validated"
+		}
+	]
+}

@@ -1,7 +1,11 @@
 // Code generated for package main by go-bindata DO NOT EDIT. (@generated)
 // sources:
+// bindata.go
+// files.go
+// files_test.go
 // method.account.account_channels.commandline.response.json
 // method.account.account_channels.jsonrpc.request.json
+// method.account.account_channels.jsonrpc.response.error-missing-account.json
 // method.account.account_channels.jsonrpc.response.json
 // method.account.account_channels.websocket.request.json
 // method.account.account_channels.websocket.response.json
@@ -35,14 +39,40 @@
 // method.ledger.ledger_current.jsonrpc.response.json
 // method.ledger.ledger_current.websocket.request.json
 // method.ledger.ledger_current.websocket.response.json
+// method.ledger.ledger_data.jsonrpc.request.error-not-found.json
 // method.ledger.ledger_data.jsonrpc.request.json
 // method.ledger.ledger_data.jsonrpc.response.binary-true.json
+// method.ledger.ledger_data.jsonrpc.response.error-not-found.json
+// method.ledger.ledger_data.jsonrpc.response.json
 // method.ledger.ledger_data.websocket.request.json
 // method.ledger.ledger_data.websocket.response.binary-false.json
 // method.ledger.ledger_data.websocket.response.binary-true.json
+// method.ledger.ledger_entry-account_root.jsonrpc.request.json
+// method.ledger.ledger_entry-account_root.websocket.request.json
+// method.ledger.ledger_entry-check.jsonrpc.request.json
+// method.ledger.ledger_entry-check.websocket.request.json
+// method.ledger.ledger_entry-deposit_preauth.jsonrpc.request.json
+// method.ledger.ledger_entry-deposit_preauth.websocket.request.json
+// method.ledger.ledger_entry-directory.jsonrpc.request.json
+// method.ledger.ledger_entry-directory.websocket.request.json
+// method.ledger.ledger_entry-escrow.jsonrpc.request.json
+// method.ledger.ledger_entry-escrow.jsonrpc.response.error-malformedRequest.json
+// method.ledger.ledger_entry-escrow.websocket.request.json
+// method.ledger.ledger_entry-escrow.websocket.response.json
+// method.ledger.ledger_entry-index.jsonrpc.request.json
+// method.ledger.ledger_entry-index.websocket.request.json
+// method.ledger.ledger_entry-offer.jsonrpc.request.json
+// method.ledger.ledger_entry-offer.websocket.request.json
+// method.ledger.ledger_entry-payment_channel.jsonrpc.request.json
+// method.ledger.ledger_entry-payment_channel.websocket.request.json
+// method.ledger.ledger_entry-ripple_state.jsonrpc.request.json
+// method.ledger.ledger_entry-ripple_state.websocket.request.json
+// method.ledger.ledger_entry-ticket.jsonrpc.request.json
+// method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json
+// method.ledger.ledger_entry-ticket.websocket.request.json
 // model.offer.json
 // model.paychannel.json
-package data
+package main
 
 import (
 	"bytes"
@@ -118,6 +148,66 @@ func (fi bindataFileInfo) Sys() interface{} {
 	return nil
 }
 
+var _bindataGo = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xa4\x97\xcf\x6e\x9c\x30\x10\x87\xef\x79\x0a\x1f\xdb\x03\xec\xbd\xa7\x4a\x4d\x0f\xbd\x34\x52\x95\x3b\xf2\xda\x03\xeb\xc6\x78\xe8\xd8\x28\xe5\xed\x2b\x16\xc8\x86\x3f\x69\x3c\x93\x13\xec\xca\xdf\x7c\x33\xbf\xb5\x58\x73\x3a\xa9\x6f\x68\x41\x35\x10\x80\x74\x02\xab\x6a\x24\xd5\x69\xf3\xa4\x1b\x50\xad\x76\x41\x9d\x07\xd5\x60\x71\x76\xc1\xea\xa4\xd5\xfd\x83\xfa\xf9\xf0\xa8\xbe\xdf\xff\x78\x2c\xd5\xa7\xaf\x2f\xdc\xe7\xbb\xd3\x49\x45\xec\xc9\x40\xfc\x32\xde\xcf\x40\xd9\xe0\xf8\xa9\x76\x1e\xe2\xeb\xfb\x2a\x41\x4c\xf3\x17\x2d\xa4\x0b\xda\x52\x1b\x83\x7d\x48\xcb\xb5\x32\x17\x1d\x02\xf8\x58\x1a\x6c\x5b\x1d\xac\x77\x01\x4a\x82\xd8\x61\x88\x50\xfe\x8e\x18\x72\xe0\x71\x1d\x75\xa6\x24\xf8\xd3\x8f\x4a\x3e\x37\x0b\x81\x08\xa9\x68\x5d\x8c\x2e\x34\xc5\xc2\x89\xcb\xe5\x82\xcf\x70\x8e\x68\x9e\x20\xb1\x27\x78\x4d\x66\x4a\x7b\x22\x08\xc6\x81\x30\xf3\x1b\xce\x4d\xfd\x88\x64\x4b\xf9\x51\x1d\xb3\x79\x62\x17\x6a\x14\xc5\x74\x05\x99\x01\x6d\x18\x86\x88\x1d\xca\x8e\xca\x93\x8d\x11\xc8\xb6\xcd\x44\x32\x03\xd9\x42\x1c\x15\x3b\x92\x3d\x76\xac\xf3\x60\x1b\xa0\xe5\x92\x93\xc5\x9a\x78\x27\x83\xb7\x16\xe7\x94\x7e\x77\xe6\xb7\x97\x67\x94\xaf\x8c\xc7\x08\x96\x3f\xf2\x02\x72\x26\xdf\x33\x0c\x11\x2f\x87\x23\x2a\x4b\x76\x7d\xb0\x24\x49\x1e\x33\xc9\x0b\x64\x07\x71\x54\xdc\x48\x0e\xb0\x1c\xdd\xf5\x34\xb0\x1d\x6b\xfa\x53\x0d\x98\x8a\x1a\xfb\x60\x05\x15\x38\xc4\xdc\xe6\xd9\x05\x4d\x43\x91\xa8\xe7\xb5\xbc\x3a\x08\xc8\x7a\xce\x0e\x8a\xf9\xa3\xec\x98\xf5\xa8\xb5\xf6\x6c\x2b\x37\x2c\x08\x89\x86\xe5\x5c\x54\x11\x22\x73\x13\x1f\xf0\xcc\x10\xa6\x0a\xe6\x02\xe6\x49\xa2\x9e\x40\x91\xd3\x42\x87\xd1\xa5\xaa\x23\xd0\x7d\xba\x48\xec\xdb\x12\xb2\x3e\x1c\x81\x49\x48\x83\xa8\x83\x17\x58\xe4\x86\x68\x08\x9f\x25\xe2\x1d\xb9\x3e\x71\x6b\x5f\x23\xb5\x60\x7f\xb1\x2b\x7e\x64\x0e\xee\xe3\x6d\x82\x5d\xb0\xf0\x57\x92\xc1\x04\x8a\x1a\xc6\xba\x66\x9e\x1d\x56\xa0\xc8\xd9\xe9\xa1\x85\xdb\xcb\x86\xc4\xbe\x2d\x21\xea\x83\x5c\xd7\x79\xa8\x62\xd2\x09\x24\x4d\xac\x78\x51\x07\xc9\x5d\x09\x81\x7b\x47\x7e\x78\xdb\xcf\x15\xff\x33\x07\x5a\xf0\xe5\x6d\xc3\xdc\xfd\x0b\x00\x00\xff\xff\xe4\x79\xee\x97\x00\x10\x00\x00")
+
+func bindataGoBytes() ([]byte, error) {
+	return bindataRead(
+		_bindataGo,
+		"bindata.go",
+	)
+}
+
+func bindataGo() (*asset, error) {
+	bytes, err := bindataGoBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "bindata.go", size: 4096, mode: os.FileMode(420), modTime: time.Unix(1620026267, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _filesGo = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x94\x53\xdf\x6b\xdb\x30\x10\x7e\xb6\xfe\x8a\x9b\xa0\x60\x83\xe7\xec\x79\xc3\x0f\x65\x74\x63\x61\x5d\x4b\x13\xd8\x43\x08\xc3\x51\x4e\x8e\x1a\x5b\xd2\x24\x99\x36\x84\xfc\xef\x43\x96\xec\x3a\xa5\xed\x36\x30\xe8\xc7\x9d\xbe\xfb\xee\xfb\xce\xba\x62\xfb\xaa\x46\xd8\x56\xae\x22\x44\xb4\x5a\x19\x07\x29\x49\x28\x6f\x1d\x25\x09\xd5\x95\xdb\xcd\xb8\x68\xd0\x6f\xfc\x85\x75\x46\xc8\xda\x52\x42\x92\x5a\x19\xa1\x75\x83\x5b\xa0\xb5\x70\xbb\x6e\x53\x30\xd5\xce\x6a\xf5\xfe\xd1\x68\xbf\xc4\x28\x25\x19\x21\x4c\x49\xdb\x03\x5f\x6a\xb1\x3c\x68\x9c\x5b\x25\xef\x34\x03\x80\x12\xe8\xbd\x55\xd2\x68\x46\xc7\xe8\x4f\xdc\x58\xc5\xf6\xe8\x7c\xf4\x61\x38\xf8\x9a\x37\x9b\x7b\x64\xce\xe7\xdc\xe1\xef\x0e\xad\xeb\x01\x4c\xd8\xd3\xf3\xb8\xd5\x4a\x5a\x0c\xf1\xb0\x3f\x4b\xb8\x56\x5b\x6c\x20\x30\x68\xfd\xfe\x9c\xe8\x35\xba\x9d\xda\x5e\x32\xa6\x3a\xe9\xbe\x49\xae\xe6\x81\xe5\x50\xd7\xbf\xea\x53\x8a\x2a\xe4\x0c\xeb\x2f\x21\xb9\x2a\x62\x4f\x45\xa4\xd6\x9f\xfb\x02\xbc\x93\x0c\xf0\xb1\x6a\x75\x83\xd6\xab\x9a\x7a\x79\x65\xd5\x22\x04\x6d\xb3\xb8\xc2\x91\x24\x06\x5d\x67\x24\x0c\x06\x14\x73\x25\x64\x4a\x8b\x19\xcd\x61\x78\x95\x91\x53\x04\xfd\x8a\x2e\x90\xfe\x5c\x39\xac\x95\x39\xa4\x81\xe0\x0b\xb8\x21\xb0\x54\xb1\x3d\xf8\x58\xc2\xe8\x66\x11\x40\xec\x6d\xd3\xd9\x31\x23\xcd\x48\x32\x9b\xf1\xd6\x75\x4e\x34\xc5\xad\x11\xd2\xcd\x17\x37\x3f\xd2\x67\x40\xd9\x00\x0d\x65\xac\x66\x8b\xa5\xfa\xae\x1e\xd0\xa4\xe3\xd9\x88\x76\xa1\x2b\x86\xf1\x71\x96\x91\x44\x70\x60\x91\x74\x0e\x6a\xef\xf9\x3c\x43\x5e\x85\xf3\xfa\x93\x0f\x1f\x49\x32\x48\xf3\xf7\x2a\x03\xb0\xaf\x73\x1a\x25\xa5\x74\xd4\xed\x2a\x98\xd1\x8f\x64\x70\xeb\x4b\xd4\x36\x32\xcc\x47\x72\xa3\x94\xb1\x4e\x0e\x68\x8c\x32\x99\x67\x34\xe6\xfc\x4b\xeb\x53\x52\x82\x43\x83\xf2\xe9\x0a\xca\x12\x3e\xf4\x3d\x4e\x20\x5f\x33\x37\x34\xf5\x3a\xc4\xd8\x6e\x0e\xbc\x75\xc5\x95\xa7\xcb\x53\x2a\xd5\x53\x4f\x5c\x99\xa8\x36\xac\x2e\xec\x9a\xe6\x30\x85\x1e\x46\xb0\x75\xc5\x42\x7b\xdf\x79\x3a\x0c\xfe\x85\xf5\xdf\x8b\x93\x9e\x4f\xfc\x8c\x68\x39\x48\xd1\xbc\x21\xfa\x1b\x62\xaf\xd6\x9b\x83\xc3\xa9\xd8\xc3\xf4\xf7\x77\x7e\x5c\xfe\xc3\xc4\x20\xb9\x7f\xf7\xae\xf4\x9c\xa6\x3a\x85\x4a\xc7\x53\x8f\x3b\xed\xff\xd2\x5a\x74\xe9\xf4\xa7\xfb\x13\x00\x00\xff\xff\xd5\x97\x74\x3d\x3b\x05\x00\x00")
+
+func filesGoBytes() ([]byte, error) {
+	return bindataRead(
+		_filesGo,
+		"files.go",
+	)
+}
+
+func filesGo() (*asset, error) {
+	bytes, err := filesGoBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "files.go", size: 1339, mode: os.FileMode(420), modTime: time.Unix(1620026074, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _files_testGo = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xa4\x93\x51\x4f\xdb\x3e\x14\xc5\x9f\xed\x4f\x71\xb1\xd4\xbf\x92\xbf\x82\xfb\x3e\xa9\x0f\x20\x2a\xc4\xc4\xb6\xaa\xed\xf6\x30\x8a\x50\x96\xdc\x04\x8f\xc4\x0e\xf6\xcd\x44\x85\xf8\xee\x93\xed\x94\x06\x86\x50\xb5\xbd\x24\x8a\x7d\x73\xce\xef\x5c\xfb\x76\x79\x71\x97\xd7\x08\x65\x4e\x39\xe7\xaa\xed\x8c\x25\x48\x38\x13\xa8\x0b\x53\x2a\x5d\x4f\x7f\x3a\xa3\x05\x67\xa2\x6a\xc9\xbf\x94\x99\x2a\xd3\x93\x6a\xfc\x87\x71\xfe\x49\xe8\x48\xe9\x5a\x70\xce\x6a\x63\x55\xd7\x35\x58\x82\xa8\x15\xdd\xf6\x3f\x64\x61\xda\x69\x6d\x8e\x1f\x6c\xe7\x5f\xc3\xae\xe0\x29\xe7\xd3\x29\xac\xd1\xd1\x12\xef\x7b\x74\x04\x5e\xc5\xc1\xc9\xe2\x02\x6c\x5c\x71\x92\x57\xbd\x2e\xc6\x45\x09\xc1\xff\x83\x9b\x5c\xa7\xf0\xc8\x99\xaa\xc0\x38\x79\x8e\x84\xfa\x57\x22\xce\xbf\x2c\x2f\x16\x8b\xcb\xf9\xd9\xcd\x7a\xbe\x5a\x8b\x14\x8e\x66\x20\x2e\x2f\xbe\xcd\x85\xaf\x65\x16\xa9\xb7\x9a\xb3\x27\xce\x5a\xa4\x5b\x53\xba\x45\xd3\x3b\xf8\x30\x83\x67\x6e\xf9\x69\xbf\x91\xa4\x9c\x69\xbf\xdb\xa0\x4e\x46\x3f\xa4\x9c\x55\xc6\x82\xca\x20\x2e\xee\x44\x6c\xae\x6b\x84\xb1\xb2\x37\x55\xd5\xb8\x6c\x36\x03\xd1\x60\x59\xa3\xbd\x41\x4d\x76\x7b\x4c\xaa\xb8\x43\x8a\x7c\xac\x30\x9a\x94\xee\x91\x33\xcf\xc8\x2c\xde\x9f\x9a\x72\x7b\xba\x25\x74\x19\xa0\xb5\xde\x65\xfe\x90\xb7\x5d\x83\x1f\x9d\xd1\xbb\xae\xec\xf5\x33\x10\x22\x8d\xa6\xbe\xfc\x68\x06\x5a\x35\x51\x9b\xe4\xdc\x5a\x63\xab\x44\x5c\x4d\xca\xe9\xa4\xbc\x0e\x67\x2e\xdf\x90\xdb\x88\x89\xdb\x88\x6c\x23\x36\x22\x85\xcf\x26\xd4\x05\xb9\xab\x89\xbb\x16\x99\x17\x63\x2a\x03\x3d\xce\x1f\xf0\xa2\x43\x92\xa6\x81\x3f\x04\x70\xdd\x33\xf8\xbe\xc7\x67\xe6\xa4\x53\xc1\xb1\x2b\x12\x21\x32\x18\x07\x3d\x18\xff\x6d\xbd\x55\xd7\x28\x1f\x21\x04\x08\x39\xa4\x94\x29\x2c\xd1\x75\x46\x3b\xfc\xfb\x1c\x7f\x9e\x44\x9c\x03\xb9\xc4\xbc\x3c\x69\x9a\xc4\x17\x49\x5f\x75\x70\x82\x57\x02\x01\x74\xcf\x07\x91\xed\x3d\x9e\x97\x6d\x1d\x3a\xb0\x8b\x1a\x7e\x7a\xf4\xf7\xc8\x6b\xce\xc0\x0f\xb2\xfc\xaa\xdb\xdc\xba\xdb\x3c\xe2\x8e\x32\xfd\xb7\xfb\x3e\x98\xfe\x95\x9e\x94\x32\x83\x03\x23\x30\x46\x76\xbb\xa2\x9c\x86\xc1\x19\xac\xe5\x12\x5d\xdf\x90\x8c\x3b\x3c\x82\xec\x2b\x8f\xc6\x61\xe3\xda\xaa\x2f\x0a\x74\x71\xd0\x58\xd5\x92\x5c\x58\xa5\xa9\xd1\x89\x23\xab\x74\xfd\x32\x64\x30\xff\xd7\x8b\x74\x9a\x97\xe0\x22\xcf\xbb\xd7\xe8\x19\x3b\x98\x76\xb9\x56\x45\x22\xbe\x83\x18\x1a\xf0\xc4\x9f\xf8\xef\x00\x00\x00\xff\xff\x69\x42\xc4\x28\x7c\x05\x00\x00")
+
+func files_testGoBytes() ([]byte, error) {
+	return bindataRead(
+		_files_testGo,
+		"files_test.go",
+	)
+}
+
+func files_testGo() (*asset, error) {
+	bytes, err := files_testGoBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "files_test.go", size: 1404, mode: os.FileMode(420), modTime: time.Unix(1620026209, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
 var _methodAccountAccount_channelsCommandlineResponseJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x9c\x92\x4d\x6f\xdb\x30\x0c\x86\xcf\xf6\xaf\x28\x7c\xde\x81\xfa\x30\x65\xf7\x66\x59\xd2\x86\x2e\x1d\xda\x65\xfd\xda\x30\x18\xaa\xad\x24\x46\x3d\xa7\x8d\xe5\x26\x4d\x91\xff\x3e\x28\x4b\xba\x1e\x76\x9a\x6e\xe2\xab\xf7\x21\x29\xf2\x35\x8e\x92\x95\x1b\xc6\xce\x27\xa7\x27\xaf\x71\x14\x25\xb6\xae\x97\x63\x1f\xae\xc9\xea\x8b\xe8\xc5\xd2\x5f\xaa\x06\x4d\xbd\x35\xf3\x49\x33\x7d\xf2\xf5\x50\x5c\x6d\xd4\xc3\x1a\x67\xdb\xaf\x9f\x92\x0f\xc1\x52\x2f\x6c\xdf\xbb\x6e\x48\x4e\x4f\x7e\xc4\x51\x14\x05\xce\x7f\x91\x82\xe9\xd7\xd1\x43\xe0\x70\x8e\xd2\xbd\xed\x6c\x5f\xbb\xa0\xbd\xc5\x0e\xa9\xab\xb6\x09\xe1\x54\x49\x20\x52\x18\xa3\x15\x4a\x14\x1a\x25\x70\xc2\x95\x56\x84\x68\x48\x89\xa2\x5a\x53\x29\x90\xe4\xa5\x06\x5d\x14\x48\x33\x54\x28\x0a\x56\x70\x95\x4a\x25\xd9\x91\xda\xb8\xc1\xb7\xbd\xf5\xed\xb2\xaf\xde\x77\x31\x23\xb2\xfd\xe8\x6e\xd7\xeb\xcb\x65\x9b\x7d\xa7\xa3\x33\x77\xdf\xf4\xed\x74\x3d\x9e\xdd\xcd\xae\xe9\xd9\x63\xff\x2f\x80\xb7\xf3\xe4\xf4\x84\x02\x11\xc0\x69\x76\x78\xf0\x38\xde\x77\x6d\x5d\x3d\xb8\x97\x00\xb6\x92\xf3\xbb\xd9\xf6\x86\xf2\x6b\xa5\xcf\x2e\xe9\xd5\x38\xb9\xb8\xa6\x17\xcf\x4f\xf5\x45\x39\x5d\x4e\xfa\x89\x78\x49\xcf\x89\xde\x2e\x9a\x1b\x3e\xe9\x3f\xa7\x9b\xf3\xe9\x5b\xad\x7f\x49\xd5\xc2\x6d\xf6\x9f\x43\x19\xe6\xcc\x90\x34\x47\x51\x68\x96\x0a\x05\x8c\x8a\x5c\xf0\x42\x71\x34\x9a\x95\x84\x0a\x42\x98\x24\x84\x80\x42\xe0\xdc\x28\x4e\xb4\xa0\x0c\xb3\xdc\x64\xa4\x2c\xf1\xc8\x1e\x9c\xf7\x9d\xab\x1a\xd7\xd9\x50\x67\x86\x1c\x20\x28\xbb\x38\x8a\x7e\xee\x47\xdf\xb9\x66\xee\x56\xd5\xc2\x0e\x8b\x90\x5a\xe6\x8a\xa9\x0c\xb4\x32\x1c\x32\x56\x00\x4a\xaa\x52\x42\x81\x6a\x90\x46\x22\x2b\x39\x9a\x12\xf2\x2c\xd5\x40\x52\x05\x28\x50\x94\x94\x84\x41\xa4\x4c\x1a\x54\xc9\x7b\x68\xdb\x37\xfb\x86\x98\xa0\x0c\x10\x60\xaf\x0d\xde\xfa\x31\x6c\x5a\x32\x8c\x75\xed\x86\xe1\x8f\xe5\xd9\x76\x6d\x63\xbd\x0b\x6b\xe0\x57\xa3\x8b\xa3\x5d\xbc\xfb\x1d\x00\x00\xff\xff\xf8\x6f\xc4\xfc\xdd\x02\x00\x00")
 
 func methodAccountAccount_channelsCommandlineResponseJsonBytes() ([]byte, error) {
@@ -133,7 +223,7 @@ func methodAccountAccount_channelsCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_channels.commandline.response.json", size: 733, mode: os.FileMode(420), modTime: time.Unix(1619924880, 0)}
+	info := bindataFileInfo{name: "method.account.account_channels.commandline.response.json", size: 733, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -153,7 +243,27 @@ func methodAccountAccount_channelsJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_channels.jsonrpc.request.json", size: 205, mode: os.FileMode(420), modTime: time.Unix(1619924774, 0)}
+	info := bindataFileInfo{name: "method.account.account_channels.jsonrpc.request.json", size: 205, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x7c\x90\x4f\x4b\xc3\x40\x10\xc5\xcf\x93\x4f\xb1\xcc\xa5\x17\x11\x5a\xa1\x95\xdc\x94\x5a\xa5\xa8\x58\xab\xd2\x2a\x12\x96\xdd\x49\xba\x98\xec\xb6\xfb\xc7\x94\x96\x7c\x77\xd9\xa4\x2d\x3d\x79\x59\xd8\x99\xf7\x7e\xf3\x78\xfb\x04\xd0\x92\x0b\xa5\xc7\x94\xed\x13\x00\x24\x6b\x8d\xc5\x94\xa1\xd2\xbf\xbc\x54\xf2\x85\x5b\x5e\x39\xbc\x38\xed\x32\x61\x24\x61\xca\xae\xfa\x67\xb3\x8a\x9c\xe3\x45\x1c\xe3\x93\x72\x4e\xe9\x82\xe5\x8a\x4a\xc9\x7a\x5c\x08\x13\xb4\xef\x5d\x76\x08\x4b\x9b\x40\xee\x78\x0d\x50\x98\xaa\xe2\x5a\x46\xe3\x41\x99\x89\x15\xd7\x9a\xca\xee\x26\x60\x45\x7e\x65\xfe\x13\xac\xbb\x84\x29\xfb\x8a\x5f\x68\xb9\x00\x47\x75\x34\xda\xe7\x91\x1e\x19\x3f\x1b\xcb\xe1\x44\xec\x26\xc5\xa3\x9c\x6f\xbc\x70\x37\xef\xdb\xf1\x4f\x3d\xcc\x77\xaf\x0f\x1d\x0a\x00\x25\x39\xaf\x34\xf7\xca\xe8\xec\x9c\x90\xf7\x6f\xd5\x3d\x2d\xea\x7a\x66\xd4\xf5\xe7\x20\xd0\x64\xf9\x76\xb7\x98\xd7\x61\xba\xcc\x3f\x06\xd3\xb5\x3e\x11\x4a\x92\x05\xd9\x4c\x69\x49\xdb\x68\x6d\x5b\xe4\x9e\x24\xb6\x82\x26\xbe\xdf\x09\x40\xd3\xf6\xe1\x3c\xf7\x21\x86\x3f\x14\x9f\x40\x93\x34\x7f\x01\x00\x00\xff\xff\x2c\x89\x70\x08\x96\x01\x00\x00")
+
+func methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson,
+		"method.account.account_channels.jsonrpc.response.error-missing-account.json",
+	)
+}
+
+func methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson() (*asset, error) {
+	bytes, err := methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.account.account_channels.jsonrpc.response.error-missing-account.json", size: 406, mode: os.FileMode(420), modTime: time.Unix(1620024234, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -173,7 +283,7 @@ func methodAccountAccount_channelsJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_channels.jsonrpc.response.json", size: 733, mode: os.FileMode(420), modTime: time.Unix(1619924859, 0)}
+	info := bindataFileInfo{name: "method.account.account_channels.jsonrpc.response.json", size: 733, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -193,7 +303,7 @@ func methodAccountAccount_channelsWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_channels.websocket.request.json", size: 186, mode: os.FileMode(420), modTime: time.Unix(1619924803, 0)}
+	info := bindataFileInfo{name: "method.account.account_channels.websocket.request.json", size: 186, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -213,7 +323,7 @@ func methodAccountAccount_channelsWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_channels.websocket.response.json", size: 798, mode: os.FileMode(420), modTime: time.Unix(1619924834, 0)}
+	info := bindataFileInfo{name: "method.account.account_channels.websocket.response.json", size: 798, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -233,7 +343,7 @@ func methodAccountAccount_currenciesCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_currencies.commandline.response.json", size: 262, mode: os.FileMode(420), modTime: time.Unix(1619930767, 0)}
+	info := bindataFileInfo{name: "method.account.account_currencies.commandline.response.json", size: 262, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -253,7 +363,7 @@ func methodAccountAccount_currenciesJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_currencies.jsonrpc.request.json", size: 185, mode: os.FileMode(420), modTime: time.Unix(1619930703, 0)}
+	info := bindataFileInfo{name: "method.account.account_currencies.jsonrpc.request.json", size: 185, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -273,7 +383,7 @@ func methodAccountAccount_currenciesJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_currencies.jsonrpc.response.json", size: 364, mode: os.FileMode(420), modTime: time.Unix(1619930726, 0)}
+	info := bindataFileInfo{name: "method.account.account_currencies.jsonrpc.response.json", size: 364, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -293,7 +403,7 @@ func methodAccountAccount_currenciesWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_currencies.websocket.request.json", size: 133, mode: os.FileMode(420), modTime: time.Unix(1619930685, 0)}
+	info := bindataFileInfo{name: "method.account.account_currencies.websocket.request.json", size: 133, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -313,7 +423,7 @@ func methodAccountAccount_currenciesWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_currencies.websocket.response.json", size: 384, mode: os.FileMode(420), modTime: time.Unix(1619930748, 0)}
+	info := bindataFileInfo{name: "method.account.account_currencies.websocket.response.json", size: 384, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -333,7 +443,7 @@ func methodAccountAccount_infoCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_info.commandline.response.json", size: 631, mode: os.FileMode(420), modTime: time.Unix(1619930966, 0)}
+	info := bindataFileInfo{name: "method.account.account_info.commandline.response.json", size: 631, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -353,7 +463,7 @@ func methodAccountAccount_infoJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_info.jsonrpc.request.json", size: 172, mode: os.FileMode(420), modTime: time.Unix(1619930885, 0)}
+	info := bindataFileInfo{name: "method.account.account_info.jsonrpc.request.json", size: 172, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -373,7 +483,7 @@ func methodAccountAccount_infoJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_info.jsonrpc.response.json", size: 965, mode: os.FileMode(420), modTime: time.Unix(1619930945, 0)}
+	info := bindataFileInfo{name: "method.account.account_info.jsonrpc.response.json", size: 965, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -393,7 +503,7 @@ func methodAccountAccount_infoWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_info.websocket.request.json", size: 151, mode: os.FileMode(420), modTime: time.Unix(1619930864, 0)}
+	info := bindataFileInfo{name: "method.account.account_info.websocket.request.json", size: 151, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -413,7 +523,7 @@ func methodAccountAccount_infoWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_info.websocket.response.json", size: 995, mode: os.FileMode(420), modTime: time.Unix(1619930928, 0)}
+	info := bindataFileInfo{name: "method.account.account_info.websocket.response.json", size: 995, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -433,7 +543,7 @@ func methodAccountAccount_linesCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_lines.commandline.response.json", size: 5365, mode: os.FileMode(420), modTime: time.Unix(1619931369, 0)}
+	info := bindataFileInfo{name: "method.account.account_lines.commandline.response.json", size: 5365, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -453,7 +563,7 @@ func methodAccountAccount_linesJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_lines.jsonrpc.request.json", size: 106, mode: os.FileMode(420), modTime: time.Unix(1619931309, 0)}
+	info := bindataFileInfo{name: "method.account.account_lines.jsonrpc.request.json", size: 106, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -473,7 +583,7 @@ func methodAccountAccount_linesJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_lines.jsonrpc.response.json", size: 807, mode: os.FileMode(420), modTime: time.Unix(1619931348, 0)}
+	info := bindataFileInfo{name: "method.account.account_lines.jsonrpc.response.json", size: 807, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -493,7 +603,7 @@ func methodAccountAccount_linesWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_lines.websocket.request.json", size: 91, mode: os.FileMode(420), modTime: time.Unix(1619931295, 0)}
+	info := bindataFileInfo{name: "method.account.account_lines.websocket.request.json", size: 91, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -513,7 +623,7 @@ func methodAccountAccount_linesWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.account.account_lines.websocket.response.json", size: 800, mode: os.FileMode(420), modTime: time.Unix(1619931331, 0)}
+	info := bindataFileInfo{name: "method.account.account_lines.websocket.response.json", size: 800, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -533,7 +643,7 @@ func methodLedgerLedgerCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger.commandline.response.json", size: 972, mode: os.FileMode(420), modTime: time.Unix(1619925830, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger.commandline.response.json", size: 972, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -553,7 +663,7 @@ func methodLedgerLedgerJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger.jsonrpc.request.json", size: 190, mode: os.FileMode(420), modTime: time.Unix(1619925274, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger.jsonrpc.request.json", size: 190, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -573,7 +683,7 @@ func methodLedgerLedgerJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger.jsonrpc.response.json", size: 972, mode: os.FileMode(420), modTime: time.Unix(1619925802, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger.jsonrpc.response.json", size: 972, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -593,7 +703,7 @@ func methodLedgerLedgerWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger.websocket.request.json", size: 166, mode: os.FileMode(420), modTime: time.Unix(1619925257, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger.websocket.request.json", size: 166, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -613,7 +723,7 @@ func methodLedgerLedgerWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger.websocket.response.json", size: 1003, mode: os.FileMode(420), modTime: time.Unix(1619925807, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger.websocket.response.json", size: 1003, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -633,7 +743,7 @@ func methodLedgerLedger_closedCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_closed.commandline.response.json", size: 154, mode: os.FileMode(420), modTime: time.Unix(1619926186, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_closed.commandline.response.json", size: 154, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -653,7 +763,7 @@ func methodLedgerLedger_closedJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_closed.jsonrpc.request.json", size: 52, mode: os.FileMode(420), modTime: time.Unix(1619926035, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_closed.jsonrpc.request.json", size: 52, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -673,7 +783,7 @@ func methodLedgerLedger_closedJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_closed.jsonrpc.response.json", size: 153, mode: os.FileMode(420), modTime: time.Unix(1619926116, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_closed.jsonrpc.response.json", size: 153, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -693,7 +803,7 @@ func methodLedgerLedger_closedWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_closed.websocket.request.json", size: 41, mode: os.FileMode(420), modTime: time.Unix(1619926017, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_closed.websocket.request.json", size: 41, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -713,7 +823,7 @@ func methodLedgerLedger_closedWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_closed.websocket.response.json", size: 183, mode: os.FileMode(420), modTime: time.Unix(1619926082, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_closed.websocket.response.json", size: 183, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -733,7 +843,7 @@ func methodLedgerLedger_currentCommandlineResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_current.commandline.response.json", size: 77, mode: os.FileMode(420), modTime: time.Unix(1619926353, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_current.commandline.response.json", size: 77, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -753,7 +863,7 @@ func methodLedgerLedger_currentJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_current.jsonrpc.request.json", size: 53, mode: os.FileMode(420), modTime: time.Unix(1619926279, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_current.jsonrpc.request.json", size: 53, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -773,7 +883,7 @@ func methodLedgerLedger_currentJsonrpcResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_current.jsonrpc.response.json", size: 76, mode: os.FileMode(420), modTime: time.Unix(1619926336, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_current.jsonrpc.response.json", size: 76, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -793,7 +903,7 @@ func methodLedgerLedger_currentWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_current.websocket.request.json", size: 42, mode: os.FileMode(420), modTime: time.Unix(1619926260, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_current.websocket.request.json", size: 42, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -813,12 +923,32 @@ func methodLedgerLedger_currentWebsocketResponseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_current.websocket.response.json", size: 106, mode: os.FileMode(420), modTime: time.Unix(1619926316, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_current.websocket.response.json", size: 106, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
 
-var _methodLedgerLedger_dataJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\x4f\x0b\xc2\x20\x18\x80\xf1\xf3\xeb\xa7\x90\xf7\xbc\x83\x7f\xa6\x53\x6f\xe6\xec\x4b\x44\x84\x31\x69\x83\x56\xe1\xec\x10\x63\xdf\x3d\x8a\x5d\x1f\x78\x7e\x2b\x01\x9c\x73\x1d\x9f\x03\x3a\x8a\xf7\x3c\xdc\x72\xb9\x0c\xa9\x26\x6c\x08\xe0\x2b\x95\x34\x2f\xe8\xe8\x89\x00\xac\x04\x00\xf0\x3a\x3d\x52\xf9\xa0\xa3\xb5\xbc\x73\xf3\x4f\xfb\x35\xa6\x65\xfc\x21\xa6\x15\x07\xd5\x05\x1e\x02\xd3\x5c\x0a\x6b\xbd\x36\xba\x97\xd1\x1e\x25\x67\x31\xb0\x56\x88\x60\xda\x5e\x5a\xce\xa3\x62\x4a\x4b\x63\xbd\xef\xa2\x32\xcc\x78\x2b\x83\xc1\x5d\x9d\xe6\xa9\xa2\xa3\x8a\x00\x6c\x04\xce\x64\xfb\x06\x00\x00\xff\xff\x89\xce\xb7\xfd\xac\x00\x00\x00")
+var _methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\x4f\x0b\xc2\x20\x18\x80\xf1\xf3\xeb\xa7\x90\xf7\xbc\x83\x7f\xa6\x53\x6f\xe6\xec\x4b\x44\x84\x31\x69\x83\x56\xe1\xec\x10\x63\xdf\x3d\x8a\x5d\x1f\x78\x7e\x2b\x01\x9c\x73\x1d\x9f\x03\x3a\x8a\xf7\x3c\xdc\x72\xb9\x0c\xa9\x26\x6c\x08\xe0\x2b\x95\x34\x2f\xe8\xe8\x89\x00\xac\x04\x00\xf0\x3a\x3d\x52\xf9\xa0\xa3\xb5\xbc\x73\xf3\x4f\xfb\x35\xa6\x65\xfc\x21\xa6\x15\x07\xd5\x05\x1e\x02\xd3\x5c\x0a\x6b\xbd\x36\xba\x97\xd1\x1e\x25\x67\x31\xb0\x56\x88\x60\xda\x5e\x5a\xce\xa3\x62\x4a\x4b\x63\xbd\xef\xa2\x32\xcc\x78\x2b\x83\xc1\x5d\x9d\xe6\xa9\xa2\xa3\x8a\x00\x6c\x04\xce\x64\xfb\x06\x00\x00\xff\xff\x89\xce\xb7\xfd\xac\x00\x00\x00")
+
+func methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJson,
+		"method.ledger.ledger_data.jsonrpc.request.error-not-found.json",
+	)
+}
+
+func methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.request.error-not-found.json", size: 172, mode: os.FileMode(420), modTime: time.Unix(1620025069, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_dataJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\xb1\xae\x83\x20\x14\x80\xe1\xf9\xf0\x14\xe4\xcc\x0e\x82\x20\xc8\x06\x28\x2f\x71\x73\xd3\x9c\x46\x5a\x4d\xb4\x6d\xd4\xa5\x31\xbe\x7b\xd3\xc6\xf5\x4f\xfe\x6f\x67\x80\x73\xde\x86\x67\x8f\x8e\xe3\x94\xfb\x7b\x5e\x2e\x3d\x6d\x84\x05\x03\x7c\xd1\x42\xf3\x8a\x8e\xff\x31\x80\x9d\x01\x00\x5e\xc7\x07\x2d\x6f\x74\xfc\x46\xd3\x9a\x8b\x5f\x3b\xb7\x81\xd6\xe1\xab\x58\x13\x4c\x57\x45\x59\xa9\x36\x68\x2b\x4a\x65\xb4\x48\xaa\x4e\x5a\xc9\x5a\x7a\xab\x83\x0c\xd6\xb7\x65\xac\x44\x63\x65\x17\x8d\xf0\x29\xe9\xe8\x3b\xa5\x85\x48\x8d\x88\x78\xaa\xe3\x3c\x6e\xe8\xb8\x66\x00\x07\x83\x7f\x76\x7c\x02\x00\x00\xff\xff\x42\x7f\xb1\xbd\xad\x00\x00\x00")
 
 func methodLedgerLedger_dataJsonrpcRequestJsonBytes() ([]byte, error) {
 	return bindataRead(
@@ -833,7 +963,7 @@ func methodLedgerLedger_dataJsonrpcRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.request.json", size: 172, mode: os.FileMode(420), modTime: time.Unix(1619926651, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.request.json", size: 173, mode: os.FileMode(420), modTime: time.Unix(1620025110, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -853,7 +983,47 @@ func methodLedgerLedger_dataJsonrpcResponseBinaryTrueJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.response.binary-true.json", size: 2289, mode: os.FileMode(420), modTime: time.Unix(1619926976, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.response.binary-true.json", size: 2289, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x5c\x90\xbb\x6e\x83\x30\x14\x86\x67\xfb\x29\xd0\x99\x33\xf8\x82\x89\xcd\x46\x1d\x32\xf6\x15\x22\x37\x3e\x22\x48\x01\xab\xbe\x0c\x55\xc4\xbb\x57\x90\xd2\x56\x59\xbf\xff\xfc\x17\x9d\x07\x25\x10\x31\x95\x7b\x86\xb6\x7a\x50\x42\x00\x63\x0c\x11\xda\x0a\xee\x43\x7c\x0f\xf9\x1c\xca\xec\xe1\xf0\xab\x5c\xae\xc1\x23\xb4\x95\xe0\xff\xd8\x84\x29\xb9\x01\x37\x17\xfa\x01\x5f\x8c\x11\x3f\x0b\xa6\xbd\x81\xc0\xc7\x38\xbb\xf8\x05\x6d\x95\x63\xc1\xc3\x86\xae\x61\x9a\xdc\xec\xff\x12\x2e\xde\x65\x07\x4f\xf1\x87\xdc\x5c\xba\xad\x07\xba\x16\x6f\xea\x68\xb9\xb5\xac\xe1\x52\x18\xd3\x35\xba\x39\xc9\xde\x9c\x25\x67\xbd\x65\xb5\x10\x56\xd7\x27\x69\x38\xef\x15\x53\x8d\xd4\xa6\xeb\x8e\xbd\xd2\x4c\x77\x46\x5a\xbd\xa7\x8e\xd3\xb8\x6e\x52\x94\x90\x65\xdb\x99\xb2\xcb\x25\xad\x15\xcf\x27\x50\xb2\xd0\xe5\x3b\x00\x00\xff\xff\xa4\xc0\x73\x04\x22\x01\x00\x00")
+
+func methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJson,
+		"method.ledger.ledger_data.jsonrpc.response.error-not-found.json",
+	)
+}
+
+func methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.response.error-not-found.json", size: 290, mode: os.FileMode(420), modTime: time.Unix(1620024737, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_dataJsonrpcResponseJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xbc\x57\xdf\x53\x1b\x39\x12\x7e\x36\x7f\x05\x35\xcf\xbb\x57\xdd\x52\xab\x25\xf1\xa6\x9f\xe4\xb2\x86\x23\xc4\x90\x90\xab\x2b\x6a\x62\x06\x6c\x30\x36\x99\xf1\x60\xc8\x56\xfe\xf7\xab\xf1\x8f\x24\x1c\x0e\x7b\x77\xb5\x9b\x79\xb3\xd4\xea\xfe\xba\xbf\xaf\x5b\xf2\xef\x3b\xbd\xa2\xae\x9a\x76\x32\x2f\xf6\x76\x7f\xdf\xe9\xf5\x8a\x49\x75\x71\x55\xd5\xeb\x5f\xbd\xa2\x1c\x0e\xab\xbb\x79\x75\x51\xec\xed\xce\xeb\xb6\xfa\x65\xb3\x38\x6b\xa7\xf3\xf3\x51\xd9\x8c\x8a\xbd\xdd\x02\x21\x69\xca\x59\xb2\x60\x22\x45\x3a\x38\x07\x49\x5a\x1b\xb4\x8a\x3a\x85\x94\x59\x32\x21\xb0\x67\x8d\x3e\x4b\x85\x26\xa3\xc2\xc0\x12\xa3\x24\xe7\x53\xb1\x72\x3b\x9c\xcc\x9a\xea\xfc\x72\x52\x5e\x35\xc5\xde\x2e\x7c\xbf\x38\x1f\xdf\x56\xc5\xde\x2e\x6b\x29\x09\x04\x3d\xdb\x3b\x1f\xb5\xb7\xe5\xb4\xc3\x22\x40\xe0\xaf\x07\xe5\xe3\xaf\x20\x77\x81\xf7\x94\xde\x13\xf0\x37\xd8\x7c\xbb\x27\x83\x50\x3c\x3b\x5c\x57\xcd\x6c\xd2\xce\xc7\xb3\xce\x03\x7e\xef\xfc\x69\xde\x9b\x7c\x8d\xf6\x3a\xc9\x20\x24\x45\xaf\x0c\x02\x69\x85\x99\x38\x2b\x12\x2c\x9c\x51\x5e\x78\xe3\x22\x04\x89\xd6\x88\x14\x34\xba\x9c\x55\x70\x89\x14\x62\xb6\xb8\x41\xb0\x2a\xf5\xf9\x5f\xe3\x75\x3c\xbd\xa8\x1e\x3a\xb7\x2c\x25\x22\x81\x5c\x6f\xdf\x95\x75\x35\x9d\x9f\x6f\x2b\xab\xc4\x27\x26\x1b\x5c\xcc\x14\x58\x5a\x95\x03\xa1\xf1\x91\x82\x10\xd1\x5a\xe7\x00\x4d\x76\x96\x48\xc9\x00\x0a\x48\x25\x01\xc6\x60\x88\xce\x86\x98\x8d\x17\x8e\x8d\xcb\xc1\xf1\x3a\x70\x53\x7d\x3a\x6c\x6f\xb7\x20\x9a\xcf\xe6\xe5\x24\xcc\xc6\xd3\x8e\xf5\xc2\x5a\x6b\x81\x8c\x44\xc3\xac\x99\x00\xbe\xb7\x3a\x1f\xfe\xa1\x59\x5d\x4e\x9b\x72\xd8\x71\xf9\x35\x01\xcb\x52\x00\x28\xeb\x84\x76\x2a\x00\x83\x46\x2b\xb3\x92\x52\x3b\x2f\x92\x75\x90\x22\x8b\xcc\xde\x6a\xd0\xd2\x5b\x74\x36\x38\xd4\xac\x88\x49\x64\x80\x58\xec\xf4\x7a\x5f\x7e\xd9\xf9\x8b\x18\xfb\x4f\xc2\x36\xd5\x59\xee\xdd\x96\xf5\xcd\xb2\x1b\x8b\x4e\xbd\x28\x6d\x8a\x0e\x64\xca\xca\x84\xa4\x51\x73\x46\x02\x01\x52\x79\x95\x3c\xbb\x94\xc8\x6a\x41\x4a\xa9\x18\x3d\x24\xef\x00\x49\x0a\x0f\x60\x9d\x5e\xc5\x6a\xe6\xe5\xbc\x63\xfc\x9f\x5d\xb1\x96\x1d\xde\x2b\xdc\xaa\x9b\xbb\x20\xf5\xc1\xb5\x8a\xd9\x0d\x4e\x1f\x16\x16\x8f\xe2\xa3\x74\x07\x62\xd1\xea\x93\x16\x6f\xae\xea\xd1\xbb\xc7\xbb\x75\xab\xf6\x0a\x5f\x4e\xca\xe9\xb0\x5a\x75\x9c\x16\xc2\x1a\xbb\xd9\xca\x4f\x1a\xb8\x57\xf4\x97\xf9\xa5\xe9\xbc\x7e\x1c\x3c\xde\x2d\x8f\xac\x43\x1e\xcf\x66\xf3\xcd\xa9\x7f\x2c\xa6\x55\x1d\xd6\x40\x36\x47\x8f\xea\xea\x7e\x3c\x6b\x9b\xc1\xc3\xf4\xef\xb1\x3b\x48\x81\x64\xd0\x06\x0c\xa2\x35\x2e\x58\xce\x9c\x02\x2a\x89\x2a\xc7\x88\x9c\x03\x0a\x52\x26\x06\xeb\x64\x46\x0f\x3e\x82\x73\x2c\xb2\x89\x36\x9b\xec\x15\x16\xcf\x1d\xf7\xaf\xea\xb7\xd5\xa7\xae\xf0\xc2\xb0\x45\xcb\x6b\x93\xb7\xd5\xa7\xb6\x5a\xa5\x48\xeb\xa5\xaf\x3d\xb5\x9c\x25\x32\xb1\xcb\x29\xa2\x73\x31\x04\x69\x9d\x4b\xa0\x85\xf6\x52\x75\x1d\x62\x38\xa3\x02\x29\x34\x65\x49\x2a\x27\x66\xd4\x64\xb2\x20\xc9\x1c\x72\xa7\xa8\x95\xa4\x36\x24\x7c\xab\xe7\x6a\xa1\x57\x0c\xdb\xba\xae\xa6\xc3\xc7\x2e\xde\x7e\xf0\x6b\xe4\xbd\x62\xdc\x34\xed\x4a\x12\xf5\x96\xcf\x7f\xf8\x78\x7f\x3d\xfe\x6a\x7c\x5f\x4e\xda\x65\xc5\x61\x19\x72\x1d\xf3\x1b\x47\x02\x59\xb0\x31\xeb\xd5\x57\xe3\xab\x51\x7f\x7c\x3b\x9e\xff\x6f\x30\xfc\xe5\xe9\xd5\x60\xda\x5c\x8c\xcc\xf0\x26\xa0\x3d\x3e\x30\xe5\xe9\xfe\x61\x7b\xf0\x61\x7a\xb7\xa8\x0f\x8e\x78\xfa\x87\x70\xba\xc0\x87\xb3\x8b\x95\x9c\x8c\x2c\x7e\xac\x9c\xe3\xf1\xdd\xdd\xa4\x7a\xbb\x94\xf1\xc6\x6a\xb6\xf8\x3f\x40\x8f\x8e\xf3\x7e\x78\x14\xc7\xaf\x07\xce\xcc\x1e\x6e\xae\xaf\xe7\x67\x83\xfb\xd9\xe5\xd1\xe9\xfe\xa7\xe1\xd5\xfd\xfb\x77\xd7\xcf\x41\x8b\xd5\x1d\xf2\x14\x7a\x7f\xb6\xd8\x20\x87\x2d\xea\x5a\xc9\x36\x40\x90\x3a\x24\x01\xe0\x15\xd8\x04\x4e\x09\x6b\x0c\xb0\xa4\xac\x0d\xa1\xb3\x29\x53\xf0\xac\x32\xc8\x80\x22\x31\x00\x85\xec\xa2\xd5\x68\x22\xb3\xa5\x97\x64\x2b\x88\xad\x12\x24\xb6\x6a\x94\x30\xe5\x08\xa2\xeb\x98\x28\xb3\x36\xc1\x48\x25\xb2\xd5\x49\x0a\x0a\xde\x20\x4b\x34\x09\xc0\x5b\xad\x83\xa6\x14\x62\x0c\x3a\x44\xab\x95\x17\xcf\x35\xfa\xfd\xa0\x78\x55\x3d\x2e\xa4\xa9\x3e\x0f\x65\xff\x6d\xff\xf3\x99\x3b\x5b\x94\x7e\x38\x16\xbf\x35\x4d\xbc\x39\xdb\x3f\xad\xed\xd6\x41\xb1\x2e\xe0\x4f\x18\x14\x5a\x11\x84\x04\xe4\x2d\x73\x64\x1d\x7d\x94\x36\x4b\xe7\x8c\x14\x42\x93\x05\xe1\xb5\x75\x99\xb4\x11\x59\xb9\x60\x23\x2d\x13\x47\xe3\x31\x5a\x97\x20\xbe\x54\x71\xd2\x86\xd8\x6a\x7c\x3e\x28\x7e\x40\x42\x24\xd4\xce\x76\x70\x6c\xb0\x4e\xa3\xe3\x6e\x28\x13\x2b\xeb\x55\x46\xe7\x9c\x47\x9f\x5c\x47\x55\xa2\x04\x98\xbc\x24\xab\x73\xb4\xd6\xbe\x4c\x42\xbf\x3a\xec\x33\xfb\xcb\xab\xaa\xf9\xec\x9b\xe0\x7f\x7b\x3d\xec\xdf\x9e\x0d\x8e\x07\xa3\xf1\xbb\xfa\x70\x70\xd2\xdf\x42\x02\x76\x37\xa7\x35\xe6\x4f\x24\x01\x7f\x44\x42\x22\x9f\x58\x82\x4e\x52\x6b\x65\x21\x67\xc5\xde\x67\x91\x05\xc7\xe0\x03\x79\x67\xd9\x08\x47\x01\x09\x05\x5b\xa9\x44\xa2\x24\x22\x25\x25\x03\x22\x72\x7a\x89\x04\xa9\x8d\x42\x30\x5b\xa6\xf5\x76\x12\xb2\xd7\xc6\x48\x13\x9c\x08\xd9\x19\x91\x34\x49\xe3\x29\x2b\xd2\x96\x1c\x6b\x23\xa5\xd0\x52\x70\x54\x26\x10\x7b\x4a\x19\xa5\x0e\xa0\x2c\x48\xf3\x32\x09\x27\x8b\xf7\xf5\x9b\x83\x92\x5e\xbd\xf2\x1f\x2f\x1f\xde\x0c\x34\x9e\xbd\x3e\xfc\xf8\xe6\x7d\xf9\xf0\xe1\xe8\xd8\x9c\x8c\xee\xb6\x76\x82\x25\x14\x9a\x7f\xca\x95\x99\x42\x50\x8a\x42\xc0\x98\x72\x8e\x44\x3a\x25\xc7\xd9\x03\x9b\xc4\x3e\x75\xda\xb4\x81\xc8\xbb\x8c\x90\x75\x66\xcc\xc8\x32\x45\xa1\x72\xd6\xc9\x19\xf5\xe2\x95\x09\x4a\x5a\x2d\xf5\x7f\x49\x02\x8a\xcc\x10\x64\xc6\x24\x04\x47\x90\xd9\x6a\x72\xc9\x24\xad\x85\x02\x2f\x7c\x72\x16\x83\x34\xce\x13\x12\x7b\x06\xa5\x1c\x90\x09\x3a\x2a\x5a\x4d\xdd\x2f\x3b\xbd\xde\xbf\xbe\x3e\x64\xda\xe5\x4b\xb0\x69\x87\xc3\xaa\x69\x56\xef\x9b\xfb\x72\x32\xbe\x28\xbf\xfd\x5f\xd9\xe9\x7d\xd9\xf9\xf2\xef\x00\x00\x00\xff\xff\xed\xb0\x16\x47\xe5\x0c\x00\x00")
+
+func methodLedgerLedger_dataJsonrpcResponseJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_dataJsonrpcResponseJson,
+		"method.ledger.ledger_data.jsonrpc.response.json",
+	)
+}
+
+func methodLedgerLedger_dataJsonrpcResponseJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_dataJsonrpcResponseJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_data.jsonrpc.response.json", size: 3301, mode: os.FileMode(420), modTime: time.Unix(1620025189, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -873,7 +1043,7 @@ func methodLedgerLedger_dataWebsocketRequestJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.request.json", size: 153, mode: os.FileMode(420), modTime: time.Unix(1619926588, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.request.json", size: 153, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -893,7 +1063,7 @@ func methodLedgerLedger_dataWebsocketResponseBinaryFalseJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.response.binary-false.json", size: 3060, mode: os.FileMode(420), modTime: time.Unix(1619926695, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.response.binary-false.json", size: 3060, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -913,7 +1083,467 @@ func methodLedgerLedger_dataWebsocketResponseBinaryTrueJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.response.binary-true.json", size: 2319, mode: os.FileMode(420), modTime: time.Unix(1619926773, 0)}
+	info := bindataFileInfo{name: "method.ledger.ledger_data.websocket.response.binary-true.json", size: 2319, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryAccount_rootJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xcc\x31\x0a\xc2\x30\x14\x06\xe0\xf9\x7f\xa7\x28\x6f\x76\xb1\x93\x74\x14\x54\xe8\x26\x8a\xb4\x8a\x94\xd0\xbc\x6a\xa0\x4d\x4a\x4c\x8d\x52\x7a\x77\xc9\xe0\x01\xbe\x6f\x26\xf0\x20\xe1\xe9\x34\x17\x19\xf7\xa2\x1f\xe2\x1b\xb1\xc1\x7f\x79\x45\xe0\x51\x79\x35\xbc\xb8\xc8\x6e\x04\xcc\x04\x80\x55\xdb\xba\xc9\x86\xc6\x3b\x17\x92\xf1\xdd\x7a\x6b\x0e\x52\xc5\x78\x74\x66\x73\xcd\x27\xd9\xd7\xe7\x5d\x75\x8a\x53\x59\x77\x97\xbc\x1c\x6d\x9a\x80\x7f\x6e\xac\x96\x4f\x82\x6f\xd5\x1b\xad\x82\x68\x26\x60\x21\xdc\x69\xf9\x05\x00\x00\xff\xff\x86\x10\x00\x7f\x8e\x00\x00\x00")
+
+func methodLedgerLedger_entryAccount_rootJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryAccount_rootJsonrpcRequestJson,
+		"method.ledger.ledger_entry-account_root.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryAccount_rootJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryAccount_rootJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-account_root.jsonrpc.request.json", size: 142, mode: os.FileMode(420), modTime: time.Unix(1620006067, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryAccount_rootWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\xbd\x0a\xc2\x30\x14\xc5\xf1\xb9\x7d\x8a\x72\x67\x17\x3b\x49\x47\x41\x85\x6e\xa2\x48\xeb\x12\x42\x72\x5a\x02\xf9\x28\xe1\xc6\x54\xc4\x77\x17\x43\xe7\xf3\xfb\x9f\x4f\x5d\x91\xd1\xd4\x35\x84\x55\xba\xc5\x42\xcc\x60\x21\x95\x0a\xc9\x73\x0c\x81\x69\x57\x57\xa4\x82\x73\xd2\x17\x66\xa1\x67\x44\x01\xcf\xf1\x5d\xb6\xcd\x8a\x82\xbb\x86\xe2\xb4\x3f\x9a\x0b\x86\x9c\xaf\xc1\x1c\x9e\x6d\xc2\x79\xbc\x9f\x86\x5b\x4e\xfd\x38\x3d\xda\x7e\xf1\x25\xdb\x7e\x8c\xd7\x58\xff\xd9\x4b\x5a\xa3\x25\x43\x53\xfd\xfd\x05\x00\x00\xff\xff\xe9\xc3\xd8\x21\x95\x00\x00\x00")
+
+func methodLedgerLedger_entryAccount_rootWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryAccount_rootWebsocketRequestJson,
+		"method.ledger.ledger_entry-account_root.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryAccount_rootWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryAccount_rootWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-account_root.websocket.request.json", size: 149, mode: os.FileMode(420), modTime: time.Unix(1620006085, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryCheckJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xcd\xc1\x8a\x83\x30\x10\x80\xe1\xf3\xe4\x29\x64\xce\x7b\xd0\x10\x13\xc7\x9b\x19\xe3\x4b\x2c\xcb\x12\xcc\x50\xa5\x6a\x8b\x95\xd2\x22\xbe\x7b\xf1\xd0\xfb\xcf\xff\xed\x0a\x70\x96\x6d\xb8\x25\xac\x33\x9c\x24\x5d\x64\xfd\x97\x65\x5b\xdf\xf8\xa3\x00\xef\x71\x8d\xf3\x03\xeb\xec\x57\x01\xec\x0a\x00\xb0\x1f\xa4\xbf\x9e\x31\x9b\xc6\x58\xe6\xb6\xea\x72\xb2\x81\xc8\xb0\xf1\x79\x1b\x1a\x6f\x39\x50\x15\x9c\xd6\x1d\x17\xae\x75\x64\x0c\xeb\xca\x53\x59\x68\xc7\xda\x96\xc4\xc6\xb1\x0f\xfe\x04\x00\xbe\xe6\xb8\x24\x79\x9d\xdb\x67\x9c\xc6\x14\x37\x49\xa8\x00\x0e\x05\x7f\xea\xf8\x04\x00\x00\xff\xff\x2f\x66\x72\x84\xa5\x00\x00\x00")
+
+func methodLedgerLedger_entryCheckJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryCheckJsonrpcRequestJson,
+		"method.ledger.ledger_entry-check.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryCheckJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryCheckJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-check.jsonrpc.request.json", size: 165, mode: os.FileMode(420), modTime: time.Unix(1620005166, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryCheckWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\x41\xaa\x83\x30\x10\x80\xe1\xb5\x9e\x42\x66\xfd\x16\x1a\xc6\xc4\x71\x67\xc6\x78\x0d\x09\x66\xf0\x49\xd5\x16\x09\xc5\x52\x7a\xf7\xd2\xb4\xeb\xff\xe7\x7b\xe6\x19\x2c\x01\xda\x02\xe4\xf4\xdb\x6d\x95\x71\x96\x38\x4e\xff\x32\x5d\xe0\x2f\xcf\x60\xba\x6e\x9b\xdf\xd3\xb0\x4a\x98\xe5\x18\x65\x8f\xc7\xe3\xdb\xd2\xd5\x16\xc0\xd8\xa1\x66\xee\x9b\xa1\x24\xed\x88\x90\xd1\x96\xbd\xeb\xac\x66\x47\x8d\x33\x4a\x0d\x5c\x99\xde\x10\x22\xab\xc6\x52\x5d\x29\xc3\x4a\xd7\xc4\x68\xd8\x3a\x9b\xb4\x1f\xbf\xec\x41\xce\x0f\x7a\xf7\xeb\x12\x7c\x94\x00\xf9\xeb\x1d\x00\x00\xff\xff\x28\xdc\x48\xe0\xa6\x00\x00\x00")
+
+func methodLedgerLedger_entryCheckWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryCheckWebsocketRequestJson,
+		"method.ledger.ledger_entry-check.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryCheckWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryCheckWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-check.websocket.request.json", size: 166, mode: os.FileMode(420), modTime: time.Unix(1620006220, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xce\x51\x4b\xc3\x30\x10\xc0\xf1\xe7\xcb\xa7\x28\xf7\xec\x8b\x45\x41\xfb\x36\xc1\x39\x56\x10\x65\x43\xb3\x89\x8c\x60\x6e\x2e\xb0\x5e\xc2\x25\x6d\xd4\xd2\xef\x2e\x29\xec\xf5\xb8\xdf\xff\x6e\x54\x80\x1d\xa5\x93\xb7\xd8\x54\x78\x26\xfb\x4d\x72\x20\x4e\xf2\x8b\x57\x0a\x30\x18\x31\x5d\xc4\xa6\xfa\x50\x00\xa3\x02\x00\xb4\x14\x7c\x74\xe9\x10\x84\x4c\x9f\x4e\xd8\x54\xf3\x1c\xd0\x67\x26\x29\x15\x39\x5e\x3f\xb8\x27\xd2\x39\xbf\x7a\x77\xb7\xaf\x7b\x5a\xee\xb6\x8f\x7a\x93\xfb\xf5\xee\xf8\x56\xaf\x03\x97\x76\x21\x25\xe0\xc5\xfd\xd1\x7c\x5d\xcc\x2d\xb7\xf5\x4d\xab\x89\xef\x17\xab\x21\xda\xe5\xb6\x5d\x6d\x16\xcf\x8e\xf7\x91\xde\xf9\xe5\x4b\x63\x61\xd3\x8c\x2f\xbf\x3a\xb6\xf4\x53\xf4\x60\xce\xce\x9a\x44\xb6\x2c\x4d\x0a\x3e\xd5\xf4\x1f\x00\x00\xff\xff\xff\xcb\x4b\x67\xdd\x00\x00\x00")
+
+func methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJson,
+		"method.ledger.ledger_entry-deposit_preauth.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-deposit_preauth.jsonrpc.request.json", size: 221, mode: os.FileMode(420), modTime: time.Unix(1620005739, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryDeposit_preauthWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x5c\x8e\x41\x4b\x03\x31\x10\x46\xcf\xc9\xaf\x28\x73\xf6\xe2\xa2\xa0\xbd\x55\xb0\x96\x2e\x88\xd2\xa2\xdb\x5e\x42\x68\xbe\xd6\x81\xdd\x49\xc8\x66\x9b\x6a\xd9\xff\x2e\x59\x3c\x79\x9e\xf7\xe6\x7d\x57\xad\x88\x1d\xcd\x67\x84\x8b\xed\x42\x0b\x73\x42\x32\x0e\xc1\xf7\x9c\x4c\x88\xb0\x43\xfa\xa2\x1b\xad\xe8\xe0\xbb\xce\xca\x84\xb6\x70\x27\x44\x03\x49\xf1\x7b\xba\xfd\xe7\xe7\xb3\xab\x56\x8a\x7c\x16\xc4\x22\xc4\xe3\xed\x13\xbf\xa0\xc9\xf9\xdd\xf3\xc3\xbe\x1a\xb0\xdc\x6d\x9f\x9b\x4d\x1e\xd6\xbb\xe3\x47\xb5\x0e\x52\xde\x28\x2a\xb2\x8f\xfc\x83\x29\x13\xed\xbd\xd4\xd5\x5d\xdd\x40\x1e\x17\xab\x73\xef\x96\xdb\x7a\xb5\x59\xbc\xb2\xec\x7b\x7c\xca\xdb\xa1\x21\xad\xc6\xd2\xff\x1b\xc4\xe2\x70\x29\xe6\xd9\xb6\xec\x6c\x82\x23\x3d\xfe\x06\x00\x00\xff\xff\xe5\xfd\xfa\x6d\xe2\x00\x00\x00")
+
+func methodLedgerLedger_entryDeposit_preauthWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryDeposit_preauthWebsocketRequestJson,
+		"method.ledger.ledger_entry-deposit_preauth.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryDeposit_preauthWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryDeposit_preauthWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-deposit_preauth.websocket.request.json", size: 226, mode: os.FileMode(420), modTime: time.Unix(1620005722, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryDirectoryJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8e\x41\x8b\xc2\x30\x10\x46\xcf\x93\x5f\x11\xe6\xbc\x87\xdd\x9e\x96\x1c\x05\x15\x7a\x13\x45\x5a\x45\x4a\x34\x53\x0d\xb4\x49\x99\xa6\xc6\x52\xfa\xdf\x25\x85\x5e\xdf\xe3\x7d\x7c\x93\x00\x6c\x29\xbc\xbc\x41\x25\xb1\x21\xf3\x24\xae\xc8\x05\x1e\xf1\x47\x00\x76\x9a\x75\xdb\xa3\x92\x57\x01\x30\x09\x00\x40\x63\x99\x1e\xc1\xf3\x88\x4a\x2e\x04\xd0\x47\x47\x9c\x7a\xae\xff\x36\x76\x4f\x45\x8c\x07\x6f\xff\x2f\xd9\x40\xbb\xf2\xb4\x2d\x8e\x71\xc8\xcb\xfa\x9c\xe5\x9d\x4b\xab\x29\xe9\x87\x7b\x65\x9d\xa1\x0f\x2a\xf9\x9b\xd0\xbc\x88\xf5\xc1\xaa\xf0\xad\x1b\x6b\x74\x20\x83\x02\x60\x16\x70\x13\xf3\x37\x00\x00\xff\xff\x04\x36\x76\x5d\xb3\x00\x00\x00")
+
+func methodLedgerLedger_entryDirectoryJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryDirectoryJsonrpcRequestJson,
+		"method.ledger.ledger_entry-directory.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryDirectoryJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryDirectoryJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-directory.jsonrpc.request.json", size: 179, mode: os.FileMode(420), modTime: time.Unix(1620004027, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryDirectoryWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8d\xbd\xaa\xc2\x40\x10\x46\xeb\xd9\xa7\x08\x53\xdf\xe2\x1a\x1b\x49\x29\xa8\x90\x4e\x14\x49\x6c\x42\xcc\x4c\x64\x20\xd9\x95\x71\xd7\x35\x84\xbc\xbb\x2c\x68\xf9\xfd\x70\xce\x6c\x00\x85\xb0\xc8\xd6\x7f\x06\xb0\x73\xe3\xd8\xda\x14\x71\x60\xba\xb3\x36\x6c\xbd\x4e\x98\x36\x12\xe5\xce\x3b\x9d\xb0\xc8\x66\x03\x80\x2e\x5a\xd6\x74\xd5\x7e\xb5\x95\x03\x57\x31\x1e\x9d\x6c\xae\x79\xe0\x7d\x7d\xde\x55\xa7\x18\xca\xba\xbf\xe4\xe5\xc3\x26\x00\xe0\x33\xdc\x1a\xb1\xc4\x6f\x2c\xb2\x7f\x03\x4b\xa2\x7e\x35\xbf\x1a\x5f\xed\x20\xd4\x7a\x26\x34\xcb\x27\x00\x00\xff\xff\xb0\xef\x1c\xd1\x9c\x00\x00\x00")
+
+func methodLedgerLedger_entryDirectoryWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryDirectoryWebsocketRequestJson,
+		"method.ledger.ledger_entry-directory.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryDirectoryWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryDirectoryWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-directory.websocket.request.json", size: 156, mode: os.FileMode(420), modTime: time.Unix(1620004002, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryEscrowJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8d\x41\x0b\x82\x40\x10\x46\xcf\x33\xbf\x62\x99\x73\x97\x24\x8a\xf6\xd8\x21\x05\x23\xca\x82\x0e\x11\xb1\xb9\x93\x59\xea\xd6\x6a\x69\xc8\xfe\xf7\x58\xa1\xe3\xfb\xe0\xbd\xaf\x47\xa0\x92\x9b\x9b\xd1\x24\x05\x15\xac\x33\xb6\x67\xae\x1a\xfb\xa5\x11\x02\x3d\x95\x55\x65\x4d\x52\x1c\x11\xa0\x47\x00\x20\xae\x53\x6b\x5a\x92\x62\x40\x20\xd3\x56\x6c\xbd\x6c\x57\x93\xeb\x26\xca\x83\xe5\x21\x6c\x93\x30\xd9\xee\xa2\x59\xb6\x48\xbb\xc7\xdb\x04\x97\xf9\x7a\x7f\x8f\x63\x9f\xf4\x4a\xcd\x2f\x92\x62\x1c\x4c\x3d\xba\x61\xfc\x5f\xe7\x95\xe6\xce\xd7\x3e\xaa\xc8\xb5\x6a\x58\x13\x02\x38\x84\x13\xba\x5f\x00\x00\x00\xff\xff\x81\xf8\xd6\xe1\xac\x00\x00\x00")
+
+func methodLedgerLedger_entryEscrowJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryEscrowJsonrpcRequestJson,
+		"method.ledger.ledger_entry-escrow.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryEscrowJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryEscrowJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-escrow.jsonrpc.request.json", size: 172, mode: os.FileMode(420), modTime: time.Unix(1620013666, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x5c\x90\xc9\x6e\x83\x30\x14\x45\xd7\xe6\x2b\xd0\x5b\x77\x01\x86\x1a\x87\x1d\x01\x9c\x48\xa9\xaa\x36\xad\xd4\x65\xe4\xc2\xcb\xd0\x02\x56\x3c\x34\xa9\xa2\xfc\x7b\xc5\xd0\x41\x5d\xda\xe7\xde\xe3\x2b\x5f\x3c\x02\x1a\x8d\x6b\x2c\xa4\xfe\xc5\x23\x04\x50\x6b\xa5\x21\xf5\xa1\x95\xcd\x56\xe9\x16\xeb\x35\x1e\x1d\x1a\x0b\x37\x3f\x78\xd3\xa2\x31\x72\x87\x90\xfa\x9d\x6b\x9a\x01\x34\x58\xef\x50\x6f\xf6\xd2\xec\xfb\x76\x11\x27\x79\x48\x67\x25\x65\x22\x2b\x82\x88\xcf\x79\xc4\x45\x50\x16\x5c\x88\x99\xe0\xac\x14\x21\xcb\xf2\x24\xbf\x0d\x39\x8d\x43\x11\x64\x8c\x06\x49\x9e\x14\x65\x96\x8b\x3c\x14\xf3\x08\xfe\x4a\x0f\x5d\x8d\x67\x48\x7d\x16\x45\x01\x63\x3c\x1e\x98\x9e\x66\x8d\xbb\x09\x54\xaa\x6d\x65\x57\xf7\x8f\x4f\x35\xec\xac\xfe\x1c\x44\x04\xd0\x54\x5a\x9d\xbe\xc3\x04\x64\x55\x29\xd7\xf5\x6d\xd0\x77\xf1\xf6\x61\x79\xa0\xe2\x65\x71\x5a\x2f\xd6\x8f\x4f\xcb\x64\x37\xaf\xce\xef\x4e\xd1\xd7\xd9\xfd\xf3\xdb\x6a\x35\x3a\x08\x18\x3c\x42\xea\x87\x94\xf5\xc7\xeb\x28\xfe\x37\x11\x3e\x64\x73\xa8\xa5\xc5\x1a\xbc\x29\x03\xc6\x4a\xeb\x4c\x0f\xc7\xcf\x1d\x2e\x7f\x73\xa9\x6f\xb5\x43\x8f\x5c\xbd\xeb\x57\x00\x00\x00\xff\xff\xd2\x97\x9d\x82\x8f\x01\x00\x00")
+
+func methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJson,
+		"method.ledger.ledger_entry-escrow.jsonrpc.response.error-malformedRequest.json",
+	)
+}
+
+func methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-escrow.jsonrpc.response.error-malformedRequest.json", size: 399, mode: os.FileMode(420), modTime: time.Unix(1620007040, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryEscrowWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcc\xb1\xae\x82\x30\x14\xc6\xf1\xf9\xf4\x29\xc8\x99\xef\x72\x89\xd1\xc8\xe8\x20\x24\x18\xa3\x68\xe2\x48\x2a\x3d\x92\x2a\x6d\xb5\x54\x5b\x43\x78\x77\x53\xc2\xfc\xfd\xbf\xdf\xc0\x00\xa5\xc0\x2c\x41\x0a\x5c\x3d\x3b\xaa\x5b\x72\x35\xf5\x8d\x35\x1e\xff\x18\x60\x63\x94\xe2\x7a\x2a\x3a\x12\x2d\xd9\x9a\xb4\xb3\xdf\x69\x9b\xb3\x2c\x19\x18\x00\x1a\xaf\xc9\xc6\xce\xee\x16\xb7\x43\x21\xd3\xed\x25\xf7\x55\x5e\x1d\x4f\xc5\xaa\xdd\x34\xe1\xf1\x36\xe9\x75\xbd\x3f\xdf\xcb\x32\xbe\x01\x7b\x7a\x61\x96\xfc\xa7\x4b\x06\x63\xe4\x66\x5f\x6a\x41\x21\x3a\x1f\xde\x49\xc1\x1d\x09\x64\xe3\x2f\x00\x00\xff\xff\x81\xa2\x36\x79\xa8\x00\x00\x00")
+
+func methodLedgerLedger_entryEscrowWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryEscrowWebsocketRequestJson,
+		"method.ledger.ledger_entry-escrow.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryEscrowWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryEscrowWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-escrow.websocket.request.json", size: 168, mode: os.FileMode(420), modTime: time.Unix(1620005391, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryEscrowWebsocketResponseJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xac\x53\xcd\x4e\x1b\x4d\x10\x3c\xaf\x9f\xc2\x9a\xf3\x77\xe8\xe9\xf9\xf7\x6d\x7e\xe1\x13\x88\x10\x40\xca\x11\x6d\xec\xc1\x6c\x62\x76\xc9\xce\x2e\x36\x42\xbc\x7b\xb4\x66\x1d\x29\xca\x25\x87\x1c\xa7\xab\xa7\xba\xba\x54\xfd\xb6\xa8\x48\xb3\x21\xab\x25\xc9\x87\xfa\xe9\x79\x97\xef\xb7\x79\xb8\xcf\x65\xdd\x77\x7b\xf2\xdf\xa2\x22\x7d\x2e\xe3\x6e\x20\xab\xe5\xdb\xa2\xaa\x48\xd3\x6e\xf2\x61\xea\x36\x54\x59\x9f\x28\x43\x9e\x40\x06\x6a\x90\x19\x0b\x2c\x72\x2b\x2d\x4b\x11\x79\x32\x8c\x32\xe7\x90\x31\xa6\xa2\x77\x1a\xa8\x0b\x36\x00\x65\x2e\xa2\x4a\x9a\x4d\xdc\x15\xd9\xe5\xcd\x36\xf7\xf7\x8f\x75\x79\x9c\x48\x25\x65\xda\xf8\x90\x62\xd4\xd4\xa8\xa8\xb8\x31\x18\x8d\x15\x49\x1b\x2b\x55\x02\x6d\x94\x11\x36\x05\x61\x82\x00\x14\x80\xa8\x22\x44\x1b\x85\x75\xcc\x80\xe5\xbf\x91\x9e\xa4\x4a\xc6\x40\x4a\x29\x8e\x58\xdb\x6d\xf2\xbc\x4b\x45\xec\x7a\xdd\x8d\xed\xb4\x1b\xe9\x2f\xf9\xc3\xf5\x79\x83\xe9\xcb\xd9\xfe\xe6\xec\xe6\xf3\xed\xb9\xda\xba\xf5\xe1\xfb\xd8\xe1\x57\x73\x75\xf7\xed\xe2\xe2\xc8\x5d\x11\xfb\x74\xfa\x62\x8c\x12\x00\x00\x33\xe0\xbb\x76\xd3\x0c\x4d\xd7\x4e\x98\x05\x14\x1a\x10\x40\x8b\x40\x63\x48\x1a\xb8\x08\x5e\x25\x19\x39\x3a\x1d\x1c\x98\x08\x02\xb9\x16\x80\x5a\x60\x72\x2c\x25\x54\x9a\x8a\xe4\x0d\xe7\x8c\x05\xea\x9d\x44\x6a\xb4\xa6\x40\xf1\x34\x21\xe4\x32\x34\x6d\x7d\x9a\xf1\xd7\x92\x53\xd3\x36\xe5\xd1\x3e\x0c\xb9\x27\xab\x25\xd3\x80\x94\x33\x29\x61\x46\x77\xf5\xb6\x90\xd5\x72\x7e\x5e\x1e\xcd\x8b\xed\xd0\xbf\xde\xbd\x3e\x4f\x5e\x91\xf8\x2b\x0c\x55\x45\x3e\xed\xdb\xdc\x5f\x7d\xb8\x48\xe8\x5c\xbc\xee\xf3\x4b\xd3\x8d\xe5\xee\xd0\xfe\x1f\x26\x80\x2b\x08\x5e\x32\x70\x80\x82\x26\xef\xad\xe2\x10\xad\xf1\x56\x29\x4d\xad\x00\x94\xa0\xb5\x81\xe4\x28\xb2\x44\x79\x00\xcf\x5d\x44\xf0\x3c\x88\xc0\x79\x70\x7f\xf2\x5e\x6e\xfb\xdb\xfc\x63\xd2\xaf\x40\x6b\x41\xf9\x47\xc7\xbf\xcb\xe3\xa2\xaa\xde\x8f\x11\x79\xa9\x77\xcd\xa6\x1e\xf2\x74\x14\x43\x3f\xe6\xc5\xb1\x4e\xca\x50\x0f\xe3\x64\x14\x29\xe3\x7a\x9d\x4b\x39\x5e\xc7\x30\x7b\xd4\xe7\xf2\xdc\xb5\x25\x93\xc5\xfb\xcf\x00\x00\x00\xff\xff\xe6\xf4\x08\x98\x52\x03\x00\x00")
+
+func methodLedgerLedger_entryEscrowWebsocketResponseJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryEscrowWebsocketResponseJson,
+		"method.ledger.ledger_entry-escrow.websocket.response.json",
+	)
+}
+
+func methodLedgerLedger_entryEscrowWebsocketResponseJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryEscrowWebsocketResponseJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-escrow.websocket.response.json", size: 850, mode: os.FileMode(420), modTime: time.Unix(1620006980, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryIndexJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x3c\xcd\xc1\x8a\x83\x30\x10\x80\xe1\xf3\xe4\x29\x64\xce\x7b\x88\x93\x6c\x26\x78\xd3\x89\x79\x89\x65\x29\x81\x84\x56\x50\x5b\xac\x94\x16\xf1\xdd\x8b\x87\xf6\xfe\xf3\x7f\x9b\x02\x9c\xca\x7a\xb9\x66\x6c\x2a\x1c\x4b\x3e\x97\xe5\x54\xe6\x75\x79\xe1\x8f\x02\xbc\xa5\x25\x4d\x77\x6c\xaa\x3f\x05\xb0\x29\x00\xc0\x61\xce\xe5\x79\xc4\x1c\x3a\xcd\xde\x8b\x26\x1d\x35\xb1\xd7\xad\x63\x13\x84\x2d\xff\x72\x24\xe3\xc9\xc4\xd6\xe8\xda\x4a\xed\x9d\xeb\x99\x44\xac\x04\xdf\x11\x39\x09\xae\x8f\xf6\x00\x00\x3e\xe6\x77\xfb\x48\xe3\x90\xd3\x5a\x32\x2a\x80\x5d\xc1\xbf\xda\xdf\x01\x00\x00\xff\xff\x32\x7f\x6e\xbb\xa5\x00\x00\x00")
+
+func methodLedgerLedger_entryIndexJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryIndexJsonrpcRequestJson,
+		"method.ledger.ledger_entry-index.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryIndexJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryIndexJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-index.jsonrpc.request.json", size: 165, mode: os.FileMode(420), modTime: time.Unix(1620006175, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryIndexWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x3c\xcc\xc1\x0a\xc2\x30\x0c\x00\xd0\xf3\xf6\x15\x92\xb3\x87\x2c\xad\x4d\xf0\xb6\xa5\xeb\x6f\x48\xb1\x41\x06\x5b\x85\x31\x44\x11\xff\x5d\x14\xf1\xfc\xe0\x3d\xdb\x06\xce\xd7\x65\xc9\xb5\xc0\x71\x07\xb3\x95\x8b\xad\x27\xab\xdb\xfa\x80\x7d\xdb\xc0\x54\x8b\xdd\x3f\xc2\x71\x40\x16\x51\x24\x4c\x48\x2c\xd8\x07\x76\x51\xd9\xf3\x81\x13\x39\x21\x97\x7a\x87\x9d\xd7\x4e\x42\x18\x99\x54\xbd\x46\x19\x88\x82\xc6\x30\x26\xff\xdd\x7e\xfd\x3f\xbd\xe5\x79\x2a\x79\xb3\x02\xed\xeb\x1d\x00\x00\xff\xff\x4f\xb6\xd9\xa2\x8a\x00\x00\x00")
+
+func methodLedgerLedger_entryIndexWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryIndexWebsocketRequestJson,
+		"method.ledger.ledger_entry-index.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryIndexWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryIndexWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-index.websocket.request.json", size: 138, mode: os.FileMode(420), modTime: time.Unix(1620006159, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryOfferJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8d\x41\x8b\xc2\x30\x10\x46\xcf\x33\xbf\x22\xcc\x79\x2f\xdb\x65\x41\x73\x14\x54\xe8\x4d\x14\x69\x15\x91\xd0\x4c\x34\xd0\x26\x35\x4d\xad\x52\xfa\xdf\x25\x05\x8f\xef\x83\xf7\xbe\x11\x81\x1a\x8e\x77\xaf\x49\x0a\xaa\x59\xdf\x38\x5c\xd9\xc5\xf0\xa6\x1f\x04\x6a\x55\x50\x4d\x47\x52\x9c\x11\x60\x44\x00\x20\x6f\x0c\x07\x92\x62\x26\x20\x55\x55\xbe\x77\x31\xd9\xc1\xfc\xae\xec\x96\x8b\x61\xd8\x79\xbb\x38\x65\x3d\x6f\xca\xc3\xba\xd8\x0f\x7d\x5e\x9a\x63\x96\xb7\x2e\x35\x93\xd4\xf1\x83\xa4\xf8\xfb\x5f\x26\x9c\xe6\xf1\xfb\x6d\x9d\xe6\x57\xaa\x3d\x55\x6d\xb5\x8a\xac\x09\x01\x26\x84\x0b\x4e\x9f\x00\x00\x00\xff\xff\xb4\x43\x0c\x60\xad\x00\x00\x00")
+
+func methodLedgerLedger_entryOfferJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryOfferJsonrpcRequestJson,
+		"method.ledger.ledger_entry-offer.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryOfferJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryOfferJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-offer.jsonrpc.request.json", size: 173, mode: os.FileMode(420), modTime: time.Unix(1620005098, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryOfferWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xcd\x41\x0b\x82\x30\x18\xc6\xf1\xf3\xf6\x29\xe4\x3d\x77\xc9\x08\xca\x63\x50\x81\xb7\x28\x42\xbb\xc8\x70\xcf\x64\xa0\x9b\xad\xd9\x0c\xf1\xbb\xc7\xac\xf3\xfb\x7b\xff\xcf\xc4\x19\x69\x49\x59\x42\x18\x45\xd7\xb7\xa8\x1a\xf8\xca\x2a\x05\x47\x2b\xce\xa8\xb6\x5d\x27\xcc\x02\x5a\xc8\x06\xae\x82\xf1\xee\xb3\xdc\x7e\x2a\x4b\x26\xce\x18\x89\xba\xb6\x83\xf1\x11\x3a\xb5\x3e\xe8\x33\x8a\x10\x2e\x56\xef\x1e\xe9\x80\x53\x79\x3b\x16\xd7\x30\xe4\xa5\xba\xa7\x79\x6f\xe2\x3b\xa3\x17\x9e\x94\x25\x9b\xed\x9e\xb3\x39\xf6\xfe\x03\xda\x48\x8c\xb1\xf3\x16\xad\x96\xc2\x43\x12\x9f\xbf\x01\x00\x00\xff\xff\x7d\xf1\x48\xb4\xa8\x00\x00\x00")
+
+func methodLedgerLedger_entryOfferWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryOfferWebsocketRequestJson,
+		"method.ledger.ledger_entry-offer.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryOfferWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryOfferWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-offer.websocket.request.json", size: 168, mode: os.FileMode(420), modTime: time.Unix(1620005078, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryPayment_channelJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xcd\x41\xaa\x83\x30\x14\x85\xe1\xf1\xcd\x2a\x24\xe3\x37\xd0\x67\xcc\x35\xce\x8c\x49\x36\x51\x8a\x84\xe6\x52\x05\x4d\x8b\x0d\xa5\x22\xee\xbd\x64\xd0\xe9\x81\xf3\x7f\x07\x03\xbe\x52\x9a\x1e\x81\x77\x05\x5f\x28\xdc\x69\x1b\x29\xa6\x6d\xe7\x7f\x0c\xf8\xd3\x6f\x7e\x7d\xf1\xae\xb8\x30\x80\x83\x01\xe4\x69\x5f\x29\xa6\xf1\x36\xf9\x18\x69\xc9\xb7\x01\x9d\xac\x05\x2a\xa1\x51\x19\x2d\x4a\xdb\x62\x85\xaa\x57\xa6\xd2\xae\x6c\x4c\xd9\xa0\xc2\xde\xa2\x55\xff\xc6\xb5\x56\xd5\xce\x48\xd9\x48\xdb\x0e\x42\xdb\xba\xb7\x98\x29\x80\x9f\x3e\xc7\x40\x9f\x9c\x7d\xfb\x65\x0e\x3e\x51\xe0\x0c\xe0\x64\x70\x65\xe7\x37\x00\x00\xff\xff\x2c\xb8\xf7\xac\xaf\x00\x00\x00")
+
+func methodLedgerLedger_entryPayment_channelJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryPayment_channelJsonrpcRequestJson,
+		"method.ledger.ledger_entry-payment_channel.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryPayment_channelJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryPayment_channelJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-payment_channel.jsonrpc.request.json", size: 175, mode: os.FileMode(420), modTime: time.Unix(1620005432, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryPayment_channelWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xcd\x41\xaa\x83\x30\x14\x85\xe1\xb1\xae\x42\x32\x7e\x03\x7d\xc6\x5c\xe3\xcc\x98\x64\x1b\xe1\x62\x2e\x56\x48\x52\x91\x50\x94\xd2\xbd\x97\x4a\x3b\x3e\x3f\xdf\x79\x96\x05\x5b\x3d\x1b\x2a\x46\x07\xc6\x2d\x90\x5b\x28\xbb\x0d\xcf\xf9\x86\x29\x51\x60\x7f\x65\xc1\xe6\x7b\x8c\x98\xae\x2a\x90\x5f\x68\x77\x94\xf2\x7e\x5e\xdb\x86\x67\xa4\x94\xdd\xaf\x1f\x2a\x36\x81\x15\x2d\x07\xc9\x15\x48\xad\x78\x6d\x7a\x68\x40\x8e\x52\x37\xca\xd6\x9d\xae\x3b\x90\x30\x1a\x30\xf2\x5f\xdb\xde\xc8\xd6\x6a\x21\x3a\x61\xfa\x89\x2b\xd3\x8e\x06\x2e\xf7\x7b\xb4\x26\x4f\xc7\x07\x7d\x60\x58\x3d\x66\xf2\xac\x7c\xbd\x03\x00\x00\xff\xff\x6b\x01\x29\x64\xb5\x00\x00\x00")
+
+func methodLedgerLedger_entryPayment_channelWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryPayment_channelWebsocketRequestJson,
+		"method.ledger.ledger_entry-payment_channel.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryPayment_channelWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryPayment_channelWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-payment_channel.websocket.request.json", size: 181, mode: os.FileMode(420), modTime: time.Unix(1620005415, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryRipple_stateJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\xcf\xbd\x6a\xc3\x30\x10\xc0\xf1\xf9\xf4\x14\xe6\xe6\x2e\x71\x96\xe2\xcd\xa1\x1f\x10\xda\xc1\x38\x6d\xec\x96\x10\x84\x74\x69\xd5\x3a\xb2\x90\xa5\xaa\x89\xf1\xbb\x07\xc9\x78\xd5\xff\x27\xee\x6e\x64\x80\x67\x72\xdf\xbd\xc4\x22\xc3\x8e\xe4\x17\xd9\x23\x69\x67\x2f\x78\xc7\x00\x0d\xb7\xfc\x3c\x60\x91\x7d\x32\x80\x91\x01\x00\x5a\x65\x4c\x47\xc7\xc1\x71\x47\x58\x64\xe9\x11\x90\x0b\xd1\x7b\xed\x16\x9a\xe0\x69\xb5\x51\xcf\xd4\x84\x50\xf5\xea\xfe\x23\xf7\xf4\xd4\xee\x1e\x9b\x3a\xf8\x6d\x7b\x7a\xcf\xb7\x46\xc7\x11\x33\x1d\xca\xfc\xc5\x5c\x3d\x0f\x14\xea\x4d\xd5\xfc\xaa\x1f\xbf\x6e\xab\xdd\xeb\x75\xbf\x5a\x9b\xb2\x94\x7b\x4c\xf2\x30\x7f\x40\xe1\xad\x25\x2d\x2e\x71\xe7\xb7\xfa\x21\xc5\x29\xb5\xe5\x04\xa5\x25\xfd\xc7\xfc\xc7\x3b\x25\xb9\x23\x19\xd1\xc4\xe0\xc0\xa6\x5b\x00\x00\x00\xff\xff\x5e\x9b\x7b\xb1\xf4\x00\x00\x00")
+
+func methodLedgerLedger_entryRipple_stateJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryRipple_stateJsonrpcRequestJson,
+		"method.ledger.ledger_entry-ripple_state.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryRipple_stateJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryRipple_stateJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-ripple_state.jsonrpc.request.json", size: 244, mode: os.FileMode(420), modTime: time.Unix(1620005971, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryRipple_stateWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x2c\xce\xbb\x6a\xc3\x30\x14\xc6\xf1\xf9\xe8\x29\xcc\x99\xbb\xc4\x59\x8a\x37\x87\x5e\x20\xb4\x83\x71\xda\xd8\x2d\x45\x08\xe9\x24\xa8\x95\x65\x21\x4b\x55\x2e\xe4\xdd\x8b\xec\xce\xdf\x8f\x8f\xff\x95\x01\x6a\x85\x55\x81\x74\x12\x83\x33\xc4\x8f\x14\xb8\xd7\xce\x19\x9a\x82\x08\x84\x77\x0c\x50\x8e\xc3\x20\xec\xcc\x0c\xa9\x23\x79\x4e\x36\xf8\xf3\xbc\x2d\x96\x2f\xb8\x2a\xae\x0c\x00\x85\x94\x63\xb4\x61\xc2\xaa\xf8\x64\x00\x80\xfe\xb0\xda\xe8\x67\xea\x52\x6a\x46\x7d\xff\x51\x46\x7a\xea\x77\x8f\x5d\x9b\xe2\xb6\x3f\xbc\x97\x5b\x67\xf3\x57\x86\x53\x5d\xbe\xb8\x4b\x14\x89\x52\xbb\x69\xba\x1f\xfd\x1d\xd7\x7d\xb3\x7b\xbd\xec\x57\x6b\x57\xd7\x6a\x8f\x0c\xe0\x2b\x63\x94\xd1\x7b\xb2\xf2\x9c\xb3\xde\xda\x07\x64\x70\xcb\x41\xff\x85\xda\x2a\x3a\xe5\xe9\x57\x18\xad\x44\x20\x85\xec\xf6\x17\x00\x00\xff\xff\x9a\x21\x3e\x0f\xef\x00\x00\x00")
+
+func methodLedgerLedger_entryRipple_stateWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryRipple_stateWebsocketRequestJson,
+		"method.ledger.ledger_entry-ripple_state.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryRipple_stateWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryRipple_stateWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-ripple_state.websocket.request.json", size: 239, mode: os.FileMode(420), modTime: time.Unix(1620005990, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryTicketJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x44\xce\x31\xcb\xc2\x30\x10\xc6\xf1\xf9\xee\x53\x84\x9b\xdf\xe5\xad\x8b\x64\x14\x54\xe8\x26\x8a\xb4\x8a\x94\xd0\x5c\x35\xd8\xa6\x35\x4d\x8d\x52\xfa\xdd\x25\x05\x71\x3c\xfe\xdc\x8f\x67\x44\xa0\x86\xfd\xad\xd5\x24\x05\xd5\xac\xaf\xec\x0a\xb6\xde\xbd\xe9\x0f\x81\x3a\xe5\x54\xd3\x93\x14\x67\x04\x18\x11\x00\xc8\x9b\xf2\xce\x9e\xa4\x98\x4f\xa0\x36\x58\x76\xf1\xd9\x55\xff\x2b\xb3\xe5\x2c\x84\x5d\x6b\x96\xa7\x64\xe0\x4d\x7e\x58\x67\xfb\x30\xa4\x79\x75\x4c\xd2\xce\x46\xf2\x47\x14\x3d\x3f\x06\xb6\x25\x93\x14\xc9\x22\x96\x69\xee\xdf\x15\xc6\x6a\x7e\x45\xf8\xa9\x6a\xa3\x95\x67\x4d\x08\x30\x21\x5c\x70\xfa\x04\x00\x00\xff\xff\x9b\x17\xf5\x84\xb7\x00\x00\x00")
+
+func methodLedgerLedger_entryTicketJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryTicketJsonrpcRequestJson,
+		"method.ledger.ledger_entry-ticket.jsonrpc.request.json",
+	)
+}
+
+func methodLedgerLedger_entryTicketJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryTicketJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-ticket.jsonrpc.request.json", size: 183, mode: os.FileMode(420), modTime: time.Unix(1620025646, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x64\x90\xbd\x6e\xb3\x30\x18\x46\x67\x73\x15\xc8\xf3\x37\xc4\x26\x04\x9b\xcd\x40\xfc\x49\xd9\xfa\xa3\x2a\xe9\x12\x59\xe1\x4d\x82\x0a\xa6\xf5\x4f\x69\x15\x71\xef\x15\x0e\x4d\x2b\x75\xf5\xd1\x7b\x7c\xf4\x5c\x22\x84\x0d\x58\xdf\x3a\x9c\xc7\x97\x08\x21\x0c\xc6\xf4\x06\xe7\x31\xee\x54\x7b\xec\x4d\x07\xf5\x3d\xbc\x79\xb0\x0e\xff\xbb\xe1\x7d\x07\xd6\xaa\x13\xe0\x3c\xd6\xbe\x6d\x03\x68\xa1\x3e\x81\xd9\x9f\x95\x3d\x4f\xd7\x25\x63\x99\xe4\xe9\xb2\xac\x38\x5d\x94\x52\x26\xeb\x4a\xa4\x05\xcd\x44\xca\x16\x92\x94\x52\x96\x6c\xc5\x0b\x5e\x11\x26\x52\x2e\x16\x9c\x52\x56\x25\x15\x21\x6b\x91\x89\xac\x90\x02\xff\x96\x36\xba\x86\x0f\x9c\xc7\xab\x24\x21\x64\xc9\xd3\xc0\xcc\x9c\x75\xed\x46\xf8\xd0\x77\x9d\xd2\xf5\xf4\xf9\x7c\x06\xda\x99\xcf\x20\xfa\x63\xc2\xef\xaa\x6d\x6a\xe5\xa0\x9e\xb9\x6b\x0e\x2f\x70\x93\x21\xdc\x0f\x1a\xc2\x0c\xe6\x48\x8a\xe6\x3f\x6c\x87\xe1\xae\x6f\xd8\x33\xf5\x20\x77\x8f\xeb\xed\xc3\xe0\x37\xbb\xe3\x13\xdd\xbc\xea\xab\xe1\x5b\xb1\xb7\x53\x97\x3e\x4c\xe3\xd0\x64\x22\x63\x84\xd0\x18\x92\xad\x53\xce\xdb\xc9\x7a\x5d\x39\x3c\xfe\x94\xe4\xb1\x33\x1e\x22\x34\x46\xe3\x57\x00\x00\x00\xff\xff\xca\xcb\xba\xc3\x98\x01\x00\x00")
+
+func methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson,
+		"method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json",
+	)
+}
+
+func methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json", size: 408, mode: os.FileMode(420), modTime: time.Unix(1620025519, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodLedgerLedger_entryTicketWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x34\x8d\xc1\x0b\x82\x30\x1c\x85\xcf\xdb\x5f\x21\xbf\x73\x97\xec\x12\x1e\x83\x0a\xbc\x45\x11\xda\x65\x0c\xf7\x94\x91\x4e\x5b\x5b\x33\xc4\xff\x3d\x26\x76\x7e\xdf\xf7\xbd\x89\x33\xd2\x8a\xb2\x84\x30\xca\x6e\x68\x21\x1a\x38\xe1\x74\xf5\x84\xa3\x0d\x67\x54\xf5\x5d\x27\xcd\x42\xb4\x50\x0d\xac\x80\x71\xf6\xbb\x6c\x2b\x96\x25\x13\x67\x8c\xfa\x60\x60\x23\x67\xeb\xed\x41\x9f\x51\x84\x70\xe9\xf5\xfe\x91\x7a\x9c\xca\xdb\xb1\xb8\x06\x9f\x97\xf5\x3d\xcd\x07\x13\xed\xbf\x2e\xde\x78\x79\x98\x0a\x94\x25\xe9\x8e\xb3\x39\x96\xd7\x2b\x6d\x14\xc6\x98\xfc\xc8\x56\x2b\xe9\xa0\x88\xcf\xbf\x00\x00\x00\xff\xff\x86\x6c\x06\xff\xb3\x00\x00\x00")
+
+func methodLedgerLedger_entryTicketWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodLedgerLedger_entryTicketWebsocketRequestJson,
+		"method.ledger.ledger_entry-ticket.websocket.request.json",
+	)
+}
+
+func methodLedgerLedger_entryTicketWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodLedgerLedger_entryTicketWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.ledger.ledger_entry-ticket.websocket.request.json", size: 179, mode: os.FileMode(420), modTime: time.Unix(1620005776, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -933,7 +1563,7 @@ func modelOfferJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "model.offer.json", size: 602, mode: os.FileMode(420), modTime: time.Unix(1619919035, 0)}
+	info := bindataFileInfo{name: "model.offer.json", size: 602, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -953,7 +1583,7 @@ func modelPaychannelJson() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "model.paychannel.json", size: 632, mode: os.FileMode(420), modTime: time.Unix(1619919220, 0)}
+	info := bindataFileInfo{name: "model.paychannel.json", size: 632, mode: os.FileMode(420), modTime: time.Unix(1619953265, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -1010,48 +1640,78 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"method.account.account_channels.commandline.response.json":      methodAccountAccount_channelsCommandlineResponseJson,
-	"method.account.account_channels.jsonrpc.request.json":           methodAccountAccount_channelsJsonrpcRequestJson,
-	"method.account.account_channels.jsonrpc.response.json":          methodAccountAccount_channelsJsonrpcResponseJson,
-	"method.account.account_channels.websocket.request.json":         methodAccountAccount_channelsWebsocketRequestJson,
-	"method.account.account_channels.websocket.response.json":        methodAccountAccount_channelsWebsocketResponseJson,
-	"method.account.account_currencies.commandline.response.json":    methodAccountAccount_currenciesCommandlineResponseJson,
-	"method.account.account_currencies.jsonrpc.request.json":         methodAccountAccount_currenciesJsonrpcRequestJson,
-	"method.account.account_currencies.jsonrpc.response.json":        methodAccountAccount_currenciesJsonrpcResponseJson,
-	"method.account.account_currencies.websocket.request.json":       methodAccountAccount_currenciesWebsocketRequestJson,
-	"method.account.account_currencies.websocket.response.json":      methodAccountAccount_currenciesWebsocketResponseJson,
-	"method.account.account_info.commandline.response.json":          methodAccountAccount_infoCommandlineResponseJson,
-	"method.account.account_info.jsonrpc.request.json":               methodAccountAccount_infoJsonrpcRequestJson,
-	"method.account.account_info.jsonrpc.response.json":              methodAccountAccount_infoJsonrpcResponseJson,
-	"method.account.account_info.websocket.request.json":             methodAccountAccount_infoWebsocketRequestJson,
-	"method.account.account_info.websocket.response.json":            methodAccountAccount_infoWebsocketResponseJson,
-	"method.account.account_lines.commandline.response.json":         methodAccountAccount_linesCommandlineResponseJson,
-	"method.account.account_lines.jsonrpc.request.json":              methodAccountAccount_linesJsonrpcRequestJson,
-	"method.account.account_lines.jsonrpc.response.json":             methodAccountAccount_linesJsonrpcResponseJson,
-	"method.account.account_lines.websocket.request.json":            methodAccountAccount_linesWebsocketRequestJson,
-	"method.account.account_lines.websocket.response.json":           methodAccountAccount_linesWebsocketResponseJson,
-	"method.ledger.ledger.commandline.response.json":                 methodLedgerLedgerCommandlineResponseJson,
-	"method.ledger.ledger.jsonrpc.request.json":                      methodLedgerLedgerJsonrpcRequestJson,
-	"method.ledger.ledger.jsonrpc.response.json":                     methodLedgerLedgerJsonrpcResponseJson,
-	"method.ledger.ledger.websocket.request.json":                    methodLedgerLedgerWebsocketRequestJson,
-	"method.ledger.ledger.websocket.response.json":                   methodLedgerLedgerWebsocketResponseJson,
-	"method.ledger.ledger_closed.commandline.response.json":          methodLedgerLedger_closedCommandlineResponseJson,
-	"method.ledger.ledger_closed.jsonrpc.request.json":               methodLedgerLedger_closedJsonrpcRequestJson,
-	"method.ledger.ledger_closed.jsonrpc.response.json":              methodLedgerLedger_closedJsonrpcResponseJson,
-	"method.ledger.ledger_closed.websocket.request.json":             methodLedgerLedger_closedWebsocketRequestJson,
-	"method.ledger.ledger_closed.websocket.response.json":            methodLedgerLedger_closedWebsocketResponseJson,
-	"method.ledger.ledger_current.commandline.response.json":         methodLedgerLedger_currentCommandlineResponseJson,
-	"method.ledger.ledger_current.jsonrpc.request.json":              methodLedgerLedger_currentJsonrpcRequestJson,
-	"method.ledger.ledger_current.jsonrpc.response.json":             methodLedgerLedger_currentJsonrpcResponseJson,
-	"method.ledger.ledger_current.websocket.request.json":            methodLedgerLedger_currentWebsocketRequestJson,
-	"method.ledger.ledger_current.websocket.response.json":           methodLedgerLedger_currentWebsocketResponseJson,
-	"method.ledger.ledger_data.jsonrpc.request.json":                 methodLedgerLedger_dataJsonrpcRequestJson,
-	"method.ledger.ledger_data.jsonrpc.response.binary-true.json":    methodLedgerLedger_dataJsonrpcResponseBinaryTrueJson,
-	"method.ledger.ledger_data.websocket.request.json":               methodLedgerLedger_dataWebsocketRequestJson,
-	"method.ledger.ledger_data.websocket.response.binary-false.json": methodLedgerLedger_dataWebsocketResponseBinaryFalseJson,
-	"method.ledger.ledger_data.websocket.response.binary-true.json":  methodLedgerLedger_dataWebsocketResponseBinaryTrueJson,
-	"model.offer.json":      modelOfferJson,
-	"model.paychannel.json": modelPaychannelJson,
+	"bindata.go":                                                                     bindataGo,
+	"files.go":                                                                       filesGo,
+	"files_test.go":                                                                  files_testGo,
+	"method.account.account_channels.commandline.response.json":                      methodAccountAccount_channelsCommandlineResponseJson,
+	"method.account.account_channels.jsonrpc.request.json":                           methodAccountAccount_channelsJsonrpcRequestJson,
+	"method.account.account_channels.jsonrpc.response.error-missing-account.json":    methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson,
+	"method.account.account_channels.jsonrpc.response.json":                          methodAccountAccount_channelsJsonrpcResponseJson,
+	"method.account.account_channels.websocket.request.json":                         methodAccountAccount_channelsWebsocketRequestJson,
+	"method.account.account_channels.websocket.response.json":                        methodAccountAccount_channelsWebsocketResponseJson,
+	"method.account.account_currencies.commandline.response.json":                    methodAccountAccount_currenciesCommandlineResponseJson,
+	"method.account.account_currencies.jsonrpc.request.json":                         methodAccountAccount_currenciesJsonrpcRequestJson,
+	"method.account.account_currencies.jsonrpc.response.json":                        methodAccountAccount_currenciesJsonrpcResponseJson,
+	"method.account.account_currencies.websocket.request.json":                       methodAccountAccount_currenciesWebsocketRequestJson,
+	"method.account.account_currencies.websocket.response.json":                      methodAccountAccount_currenciesWebsocketResponseJson,
+	"method.account.account_info.commandline.response.json":                          methodAccountAccount_infoCommandlineResponseJson,
+	"method.account.account_info.jsonrpc.request.json":                               methodAccountAccount_infoJsonrpcRequestJson,
+	"method.account.account_info.jsonrpc.response.json":                              methodAccountAccount_infoJsonrpcResponseJson,
+	"method.account.account_info.websocket.request.json":                             methodAccountAccount_infoWebsocketRequestJson,
+	"method.account.account_info.websocket.response.json":                            methodAccountAccount_infoWebsocketResponseJson,
+	"method.account.account_lines.commandline.response.json":                         methodAccountAccount_linesCommandlineResponseJson,
+	"method.account.account_lines.jsonrpc.request.json":                              methodAccountAccount_linesJsonrpcRequestJson,
+	"method.account.account_lines.jsonrpc.response.json":                             methodAccountAccount_linesJsonrpcResponseJson,
+	"method.account.account_lines.websocket.request.json":                            methodAccountAccount_linesWebsocketRequestJson,
+	"method.account.account_lines.websocket.response.json":                           methodAccountAccount_linesWebsocketResponseJson,
+	"method.ledger.ledger.commandline.response.json":                                 methodLedgerLedgerCommandlineResponseJson,
+	"method.ledger.ledger.jsonrpc.request.json":                                      methodLedgerLedgerJsonrpcRequestJson,
+	"method.ledger.ledger.jsonrpc.response.json":                                     methodLedgerLedgerJsonrpcResponseJson,
+	"method.ledger.ledger.websocket.request.json":                                    methodLedgerLedgerWebsocketRequestJson,
+	"method.ledger.ledger.websocket.response.json":                                   methodLedgerLedgerWebsocketResponseJson,
+	"method.ledger.ledger_closed.commandline.response.json":                          methodLedgerLedger_closedCommandlineResponseJson,
+	"method.ledger.ledger_closed.jsonrpc.request.json":                               methodLedgerLedger_closedJsonrpcRequestJson,
+	"method.ledger.ledger_closed.jsonrpc.response.json":                              methodLedgerLedger_closedJsonrpcResponseJson,
+	"method.ledger.ledger_closed.websocket.request.json":                             methodLedgerLedger_closedWebsocketRequestJson,
+	"method.ledger.ledger_closed.websocket.response.json":                            methodLedgerLedger_closedWebsocketResponseJson,
+	"method.ledger.ledger_current.commandline.response.json":                         methodLedgerLedger_currentCommandlineResponseJson,
+	"method.ledger.ledger_current.jsonrpc.request.json":                              methodLedgerLedger_currentJsonrpcRequestJson,
+	"method.ledger.ledger_current.jsonrpc.response.json":                             methodLedgerLedger_currentJsonrpcResponseJson,
+	"method.ledger.ledger_current.websocket.request.json":                            methodLedgerLedger_currentWebsocketRequestJson,
+	"method.ledger.ledger_current.websocket.response.json":                           methodLedgerLedger_currentWebsocketResponseJson,
+	"method.ledger.ledger_data.jsonrpc.request.error-not-found.json":                 methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJson,
+	"method.ledger.ledger_data.jsonrpc.request.json":                                 methodLedgerLedger_dataJsonrpcRequestJson,
+	"method.ledger.ledger_data.jsonrpc.response.binary-true.json":                    methodLedgerLedger_dataJsonrpcResponseBinaryTrueJson,
+	"method.ledger.ledger_data.jsonrpc.response.error-not-found.json":                methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJson,
+	"method.ledger.ledger_data.jsonrpc.response.json":                                methodLedgerLedger_dataJsonrpcResponseJson,
+	"method.ledger.ledger_data.websocket.request.json":                               methodLedgerLedger_dataWebsocketRequestJson,
+	"method.ledger.ledger_data.websocket.response.binary-false.json":                 methodLedgerLedger_dataWebsocketResponseBinaryFalseJson,
+	"method.ledger.ledger_data.websocket.response.binary-true.json":                  methodLedgerLedger_dataWebsocketResponseBinaryTrueJson,
+	"method.ledger.ledger_entry-account_root.jsonrpc.request.json":                   methodLedgerLedger_entryAccount_rootJsonrpcRequestJson,
+	"method.ledger.ledger_entry-account_root.websocket.request.json":                 methodLedgerLedger_entryAccount_rootWebsocketRequestJson,
+	"method.ledger.ledger_entry-check.jsonrpc.request.json":                          methodLedgerLedger_entryCheckJsonrpcRequestJson,
+	"method.ledger.ledger_entry-check.websocket.request.json":                        methodLedgerLedger_entryCheckWebsocketRequestJson,
+	"method.ledger.ledger_entry-deposit_preauth.jsonrpc.request.json":                methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJson,
+	"method.ledger.ledger_entry-deposit_preauth.websocket.request.json":              methodLedgerLedger_entryDeposit_preauthWebsocketRequestJson,
+	"method.ledger.ledger_entry-directory.jsonrpc.request.json":                      methodLedgerLedger_entryDirectoryJsonrpcRequestJson,
+	"method.ledger.ledger_entry-directory.websocket.request.json":                    methodLedgerLedger_entryDirectoryWebsocketRequestJson,
+	"method.ledger.ledger_entry-escrow.jsonrpc.request.json":                         methodLedgerLedger_entryEscrowJsonrpcRequestJson,
+	"method.ledger.ledger_entry-escrow.jsonrpc.response.error-malformedRequest.json": methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJson,
+	"method.ledger.ledger_entry-escrow.websocket.request.json":                       methodLedgerLedger_entryEscrowWebsocketRequestJson,
+	"method.ledger.ledger_entry-escrow.websocket.response.json":                      methodLedgerLedger_entryEscrowWebsocketResponseJson,
+	"method.ledger.ledger_entry-index.jsonrpc.request.json":                          methodLedgerLedger_entryIndexJsonrpcRequestJson,
+	"method.ledger.ledger_entry-index.websocket.request.json":                        methodLedgerLedger_entryIndexWebsocketRequestJson,
+	"method.ledger.ledger_entry-offer.jsonrpc.request.json":                          methodLedgerLedger_entryOfferJsonrpcRequestJson,
+	"method.ledger.ledger_entry-offer.websocket.request.json":                        methodLedgerLedger_entryOfferWebsocketRequestJson,
+	"method.ledger.ledger_entry-payment_channel.jsonrpc.request.json":                methodLedgerLedger_entryPayment_channelJsonrpcRequestJson,
+	"method.ledger.ledger_entry-payment_channel.websocket.request.json":              methodLedgerLedger_entryPayment_channelWebsocketRequestJson,
+	"method.ledger.ledger_entry-ripple_state.jsonrpc.request.json":                   methodLedgerLedger_entryRipple_stateJsonrpcRequestJson,
+	"method.ledger.ledger_entry-ripple_state.websocket.request.json":                 methodLedgerLedger_entryRipple_stateWebsocketRequestJson,
+	"method.ledger.ledger_entry-ticket.jsonrpc.request.json":                         methodLedgerLedger_entryTicketJsonrpcRequestJson,
+	"method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json": methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson,
+	"method.ledger.ledger_entry-ticket.websocket.request.json":                       methodLedgerLedger_entryTicketWebsocketRequestJson,
+	"model.offer.json":                                                               modelOfferJson,
+	"model.paychannel.json":                                                          modelPaychannelJson,
 }
 
 // AssetDir returns the file names below a certain
@@ -1095,48 +1755,78 @@ type bintree struct {
 }
 
 var _bintree = &bintree{nil, map[string]*bintree{
-	"method.account.account_channels.commandline.response.json":      &bintree{methodAccountAccount_channelsCommandlineResponseJson, map[string]*bintree{}},
-	"method.account.account_channels.jsonrpc.request.json":           &bintree{methodAccountAccount_channelsJsonrpcRequestJson, map[string]*bintree{}},
-	"method.account.account_channels.jsonrpc.response.json":          &bintree{methodAccountAccount_channelsJsonrpcResponseJson, map[string]*bintree{}},
-	"method.account.account_channels.websocket.request.json":         &bintree{methodAccountAccount_channelsWebsocketRequestJson, map[string]*bintree{}},
-	"method.account.account_channels.websocket.response.json":        &bintree{methodAccountAccount_channelsWebsocketResponseJson, map[string]*bintree{}},
-	"method.account.account_currencies.commandline.response.json":    &bintree{methodAccountAccount_currenciesCommandlineResponseJson, map[string]*bintree{}},
-	"method.account.account_currencies.jsonrpc.request.json":         &bintree{methodAccountAccount_currenciesJsonrpcRequestJson, map[string]*bintree{}},
-	"method.account.account_currencies.jsonrpc.response.json":        &bintree{methodAccountAccount_currenciesJsonrpcResponseJson, map[string]*bintree{}},
-	"method.account.account_currencies.websocket.request.json":       &bintree{methodAccountAccount_currenciesWebsocketRequestJson, map[string]*bintree{}},
-	"method.account.account_currencies.websocket.response.json":      &bintree{methodAccountAccount_currenciesWebsocketResponseJson, map[string]*bintree{}},
-	"method.account.account_info.commandline.response.json":          &bintree{methodAccountAccount_infoCommandlineResponseJson, map[string]*bintree{}},
-	"method.account.account_info.jsonrpc.request.json":               &bintree{methodAccountAccount_infoJsonrpcRequestJson, map[string]*bintree{}},
-	"method.account.account_info.jsonrpc.response.json":              &bintree{methodAccountAccount_infoJsonrpcResponseJson, map[string]*bintree{}},
-	"method.account.account_info.websocket.request.json":             &bintree{methodAccountAccount_infoWebsocketRequestJson, map[string]*bintree{}},
-	"method.account.account_info.websocket.response.json":            &bintree{methodAccountAccount_infoWebsocketResponseJson, map[string]*bintree{}},
-	"method.account.account_lines.commandline.response.json":         &bintree{methodAccountAccount_linesCommandlineResponseJson, map[string]*bintree{}},
-	"method.account.account_lines.jsonrpc.request.json":              &bintree{methodAccountAccount_linesJsonrpcRequestJson, map[string]*bintree{}},
-	"method.account.account_lines.jsonrpc.response.json":             &bintree{methodAccountAccount_linesJsonrpcResponseJson, map[string]*bintree{}},
-	"method.account.account_lines.websocket.request.json":            &bintree{methodAccountAccount_linesWebsocketRequestJson, map[string]*bintree{}},
-	"method.account.account_lines.websocket.response.json":           &bintree{methodAccountAccount_linesWebsocketResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger.commandline.response.json":                 &bintree{methodLedgerLedgerCommandlineResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger.jsonrpc.request.json":                      &bintree{methodLedgerLedgerJsonrpcRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger.jsonrpc.response.json":                     &bintree{methodLedgerLedgerJsonrpcResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger.websocket.request.json":                    &bintree{methodLedgerLedgerWebsocketRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger.websocket.response.json":                   &bintree{methodLedgerLedgerWebsocketResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_closed.commandline.response.json":          &bintree{methodLedgerLedger_closedCommandlineResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_closed.jsonrpc.request.json":               &bintree{methodLedgerLedger_closedJsonrpcRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_closed.jsonrpc.response.json":              &bintree{methodLedgerLedger_closedJsonrpcResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_closed.websocket.request.json":             &bintree{methodLedgerLedger_closedWebsocketRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_closed.websocket.response.json":            &bintree{methodLedgerLedger_closedWebsocketResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_current.commandline.response.json":         &bintree{methodLedgerLedger_currentCommandlineResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_current.jsonrpc.request.json":              &bintree{methodLedgerLedger_currentJsonrpcRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_current.jsonrpc.response.json":             &bintree{methodLedgerLedger_currentJsonrpcResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_current.websocket.request.json":            &bintree{methodLedgerLedger_currentWebsocketRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_current.websocket.response.json":           &bintree{methodLedgerLedger_currentWebsocketResponseJson, map[string]*bintree{}},
-	"method.ledger.ledger_data.jsonrpc.request.json":                 &bintree{methodLedgerLedger_dataJsonrpcRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_data.jsonrpc.response.binary-true.json":    &bintree{methodLedgerLedger_dataJsonrpcResponseBinaryTrueJson, map[string]*bintree{}},
-	"method.ledger.ledger_data.websocket.request.json":               &bintree{methodLedgerLedger_dataWebsocketRequestJson, map[string]*bintree{}},
-	"method.ledger.ledger_data.websocket.response.binary-false.json": &bintree{methodLedgerLedger_dataWebsocketResponseBinaryFalseJson, map[string]*bintree{}},
-	"method.ledger.ledger_data.websocket.response.binary-true.json":  &bintree{methodLedgerLedger_dataWebsocketResponseBinaryTrueJson, map[string]*bintree{}},
-	"model.offer.json":      &bintree{modelOfferJson, map[string]*bintree{}},
-	"model.paychannel.json": &bintree{modelPaychannelJson, map[string]*bintree{}},
+	"bindata.go":                                                                     &bintree{bindataGo, map[string]*bintree{}},
+	"files.go":                                                                       &bintree{filesGo, map[string]*bintree{}},
+	"files_test.go":                                                                  &bintree{files_testGo, map[string]*bintree{}},
+	"method.account.account_channels.commandline.response.json":                      &bintree{methodAccountAccount_channelsCommandlineResponseJson, map[string]*bintree{}},
+	"method.account.account_channels.jsonrpc.request.json":                           &bintree{methodAccountAccount_channelsJsonrpcRequestJson, map[string]*bintree{}},
+	"method.account.account_channels.jsonrpc.response.error-missing-account.json":    &bintree{methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson, map[string]*bintree{}},
+	"method.account.account_channels.jsonrpc.response.json":                          &bintree{methodAccountAccount_channelsJsonrpcResponseJson, map[string]*bintree{}},
+	"method.account.account_channels.websocket.request.json":                         &bintree{methodAccountAccount_channelsWebsocketRequestJson, map[string]*bintree{}},
+	"method.account.account_channels.websocket.response.json":                        &bintree{methodAccountAccount_channelsWebsocketResponseJson, map[string]*bintree{}},
+	"method.account.account_currencies.commandline.response.json":                    &bintree{methodAccountAccount_currenciesCommandlineResponseJson, map[string]*bintree{}},
+	"method.account.account_currencies.jsonrpc.request.json":                         &bintree{methodAccountAccount_currenciesJsonrpcRequestJson, map[string]*bintree{}},
+	"method.account.account_currencies.jsonrpc.response.json":                        &bintree{methodAccountAccount_currenciesJsonrpcResponseJson, map[string]*bintree{}},
+	"method.account.account_currencies.websocket.request.json":                       &bintree{methodAccountAccount_currenciesWebsocketRequestJson, map[string]*bintree{}},
+	"method.account.account_currencies.websocket.response.json":                      &bintree{methodAccountAccount_currenciesWebsocketResponseJson, map[string]*bintree{}},
+	"method.account.account_info.commandline.response.json":                          &bintree{methodAccountAccount_infoCommandlineResponseJson, map[string]*bintree{}},
+	"method.account.account_info.jsonrpc.request.json":                               &bintree{methodAccountAccount_infoJsonrpcRequestJson, map[string]*bintree{}},
+	"method.account.account_info.jsonrpc.response.json":                              &bintree{methodAccountAccount_infoJsonrpcResponseJson, map[string]*bintree{}},
+	"method.account.account_info.websocket.request.json":                             &bintree{methodAccountAccount_infoWebsocketRequestJson, map[string]*bintree{}},
+	"method.account.account_info.websocket.response.json":                            &bintree{methodAccountAccount_infoWebsocketResponseJson, map[string]*bintree{}},
+	"method.account.account_lines.commandline.response.json":                         &bintree{methodAccountAccount_linesCommandlineResponseJson, map[string]*bintree{}},
+	"method.account.account_lines.jsonrpc.request.json":                              &bintree{methodAccountAccount_linesJsonrpcRequestJson, map[string]*bintree{}},
+	"method.account.account_lines.jsonrpc.response.json":                             &bintree{methodAccountAccount_linesJsonrpcResponseJson, map[string]*bintree{}},
+	"method.account.account_lines.websocket.request.json":                            &bintree{methodAccountAccount_linesWebsocketRequestJson, map[string]*bintree{}},
+	"method.account.account_lines.websocket.response.json":                           &bintree{methodAccountAccount_linesWebsocketResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger.commandline.response.json":                                 &bintree{methodLedgerLedgerCommandlineResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger.jsonrpc.request.json":                                      &bintree{methodLedgerLedgerJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger.jsonrpc.response.json":                                     &bintree{methodLedgerLedgerJsonrpcResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger.websocket.request.json":                                    &bintree{methodLedgerLedgerWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger.websocket.response.json":                                   &bintree{methodLedgerLedgerWebsocketResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_closed.commandline.response.json":                          &bintree{methodLedgerLedger_closedCommandlineResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_closed.jsonrpc.request.json":                               &bintree{methodLedgerLedger_closedJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_closed.jsonrpc.response.json":                              &bintree{methodLedgerLedger_closedJsonrpcResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_closed.websocket.request.json":                             &bintree{methodLedgerLedger_closedWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_closed.websocket.response.json":                            &bintree{methodLedgerLedger_closedWebsocketResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_current.commandline.response.json":                         &bintree{methodLedgerLedger_currentCommandlineResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_current.jsonrpc.request.json":                              &bintree{methodLedgerLedger_currentJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_current.jsonrpc.response.json":                             &bintree{methodLedgerLedger_currentJsonrpcResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_current.websocket.request.json":                            &bintree{methodLedgerLedger_currentWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_current.websocket.response.json":                           &bintree{methodLedgerLedger_currentWebsocketResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.jsonrpc.request.error-not-found.json":                 &bintree{methodLedgerLedger_dataJsonrpcRequestErrorNotFoundJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.jsonrpc.request.json":                                 &bintree{methodLedgerLedger_dataJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.jsonrpc.response.binary-true.json":                    &bintree{methodLedgerLedger_dataJsonrpcResponseBinaryTrueJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.jsonrpc.response.error-not-found.json":                &bintree{methodLedgerLedger_dataJsonrpcResponseErrorNotFoundJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.jsonrpc.response.json":                                &bintree{methodLedgerLedger_dataJsonrpcResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.websocket.request.json":                               &bintree{methodLedgerLedger_dataWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.websocket.response.binary-false.json":                 &bintree{methodLedgerLedger_dataWebsocketResponseBinaryFalseJson, map[string]*bintree{}},
+	"method.ledger.ledger_data.websocket.response.binary-true.json":                  &bintree{methodLedgerLedger_dataWebsocketResponseBinaryTrueJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-account_root.jsonrpc.request.json":                   &bintree{methodLedgerLedger_entryAccount_rootJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-account_root.websocket.request.json":                 &bintree{methodLedgerLedger_entryAccount_rootWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-check.jsonrpc.request.json":                          &bintree{methodLedgerLedger_entryCheckJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-check.websocket.request.json":                        &bintree{methodLedgerLedger_entryCheckWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-deposit_preauth.jsonrpc.request.json":                &bintree{methodLedgerLedger_entryDeposit_preauthJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-deposit_preauth.websocket.request.json":              &bintree{methodLedgerLedger_entryDeposit_preauthWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-directory.jsonrpc.request.json":                      &bintree{methodLedgerLedger_entryDirectoryJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-directory.websocket.request.json":                    &bintree{methodLedgerLedger_entryDirectoryWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-escrow.jsonrpc.request.json":                         &bintree{methodLedgerLedger_entryEscrowJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-escrow.jsonrpc.response.error-malformedRequest.json": &bintree{methodLedgerLedger_entryEscrowJsonrpcResponseErrorMalformedrequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-escrow.websocket.request.json":                       &bintree{methodLedgerLedger_entryEscrowWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-escrow.websocket.response.json":                      &bintree{methodLedgerLedger_entryEscrowWebsocketResponseJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-index.jsonrpc.request.json":                          &bintree{methodLedgerLedger_entryIndexJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-index.websocket.request.json":                        &bintree{methodLedgerLedger_entryIndexWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-offer.jsonrpc.request.json":                          &bintree{methodLedgerLedger_entryOfferJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-offer.websocket.request.json":                        &bintree{methodLedgerLedger_entryOfferWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-payment_channel.jsonrpc.request.json":                &bintree{methodLedgerLedger_entryPayment_channelJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-payment_channel.websocket.request.json":              &bintree{methodLedgerLedger_entryPayment_channelWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-ripple_state.jsonrpc.request.json":                   &bintree{methodLedgerLedger_entryRipple_stateJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-ripple_state.websocket.request.json":                 &bintree{methodLedgerLedger_entryRipple_stateWebsocketRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-ticket.jsonrpc.request.json":                         &bintree{methodLedgerLedger_entryTicketJsonrpcRequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json": &bintree{methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson, map[string]*bintree{}},
+	"method.ledger.ledger_entry-ticket.websocket.request.json":                       &bintree{methodLedgerLedger_entryTicketWebsocketRequestJson, map[string]*bintree{}},
+	"model.offer.json":                                                               &bintree{modelOfferJson, map[string]*bintree{}},
+	"model.paychannel.json":                                                          &bintree{modelPaychannelJson, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory

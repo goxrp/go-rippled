@@ -5,18 +5,22 @@ import (
 	"io/ioutil"
 	"log"
 	"net/http"
+	"strings"
 
 	"github.com/grokify/simplego/encoding/jsonutil"
+	"github.com/grokify/simplego/fmt/fmtutil"
 	"github.com/grokify/simplego/net/http/httpsimple"
 	"github.com/jessevdk/go-flags"
 
+	gorippled "github.com/go-xrp/go-rippled"
 	"github.com/go-xrp/go-rippled/data"
 )
 
 type Options struct {
-	Method string `short:"m" long:"method" description:"Method" required:"true"`
-	Exec   []bool `short:"x" long:"exec" description:"Execute API Call"`
-	Pretty []bool `short:"p" long:"pretty" description:"Pretty Print Result"`
+	Method   string `short:"m" long:"method" description:"Method" required:"true"`
+	Category string `short:"c" long:"category" description:"Category"`
+	Exec     []bool `short:"x" long:"exec" description:"Execute API Call"`
+	Pretty   []bool `short:"p" long:"pretty" description:"Pretty Print Result"`
 }
 
 const (
@@ -27,10 +31,12 @@ func main() {
 	var opts Options
 	_, err := flags.Parse(&opts)
 	if err != nil {
+		methods := gorippled.MethodsPlus()
+		fmt.Printf("No Method Provided. Valid Methods [%s]\n", strings.Join(methods, ","))
 		log.Fatal(err)
 	}
 
-	bytes, err := data.ExampleJsonRequest(opts.Method)
+	bytes, err := data.ExampleJsonRequest(opts.Method, opts.Category)
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -42,6 +48,8 @@ func main() {
 			URL:    RippledJsonRpcUrl,
 			Body:   bytes,
 			IsJSON: true}
+
+		fmtutil.PrintJSON(req)
 
 		resp, err := httpsimple.Do(req)
 		if err != nil {

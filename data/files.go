@@ -4,6 +4,8 @@ import (
 	"fmt"
 	"path/filepath"
 	"strings"
+
+	gorippled "github.com/go-xrp/go-rippled"
 )
 
 const (
@@ -23,18 +25,8 @@ func examplespath(filename string) string {
 	return filepath.Join("./", filename)
 }
 
-var methodToAccount = map[string]string{
-	"account_channels":   "account",
-	"account_currencies": "account",
-	"account_info":       "account",
-	"account_lines":      "account",
-	"ledger":             "ledger",
-	"ledger_closed":      "ledger",
-	"ledger_current":     "ledger",
-	"ledger_data":        "ledger",
-}
-
 func GetMethodCategory(method string) string {
+	methodToAccount := gorippled.MethodsPlusToAccount()
 	method = strings.ToLower(strings.TrimSpace(method))
 	if category, ok := methodToAccount[method]; ok {
 		return strings.ToLower(strings.TrimSpace(category))
@@ -42,16 +34,19 @@ func GetMethodCategory(method string) string {
 	return ""
 }
 
-func ExampleJsonRequestFilename(method string) (string, error) {
-	category := GetMethodCategory(method)
+func ExampleJsonRequestFilename(method, category string) (string, error) {
+	category = strings.ToLower(strings.TrimSpace(category))
+	if len(category) == 0 {
+		category = GetMethodCategory(method)
+	}
 	if len(category) == 0 {
 		return "", fmt.Errorf("no category for method [%s]", method)
 	}
 	return fmt.Sprintf("method.%s.%s.jsonrpc.request.json", category, method), nil
 }
 
-func ExampleJsonRequest(method string) ([]byte, error) {
-	filename, err := ExampleJsonRequestFilename(method)
+func ExampleJsonRequest(method, category string) ([]byte, error) {
+	filename, err := ExampleJsonRequestFilename(method, category)
 	if err != nil {
 		return []byte{}, err
 	}

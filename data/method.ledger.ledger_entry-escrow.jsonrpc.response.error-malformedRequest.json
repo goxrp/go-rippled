@@ -1,0 +1,18 @@
+{
+	"result": {
+		"error": "malformedRequest",
+		"error_message": null,
+		"ledger_hash": "D47C129E26FAD038B838F0ED8FF9F86EF16AC7C518241F0A6207C7DEACFC1FB3",
+		"ledger_index": 63306684,
+		"request": {
+			"command": "ledger_entry",
+			"escrow": {
+				"account": "rL4fPHi2FWGwRGRQSH7gBcxkuo2b9NTjKK",
+				"seq": 126
+			},
+			"ledger_index": "validated"
+		},
+		"status": "error",
+		"validated": true
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"result": {
+		"error": "lgrNotFound",
+		"error_code": 21,
+		"error_message": "ledgerNotFound",
+		"request": {
+			"binary": true,
+			"command": "ledger_data",
+			"ledger_hash": "842B57C1CC0613299A686D3E9F310EC0422C84D3911E5056389AA7E5808A93C8",
+			"limit": 5
+		},
+		"status": "error"
+	}
+}

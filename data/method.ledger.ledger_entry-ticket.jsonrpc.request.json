@@ -1,0 +1,12 @@
+{
+	"method": "ledger_entry",
+	"params": [
+		{
+			"ticket": {
+				"owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+				"ticket_sequence": 23
+			},
+			"ledger_index": "validated"
+		}
+	]
+}

@@ -1,0 +1,9 @@
+{
+	"id": "example_get_ticket",
+	"command": "ledger_entry",
+	"ticket": {
+		"owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+		"ticket_sequence": 23
+	},
+	"ledger_index": "validated"
+}

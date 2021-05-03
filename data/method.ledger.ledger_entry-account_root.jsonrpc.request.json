@@ -1,0 +1,9 @@
+{
+	"method": "ledger_entry",
+	"params": [
+		{
+			"account_root": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+			"ledger_index": "validated"
+		}
+	]
+}

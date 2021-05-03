@@ -1,0 +1,6 @@
+{
+	"id": "example_get_accountroot",
+	"command": "ledger_entry",
+	"account_root": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+	"ledger_index": "validated"
+}

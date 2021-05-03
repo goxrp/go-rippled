@@ -1,0 +1,6 @@
+{
+	"id": "example_get_paychannel",
+	"command": "ledger_entry",
+	"payment_channel": "C7F634794B79DB40E87179A9D1BF05D05797AE7E92DF8E93FD6656E8C4BE3AE7",
+	"ledger_index": "validated"
+}

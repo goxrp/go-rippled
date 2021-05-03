@@ -1,0 +1,12 @@
+{
+	"method": "ledger_entry",
+	"params": [
+		{
+			"escrow": {
+				"owner": "rL4fPHi2FWGwRGRQSH7gBcxkuo2b9NTjKK",
+				"seq": 126
+			},
+			"ledger_index": "validated"
+		}
+	]
+}

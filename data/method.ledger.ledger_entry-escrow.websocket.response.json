@@ -1,0 +1,24 @@
+{
+	"id": "example_get_escrow",
+	"result": {
+		"index": "917ACF1324F06D19239A03E4A6A3FE24F9313BB23337ECB801BDAD013BE27F83",
+		"ledger_hash": "61389CDFEE8197E74992E9A5F89A67F089795AFD59D50250227E0EAE5AB390A4",
+		"ledger_index": 63306665,
+		"node": {
+			"Account": "rL4fPHi2FWGwRGRQSH7gBcxkuo2b9NTjKK",
+			"Amount": "99750000",
+			"Condition": "A0258020085D1EDF8045DC7F6E42B8DB09E05248502852FB3FF27815FC94433D1CB62198810120",
+			"Destination": "rL4fPHi2FWGwRGRQSH7gBcxkuo2b9NTjKK",
+			"FinishAfter": 3802143660,
+			"Flags": 0,
+			"LedgerEntryType": "Escrow",
+			"OwnerNode": "1",
+			"PreviousTxnID": "470DC630B0251FCCA740EA9CA7781A502608890FB123F14D0C4BE20C4D5D44DB",
+			"PreviousTxnLgrSeq": 37088514,
+			"index": "917ACF1324F06D19239A03E4A6A3FE24F9313BB23337ECB801BDAD013BE27F83"
+		},
+		"validated": true
+	},
+	"status": "success",
+	"type": "response"
+}

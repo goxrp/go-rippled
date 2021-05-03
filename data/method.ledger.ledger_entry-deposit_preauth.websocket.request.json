@@ -1,0 +1,9 @@
+{
+	"id": "example_get_deposit_preauth",
+	"command": "ledger_entry",
+	"deposit_preauth": {
+		"owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+		"authorized": "ra5nK24KXen9AHvsdFTKHSANinZseWnPcX"
+	},
+	"ledger_index": "validated"
+}

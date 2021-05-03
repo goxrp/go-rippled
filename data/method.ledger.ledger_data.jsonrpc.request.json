@@ -2,8 +2,8 @@
 	"method": "ledger_data",
 	"params": [
 		{
-			"binary": true,
-			"ledger_hash": "842B57C1CC0613299A686D3E9F310EC0422C84D3911E5056389AA7E5808A93C8",
+			"binary": false,
+			"ledger_hash": "87B7E3C234DB58104751F46F54262A85B2B8AD0C31982EC71AFF5CAE4511F91C",
 			"limit": 5
 		}
 	]

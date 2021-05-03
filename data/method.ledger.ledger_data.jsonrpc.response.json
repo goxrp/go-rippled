@@ -1,0 +1,97 @@
+{
+	"result": {
+		"ledger": {
+			"accepted": true,
+			"account_hash": "10E74FF362644547CAA0E399C75D7ECEF6364106B671BF3518F151C631D34ABE",
+			"close_flags": 0,
+			"close_time": 673340240,
+			"close_time_human": "2021-May-03 06:57:20.000000000 UTC",
+			"close_time_resolution": 10,
+			"closed": true,
+			"hash": "87B7E3C234DB58104751F46F54262A85B2B8AD0C31982EC71AFF5CAE4511F91C",
+			"ledger_hash": "87B7E3C234DB58104751F46F54262A85B2B8AD0C31982EC71AFF5CAE4511F91C",
+			"ledger_index": "63311403",
+			"parent_close_time": 673340231,
+			"parent_hash": "664C6395FC418BD4C22D99AA018FA94453C05045E20881CDA9CDF8B2A68AFCA6",
+			"seqNum": "63311403",
+			"totalCoins": "99990483186676400",
+			"total_coins": "99990483186676400",
+			"transaction_hash": "96320059A27A5C0607193F5337AB2E9A0ED62F6B97073B91A9CA17654642F00D"
+		},
+		"ledger_hash": "87B7E3C234DB58104751F46F54262A85B2B8AD0C31982EC71AFF5CAE4511F91C",
+		"ledger_index": 63311403,
+		"marker": "0000139EDA03EF58CE7176F1402035B5EB6AEE49724555DDB0EBA01432B009A7",
+		"state": [
+			{
+				"Account": "rMj5DFATVxw91PDy3AM2wu7Uu1kgrhWypE",
+				"Balance": "20722989",
+				"Flags": 0,
+				"LedgerEntryType": "AccountRoot",
+				"OwnerCount": 0,
+				"PreviousTxnID": "4C43C78081198AC96F6EC15315FDD16FC12458DC9A3F1B0BD0AA62F8D9F8FB51",
+				"PreviousTxnLgrSeq": 62869196,
+				"Sequence": 4,
+				"index": "000003E6AFED1AADCC39AAE0727B354C2286F1503274F345FE661748F24366CF"
+			},
+			{
+				"Balance": {
+					"currency": "GCB",
+					"issuer": "rrrrrrrrrrrrrrrrrrrrBZbvji",
+					"value": "0"
+				},
+				"Flags": 2162688,
+				"HighLimit": {
+					"currency": "GCB",
+					"issuer": "rBfVgTnsdh8ckC19RM8aVGNuMZnpwrMP6n",
+					"value": "0"
+				},
+				"HighNode": "283",
+				"LedgerEntryType": "RippleState",
+				"LowLimit": {
+					"currency": "GCB",
+					"issuer": "rhRFGCy2RJTA8oxkjjtYTvofPVGqcgvXWj",
+					"value": "2000000"
+				},
+				"LowNode": "0",
+				"PreviousTxnID": "C0C37CE200B509E0A529880634F7841A9EF4CB65F03C12E6004CFAD9718D6694",
+				"PreviousTxnLgrSeq": 24695242,
+				"index": "0000041EFD027808D3F78C8352F97E324CB816318E00B977C74ECDDC7CD975B2"
+			},
+			{
+				"Account": "rHeyw38ezc3LSLzYAYwaBci2KssDkYGVr9",
+				"Balance": "20000000",
+				"Flags": 0,
+				"LedgerEntryType": "AccountRoot",
+				"OwnerCount": 0,
+				"PreviousTxnID": "7540CE04B966D67DBD39F3AA832274902B79AF4782F5AC9D4DC7CD18B1D9AE0D",
+				"PreviousTxnLgrSeq": 47846971,
+				"Sequence": 2,
+				"index": "000004D417A9CE049C9A71A62B004659B5F1AAAB1BEA1EFDE4E01EB3497FD999"
+			},
+			{
+				"Account": "rLeNL66BfgeszBsCBKJcLmYTRThiWrNTUL",
+				"Balance": "19999988",
+				"Flags": 0,
+				"LedgerEntryType": "AccountRoot",
+				"OwnerCount": 1,
+				"PreviousTxnID": "E4BE6307E377590FF56BBF2F26DCBC4BA9682A4C141269352E4E2D4E53C1116E",
+				"PreviousTxnLgrSeq": 37851086,
+				"Sequence": 2,
+				"index": "00000FB78838CA2CFA82E7438B4F54794A6783327326D58C46B4EF137C059038"
+			},
+			{
+				"Account": "rUwXrQMa4HHBbfxQT71YJNbQXaxZPR8Uhp",
+				"Balance": "20941276",
+				"Flags": 0,
+				"LedgerEntryType": "AccountRoot",
+				"OwnerCount": 0,
+				"PreviousTxnID": "4ECC554CC1DEFFD447EEA6FB068E6BED4179C44BAF10F7F61F163ED25FF7EA85",
+				"PreviousTxnLgrSeq": 60539737,
+				"Sequence": 2,
+				"index": "000012F60C3F1E226D03F974AE8E77250B2BEA91C38AB4146B6055A048C7D540"
+			}
+		],
+		"status": "success",
+		"validated": true
+	}
+}

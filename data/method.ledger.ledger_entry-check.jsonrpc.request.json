@@ -1,0 +1,9 @@
+{
+	"method": "ledger_entry",
+	"params": [
+		{
+			"check": "C4A46CCD8F096E994C4B0DEAB6CE98E722FC17D7944C28B95127C2659C47CBEB",
+			"ledger_index": "validated"
+		}
+	]
+}

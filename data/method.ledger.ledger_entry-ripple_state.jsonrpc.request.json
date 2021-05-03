@@ -1,0 +1,15 @@
+{
+	"method": "ledger_entry",
+	"params": [
+		{
+			"ripple_state": {
+				"accounts": [
+					"rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+					"rsA2LpzuawewSBQXkiju3YQTMzW13pAAdW"
+				],
+				"currency": "USD"
+			},
+			"ledger_index": "validated"
+		}
+	]
+}

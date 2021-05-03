@@ -1,0 +1,18 @@
+{
+	"result": {
+		"error": "malformedRequest",
+		"error_message": null,
+		"ledger_hash": "C887F954CD920CFF3EDA5B27A580F1CFFC869B9D18A59A09228D3D11EA7A7BFA",
+		"ledger_index": 63311495,
+		"request": {
+			"command": "ledger_entry",
+			"ledger_index": "validated",
+			"ticket": {
+				"owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+				"ticket_sequence": 23
+			}
+		},
+		"status": "error",
+		"validated": true
+	}
+}

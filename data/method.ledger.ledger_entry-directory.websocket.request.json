@@ -1,0 +1,9 @@
+{
+	"id": 3,
+	"command": "ledger_entry",
+	"directory": {
+		"owner": "rf1BiGeXwwQoi8Z2ueFYTEXSwuJYfV2Jpn",
+		"sub_index": 0
+	},
+	"ledger_index": "validated"
+}

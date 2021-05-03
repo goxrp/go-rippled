@@ -72,7 +72,7 @@
 // method.ledger.ledger_entry-ticket.websocket.request.json
 // model.offer.json
 // model.paychannel.json
-package main
+package data
 
 import (
 	"bytes"
@@ -1640,9 +1640,9 @@ func AssetNames() []string {
 
 // _bindata is a table, holding each asset generator, mapped to its name.
 var _bindata = map[string]func() (*asset, error){
-	"bindata.go":                                                                     bindataGo,
-	"files.go":                                                                       filesGo,
-	"files_test.go":                                                                  files_testGo,
+	"bindata.go":    bindataGo,
+	"files.go":      filesGo,
+	"files_test.go": files_testGo,
 	"method.account.account_channels.commandline.response.json":                      methodAccountAccount_channelsCommandlineResponseJson,
 	"method.account.account_channels.jsonrpc.request.json":                           methodAccountAccount_channelsJsonrpcRequestJson,
 	"method.account.account_channels.jsonrpc.response.error-missing-account.json":    methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson,
@@ -1710,8 +1710,8 @@ var _bindata = map[string]func() (*asset, error){
 	"method.ledger.ledger_entry-ticket.jsonrpc.request.json":                         methodLedgerLedger_entryTicketJsonrpcRequestJson,
 	"method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json": methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson,
 	"method.ledger.ledger_entry-ticket.websocket.request.json":                       methodLedgerLedger_entryTicketWebsocketRequestJson,
-	"model.offer.json":                                                               modelOfferJson,
-	"model.paychannel.json":                                                          modelPaychannelJson,
+	"model.offer.json":      modelOfferJson,
+	"model.paychannel.json": modelPaychannelJson,
 }
 
 // AssetDir returns the file names below a certain
@@ -1755,9 +1755,9 @@ type bintree struct {
 }
 
 var _bintree = &bintree{nil, map[string]*bintree{
-	"bindata.go":                                                                     &bintree{bindataGo, map[string]*bintree{}},
-	"files.go":                                                                       &bintree{filesGo, map[string]*bintree{}},
-	"files_test.go":                                                                  &bintree{files_testGo, map[string]*bintree{}},
+	"bindata.go":    &bintree{bindataGo, map[string]*bintree{}},
+	"files.go":      &bintree{filesGo, map[string]*bintree{}},
+	"files_test.go": &bintree{files_testGo, map[string]*bintree{}},
 	"method.account.account_channels.commandline.response.json":                      &bintree{methodAccountAccount_channelsCommandlineResponseJson, map[string]*bintree{}},
 	"method.account.account_channels.jsonrpc.request.json":                           &bintree{methodAccountAccount_channelsJsonrpcRequestJson, map[string]*bintree{}},
 	"method.account.account_channels.jsonrpc.response.error-missing-account.json":    &bintree{methodAccountAccount_channelsJsonrpcResponseErrorMissingAccountJson, map[string]*bintree{}},
@@ -1825,8 +1825,8 @@ var _bintree = &bintree{nil, map[string]*bintree{
 	"method.ledger.ledger_entry-ticket.jsonrpc.request.json":                         &bintree{methodLedgerLedger_entryTicketJsonrpcRequestJson, map[string]*bintree{}},
 	"method.ledger.ledger_entry-ticket.jsonrpc.response.error-malformedRequest.json": &bintree{methodLedgerLedger_entryTicketJsonrpcResponseErrorMalformedrequestJson, map[string]*bintree{}},
 	"method.ledger.ledger_entry-ticket.websocket.request.json":                       &bintree{methodLedgerLedger_entryTicketWebsocketRequestJson, map[string]*bintree{}},
-	"model.offer.json":                                                               &bintree{modelOfferJson, map[string]*bintree{}},
-	"model.paychannel.json":                                                          &bintree{modelPaychannelJson, map[string]*bintree{}},
+	"model.offer.json":      &bintree{modelOfferJson, map[string]*bintree{}},
+	"model.paychannel.json": &bintree{modelPaychannelJson, map[string]*bintree{}},
 }}
 
 // RestoreAsset restores an asset under the given directory

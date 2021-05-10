@@ -6,42 +6,42 @@ import (
 )
 
 const (
-	AccountChannels   = "account_channels"
-	AccountCurrencies = "account_currencies"
-	AccountInfo       = "account_info"
-	AccountLines      = "account_lines"
-	AccountObjects    = "account_objects"
-	AccountOffers     = "account_offers"
-	AccountTx         = "account_tx"
-	GatewayBalances   = "gateway_balances"
-	NorippleCheck     = "noripple_check"
-	Ledger            = "ledger"
-	LedgerClosed      = "ledger_closed"
-	LedgerCurrent     = "ledger_current"
-	LedgerData        = "ledger_data"
-	LedgerEntry       = "ledger_entry"
-	Sign              = "sign"
-	SignFor           = "sign_for"
-	Submit            = "submit"
-	SubmitMultisigned = "submit_multisigned"
-	TransactionEntry  = "transaction_entry"
-	Tx                = "tx"
-	TxHistory         = "tx_history"
-	BookOffers        = "book_offers"
-	DepositAuthorized = "deposit_authorized"
-	PathFind          = "path_find"
-	RipplePathFind    = "ripple_path_find"
-	ChannelAuthorize  = "channel_authorize"
-	ChannelVerify     = "channel_verify"
-	Subscribe         = "subscribe"
-	Unsubscribe       = "unsubscribe"
-	Fee               = "fee"
-	Manifest          = "manifest"
-	ServerInfo        = "server_info"
-	ServerState       = "server_state"
-	JSON              = "json"
-	Ping              = "ping"
-	Random            = "random"
+	MethodAccountChannels   = "account_channels"
+	MethodAccountCurrencies = "account_currencies"
+	MethodAccountInfo       = "account_info"
+	MethodAccountLines      = "account_lines"
+	MethodAccountObjects    = "account_objects"
+	MethodAccountOffers     = "account_offers"
+	MethodAccountTx         = "account_tx"
+	MethodGatewayBalances   = "gateway_balances"
+	MethodNorippleCheck     = "noripple_check"
+	MethodLedger            = "ledger"
+	MethodLedgerClosed      = "ledger_closed"
+	MethodLedgerCurrent     = "ledger_current"
+	MethodLedgerData        = "ledger_data"
+	MethodLedgerEntry       = "ledger_entry"
+	MethodSign              = "sign"
+	MethodSignFor           = "sign_for"
+	MethodSubmit            = "submit"
+	MethodSubmitMultisigned = "submit_multisigned"
+	MethodTransactionEntry  = "transaction_entry"
+	MethodTx                = "tx"
+	MethodTxHistory         = "tx_history"
+	MethodBookOffers        = "book_offers"
+	MethodDepositAuthorized = "deposit_authorized"
+	MethodPathFind          = "path_find"
+	MethodRipplePathFind    = "ripple_path_find"
+	MethodChannelAuthorize  = "channel_authorize"
+	MethodChannelVerify     = "channel_verify"
+	MethodSubscribe         = "subscribe"
+	MethodUnsubscribe       = "unsubscribe"
+	MethodFee               = "fee"
+	MethodManifest          = "manifest"
+	MethodServerInfo        = "server_info"
+	MethodServerState       = "server_state"
+	MethodJSON              = "json"
+	MethodPing              = "ping"
+	MethodRandom            = "random"
 
 	CategoryAccount                  = "Account"
 	CategoryLedger                   = "Ledger"
@@ -84,6 +84,7 @@ type Method struct {
 	Type        string
 	Summary     string
 	Description string
+	Deprecated  bool
 }
 
 func (m *Method) APIReferenceURL() string {
@@ -169,55 +170,55 @@ func GetCategory(categoryName string) (Category, error) {
 
 var accountMethods = []Method{
 	{
-		Name:        AccountChannels,
+		Name:        MethodAccountChannels,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get a list of payment channels where the account is the source of the channel.",
 		Description: "The `account_channels` method returns information about an account's Payment Channels. This includes only channels where the specified account is the channel's source, not the destination. (A channel's \"source\" and \"owner\" are the same.) All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
-		Name:        AccountCurrencies,
+		Name:        MethodAccountCurrencies,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get a list of currencies an account can send or receive.",
 		Description: "The `account_currencies` command retrieves a list of currencies that an account can send or receive, based on its trust lines. (This is not a thoroughly confirmed list, but it can be used to populate user interfaces.)",
 	},
 	{
-		Name:        AccountInfo,
+		Name:        MethodAccountInfo,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get basic data about an account.",
 		Description: "The `account_info` command retrieves information about an account, its activity, and its XRP balance. All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
-		Name:        AccountLines,
+		Name:        MethodAccountLines,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's trust lines.",
 		Description: "The `account_lines` method returns information about an account's trust lines, including balances in all non-XRP currencies and assets. All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
-		Name:        AccountObjects,
+		Name:        MethodAccountObjects,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get all ledger objects owned by an account.",
 		Description: "The `account_objects` command returns the raw [ledger format](https://xrpl.org/ledger-object-types.html) for all objects owned by an account. For a higher-level view of an account's trust lines and balances, see the [`account_lines` method](https://xrpl.org/account_lines.html) instead.\n\nThe types of objects that may appear in the account_objects response for an account include:\n\n* [Offer objects](https://xrpl.org/offer.html) for orders that are currently live, unfunded, or expired but not yet removed. (See [Lifecycle of an Offer](https://xrpl.org/offers.html#lifecycle-of-an-offer) for more information.)\n* [RippleState objects](https://xrpl.org/ripplestate.html) for trust lines where this account's side is not in the default state.\n* The account's [SignerList](https://xrpl.org/signerlist.html), if the account has [multi-signing](https://xrpl.org/multi-signing.html) enabled.\n* [Escrow objects](https://xrpl.org/escrow.html) for held payments that have not yet been executed or canceled.\n* [PayChannel objects](https://xrpl.org/paychannel.html) for open payment channels.\n* [Check objects](https://xrpl.org/check.html) for pending Checks.\n* [DepositPreauth objects](https://xrpl.org/depositpreauth-object.html) for deposit preauthorizations. New in: rippled 1.1.0\n* [Ticket objects](https://xrpl.org/known-amendments.html#tickets) for Tickets.",
 	},
 	{
-		Name:        AccountOffers,
+		Name:        MethodAccountOffers,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's currency exchange offers.",
 		Description: "The `account_offers` method retrieves a list of [offers](https://xrpl.org/offers.html) made by a given [account](https://xrpl.org/accounts.html) that are outstanding as of a particular [ledger version](https://xrpl.org/ledgers.html).",
 	},
 	{
-		Name:        AccountTx,
+		Name:        MethodAccountTx,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's transactions.",
 		Description: "The `account_tx` method retrieves a list of transactions that involved the specified account.",
 	},
 	{
-		Name:        GatewayBalances,
+		Name:        MethodGatewayBalances,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Calculate total amounts issued by an account.",
 		Description: "The `gateway_balances` command calculates the total balances issued by a given account, optionally excluding amounts held by [operational addresses](https://xrpl.org/issuing-and-operational-addresses.html).",
 	},
 	{
-		Name:        NorippleCheck,
+		Name:        MethodNorippleCheck,
 		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get recommended changes to an account's Default Ripple and No Ripple settings.",
 		Description: "The `noripple_check` command provides a quick way to check the status of [the Default Ripple field for an account and the No Ripple flag of its trust lines](https://xrpl.org/rippling.html), compared with the recommended settings.",
@@ -226,46 +227,93 @@ var accountMethods = []Method{
 
 var ledgerMethods = []Method{
 	{
-		Name:        Ledger,
+		Name:        MethodLedger,
 		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get info about a ledger version.",
 		Description: "Retrieve information about the public [ledger](https://xrpl.org/ledgers.html).",
 	},
 	{
-		Name:        LedgerClosed,
+		Name:        MethodLedgerClosed,
 		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the latest closed ledger version.",
 		Description: "The `ledger_closed` method returns the unique identifiers of the most recently closed ledger. (This ledger is not necessarily validated and immutable yet.)",
 	},
 	{
-		Name:        LedgerCurrent,
+		Name:        MethodLedgerCurrent,
 		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the current working ledger version.",
 		Description: "The ledger_current method returns the unique identifiers of the current in-progress [ledger](https://xrpl.org/ledgers.html). This command is mostly useful for testing, because the ledger returned is still in flux.",
 	},
 	{
-		Name:        LedgerData,
+		Name:        MethodLedgerData,
 		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the raw contents of a ledger version.",
 		Description: "The `ledger_data` method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.",
 	},
 	{
-		Name:        LedgerEntry,
+		Name:        MethodLedgerEntry,
 		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get one element from a ledger version.",
 		Description: "The `ledger_data` method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.",
 	},
 }
 
+var transactionMethods = []Method{
+	{
+		Name:        MethodSign,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Cryptographically sign a transaction.",
+		Description: "The `sign` method takes a [transaction in JSON format](https://xrpl.org/transaction-formats.html) and a [seed value](https://xrpl.org/cryptographic-keys.html), and returns a signed binary representation of the transaction. To contribute one signature to a [multi-signed transaction](https://xrpl.org/multi-signing.html), use the [`sign_for` method](https://xrpl.org/sign_for.html) instead.\n\nBy default, this method is [admin-only](https://xrpl.org/admin-rippled-methods.html). It can be used as a public method if the server has [enabled public signing](https://xrpl.org/enable-public-signing.html).",
+	},
+	{
+		Name:        MethodSignFor,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Contribute to a multi-signature.",
+		Description: "The `sign_for` command provides one signature for a [multi-signed transaction](https://xrpl.org/multi-signing.html).\n\nBy default, this method is [admin-only](https://xrpl.org/admin-rippled-methods.html). It can be used as a public method if the server has [enabled public signing](https://xrpl.org/enable-public-signing.html).\n\nThis command requires the [MultiSign amendment](https://xrpl.org/known-amendments.html#multisign) to be enabled.",
+	},
+	{
+		Name:        MethodSubmit,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Send a transaction to the network.",
+		Description: "The `submit` method applies a [transaction](https://xrpl.org/transaction-formats.html) and sends it to the network to be confirmed and included in future ledgers.\n\nThis command has two modes:\n\n* Submit-only mode takes a signed, serialized transaction as a binary blob, and submits it to the network as-is. Since signed transaction objects are immutable, no part of the transaction can be modified or automatically filled in after submission.\n* Sign-and-submit mode takes a JSON-formatted Transaction object, completes and signs the transaction in the same manner as the sign method, and then submits the signed transaction. We recommend only using this mode for testing and development.\n\nTo send a transaction as robustly as possible, you should construct and sign it in advance, persist it somewhere that you can access even after a power outage, then `submit` it as a `tx_blob`. After submission, monitor the network with the [`tx` method](https://xrpl.org/tx.html) command to see if the transaction was successfully applied; if a restart or other problem occurs, you can safely re-submit the `tx_blob` transaction: it won't be applied twice since it has the same sequence number as the old transaction.",
+	},
+	{
+		Name:        MethodSubmitMultisigned,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Send a multi-signed transaction to the network.",
+		Description: "The `submit_multisigned` command applies a [multi-signed](https://xrpl.org/multi-signing.html) transaction and sends it to the network to be included in future ledgers. (You can also submit multi-signed transactions in binary form using the [submit command in submit-only mode](https://xrpl.org/submit.html#submit-only-mode).)\n\nThis command requires the [MultiSign amendment](https://xrpl.org/known-amendments.html#multisign) to be enabled.",
+	},
+
+	{
+		Name:        MethodTransactionEntry,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Retrieve info about a transaction from a particular ledger version.",
+		Description: "The `transaction_entry` method retrieves information on a single transaction from a specific ledger version. (The [`tx` method](https://xrpl.org/tx.html), by contrast, searches all ledgers for the specified transaction. We recommend using that method instead.)",
+	},
+	{
+		Name:        MethodTx,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Retrieve info about a transaction from all the ledgers on hand.",
+		Description: "The `tx` method retrieves information on a single [transaction](https://xrpl.org/transaction-formats.html), by its [identifying hash](https://xrpl.org/transaction-basics.html#identifying-transactions).",
+	},
+	{
+		Name:        MethodTxHistory,
+		Category:    Category{Name: CategoryTransaction},
+		Summary:     "Retrieve info about all recent transactions.",
+		Description: "The `tx_history` method retrieves some of the most recent transactions made.",
+		Deprecated:  true,
+	},
+}
+
 var paymentChannelMethods = []Method{
 	{
-		Name:        ChannelAuthorize,
+		Name:        MethodChannelAuthorize,
 		Category:    Category{Name: CategoryPaymentChannel},
 		Summary:     "Sign a claim for money from a payment channel.",
 		Description: "The `channel_authorize` method creates a signature that can be used to redeem a specific amount of XRP from a payment channel.",
 	},
 	{
-		Name:        ChannelVerify,
+		Name:        MethodChannelVerify,
 		Category:    Category{Name: CategoryPaymentChannel},
 		Summary:     "Check a payment channel claim's signature.",
 		Description: "The `channel_verify` method checks the validity of a signature that can be used to redeem a specific amount of XRP from a payment channel.",
@@ -274,13 +322,13 @@ var paymentChannelMethods = []Method{
 
 var subscriptionMethods = []Method{
 	{
-		Name:        Subscribe,
+		Name:        MethodSubscribe,
 		Category:    Category{Name: CategorySubscription},
 		Summary:     "Listen for updates about a particular subject.",
 		Description: "The `subscribe` method requests periodic notifications from the server when certain events happen.",
 	},
 	{
-		Name:        Unsubscribe,
+		Name:        MethodUnsubscribe,
 		Category:    Category{Name: CategorySubscription},
 		Summary:     "Stop listening for updates about a particular subject.",
 		Description: "The `unsubscribe` command tells the server to stop sending messages for a particular subscription or set of subscriptions.",
@@ -289,25 +337,25 @@ var subscriptionMethods = []Method{
 
 var serverInfoMethods = []Method{
 	{
-		Name:        Fee,
+		Name:        MethodFee,
 		Category:    Category{Name: CategoryServerInfo},
 		Summary:     "Get information about transaction cost.",
 		Description: "The `fee` command reports the current state of the open-ledger requirements for the [transaction cost](https://xrpl.org/transaction-cost.html). This requires the FeeEscalation amendment to be enabled.",
 	},
 	{
-		Name:        Manifest,
+		Name:        MethodManifest,
 		Category:    Category{Name: CategoryServerInfo},
 		Summary:     "Look up the public information about a known validator.",
 		Description: "The `manifest` method reports the current \"manifest\" information for a given validator public key. The \"manifest\" is the public portion of that validator's configured token.",
 	},
 	{
-		Name:        ServerInfo,
+		Name:        MethodServerInfo,
 		Category:    Category{Name: CategoryServerInfo},
 		Summary:     "Retrieve status of the server in human-readable format.",
 		Description: "The `server_info` command asks the server for a human-readable version of various information about the rippled server being queried.",
 	},
 	{
-		Name:        ServerState,
+		Name:        MethodServerState,
 		Category:    Category{Name: CategoryServerInfo},
 		Summary:     "Retrieve status of the server in machine-readable format.",
 		Description: "The `server_state` command asks the server for various machine-readable information about the rippled server's current state. The response is almost the same as the [`server_info` method](https://xrpl.org/server_info.html), but uses units that are easier to process instead of easier to read. (For example, XRP values are given in integer drops instead of scientific notation or decimal values, and time is given in milliseconds instead of seconds.)",

@@ -1,5 +1,10 @@
 package gorippled
 
+import (
+	"fmt"
+	"strings"
+)
+
 const (
 	AccountChannels   = "account_channels"
 	AccountCurrencies = "account_currencies"
@@ -48,10 +53,11 @@ const (
 	CategoryUtility          = "Utility"
 )
 
-var mapCategoryMethods = map[string][]string{}
-
-func CategoryMethods() map[string][]string {
-	return mapCategoryMethods
+func Methods() []Method {
+	methods := []Method{}
+	methods = append(methods, accountMethods...)
+	methods = append(methods, ledgerMethods...)
+	return methods
 }
 
 type Method struct {
@@ -59,6 +65,14 @@ type Method struct {
 	Category    string
 	Summary     string
 	Description string
+}
+
+func (m *Method) APIReferenceURL() string {
+	m.Name = strings.TrimSpace(m.Name)
+	if len(m.Name) > 0 {
+		return fmt.Sprintf("https: //xrpl.org/%s.html", m.Name)
+	}
+	return ""
 }
 
 var accountMethods = []Method{

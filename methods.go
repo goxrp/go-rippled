@@ -43,26 +43,36 @@ const (
 	Ping              = "ping"
 	Random            = "random"
 
-	CategoryAccount          = "Account"
-	CategoryLedger           = "Ledger"
-	CategoryTransaction      = "Transaction"
-	CategoryPathAndOrderBook = "Path And Order Book"
-	CategoryPaymentChannel   = "PaymentChannel"
-	CategorySubscription     = "Subscription"
-	CategoryServerInfo       = "Server Info"
-	CategoryUtility          = "Utility"
+	CategoryAccount                  = "Account"
+	CategoryLedger                   = "Ledger"
+	CategoryTransaction              = "Transaction"
+	CategoryPathAndOrderBook         = "Path And Order Book"
+	CategoryPaymentChannel           = "PaymentChannel"
+	CategorySubscription             = "Subscription"
+	CategoryServerInfo               = "Server Info"
+	CategoryUtility                  = "Utility"
+	CategoryKeyGeneration            = "Key Generation"
+	CategoryLoggingAndDataManagement = "Logging and Data Management"
+	CategoryServerControl            = "Server Control"
+	CategoryPeerManagement           = "Peer Management"
+	CategoryStatusAndDebugging       = "Status and Debugging"
+
+	TypePublic = "public"
+	TypeAdmin  = "admin"
 )
 
 func Methods() []Method {
 	methods := []Method{}
 	methods = append(methods, accountMethods...)
 	methods = append(methods, ledgerMethods...)
+	methods = append(methods, paymentChannelMethods...)
 	return methods
 }
 
 type Method struct {
 	Name        string
 	Category    string
+	Type        string
 	Summary     string
 	Description string
 }
@@ -73,6 +83,69 @@ func (m *Method) APIReferenceURL() string {
 		return fmt.Sprintf("https: //xrpl.org/%s.html", m.Name)
 	}
 	return ""
+}
+
+type Category struct {
+	Name        string
+	Type        string
+	Description string
+}
+
+func Categories() []Category {
+	return []Category{
+		{
+			Name:        CategoryAccount,
+			Type:        TypePublic,
+			Description: "An account in the XRP Ledger represents a holder of XRP and a sender of transactions. Use these methods to work with account info."},
+		{
+			Name:        CategoryLedger,
+			Type:        TypePublic,
+			Description: "A ledger version contains a header, a transaction tree, and a state tree, which contain account settings, trustlines, balances, transactions, and other data. Use these methods to retrieve ledger info."},
+		{
+			Name:        CategoryTransaction,
+			Type:        TypePublic,
+			Description: "Transactions are the only thing that can modify the shared state of the XRP Ledger. All business on the XRP Ledger takes the form of transactions. Use these methods to work with transactions."},
+		{
+			Name:        CategoryPathAndOrderBook,
+			Type:        TypePublic,
+			Description: "Paths define a way for payments to flow through intermediary steps on their way from sender to receiver. Paths enable cross-currency payments by connecting sender and receiver through order books. Use these methods to work with paths and other books."},
+		{
+			Name:        CategoryPaymentChannel,
+			Type:        TypePublic,
+			Description: "Payment channels are a tool for facilitating repeated, unidirectional payments, or temporary credit between two parties. Use these methods to work with payment channels."},
+		{
+			Name:        CategorySubscription,
+			Type:        TypePublic,
+			Description: "Use these methods to enable the server to push updates to your client when various events happen, so that you can know and react right away. WebSocket API only."},
+		{
+			Name:        CategoryServerInfo,
+			Type:        TypePublic,
+			Description: "Use these methods to retrieve information about the current state of the rippled server."},
+		{
+			Name:        CategoryUtility,
+			Type:        TypePublic,
+			Description: "Use these methods to perform convenient tasks, such as ping and random number generation."},
+		{
+			Name:        CategoryKeyGeneration,
+			Type:        TypeAdmin,
+			Description: "Use these methods to generate and manage keys."},
+		{
+			Name:        CategoryLoggingAndDataManagement,
+			Type:        TypeAdmin,
+			Description: "Use these methods to manage log levels and other data, such as ledgers."},
+		{
+			Name:        CategoryServerControl,
+			Type:        TypeAdmin,
+			Description: "Use these methods to manage the rippled server."},
+		{
+			Name:        CategoryPeerManagement,
+			Type:        TypeAdmin,
+			Description: "Use these methods to manage your server's peer-to-peer connections."},
+		{
+			Name:        CategoryStatusAndDebugging,
+			Type:        TypeAdmin,
+			Description: "Use these methods to check the status of the network and server."},
+	}
 }
 
 var accountMethods = []Method{
@@ -162,5 +235,20 @@ var ledgerMethods = []Method{
 		Category:    CategoryLedger,
 		Summary:     "Get one element from a ledger version.",
 		Description: "The `ledger_data` method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.",
+	},
+}
+
+var paymentChannelMethods = []Method{
+	{
+		Name:        ChannelAuthorize,
+		Category:    CategoryPaymentChannel,
+		Summary:     "Sign a claim for money from a payment channel.",
+		Description: "The `channel_authorize` method creates a signature that can be used to redeem a specific amount of XRP from a payment channel.",
+	},
+	{
+		Name:        ChannelVerify,
+		Category:    CategoryPaymentChannel,
+		Summary:     "Check a payment channel claim's signature.",
+		Description: "The `channel_verify` method checks the validity of a signature that can be used to redeem a specific amount of XRP from a payment channel.",
 	},
 }

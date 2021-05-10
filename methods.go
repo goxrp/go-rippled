@@ -66,12 +66,21 @@ func Methods() []Method {
 	methods = append(methods, accountMethods...)
 	methods = append(methods, ledgerMethods...)
 	methods = append(methods, paymentChannelMethods...)
+	methods = append(methods, serverInfoMethods...)
+	for i, method := range methods {
+		cat, err := GetCategory(method.Category.Name)
+		if err != nil {
+			panic(fmt.Sprintf("category not found [%s]", method.Category))
+		}
+		method.Category = cat
+		methods[i] = method
+	}
 	return methods
 }
 
 type Method struct {
 	Name        string
-	Category    string
+	Category    Category
 	Type        string
 	Summary     string
 	Description string
@@ -148,58 +157,68 @@ func Categories() []Category {
 	}
 }
 
+func GetCategory(categoryName string) (Category, error) {
+	cats := Categories()
+	for _, cat := range cats {
+		if categoryName == cat.Name {
+			return cat, nil
+		}
+	}
+	return Category{}, fmt.Errorf("category not found [%s]", categoryName)
+}
+
 var accountMethods = []Method{
 	{
 		Name:        AccountChannels,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get a list of payment channels where the account is the source of the channel.",
 		Description: "The `account_channels` method returns information about an account's Payment Channels. This includes only channels where the specified account is the channel's source, not the destination. (A channel's \"source\" and \"owner\" are the same.) All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
 		Name:        AccountCurrencies,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get a list of currencies an account can send or receive.",
 		Description: "The `account_currencies` command retrieves a list of currencies that an account can send or receive, based on its trust lines. (This is not a thoroughly confirmed list, but it can be used to populate user interfaces.)",
 	},
 	{
 		Name:        AccountInfo,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get basic data about an account.",
 		Description: "The `account_info` command retrieves information about an account, its activity, and its XRP balance. All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
 		Name:        AccountLines,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's trust lines.",
 		Description: "The `account_lines` method returns information about an account's trust lines, including balances in all non-XRP currencies and assets. All information retrieved is relative to a particular version of the ledger.",
 	},
 	{
 		Name:        AccountObjects,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get all ledger objects owned by an account.",
 		Description: "The `account_objects` command returns the raw [ledger format](https://xrpl.org/ledger-object-types.html) for all objects owned by an account. For a higher-level view of an account's trust lines and balances, see the [`account_lines` method](https://xrpl.org/account_lines.html) instead.\n\nThe types of objects that may appear in the account_objects response for an account include:\n\n* [Offer objects](https://xrpl.org/offer.html) for orders that are currently live, unfunded, or expired but not yet removed. (See [Lifecycle of an Offer](https://xrpl.org/offers.html#lifecycle-of-an-offer) for more information.)\n* [RippleState objects](https://xrpl.org/ripplestate.html) for trust lines where this account's side is not in the default state.\n* The account's [SignerList](https://xrpl.org/signerlist.html), if the account has [multi-signing](https://xrpl.org/multi-signing.html) enabled.\n* [Escrow objects](https://xrpl.org/escrow.html) for held payments that have not yet been executed or canceled.\n* [PayChannel objects](https://xrpl.org/paychannel.html) for open payment channels.\n* [Check objects](https://xrpl.org/check.html) for pending Checks.\n* [DepositPreauth objects](https://xrpl.org/depositpreauth-object.html) for deposit preauthorizations. New in: rippled 1.1.0\n* [Ticket objects](https://xrpl.org/known-amendments.html#tickets) for Tickets.",
 	},
 	{
 		Name:        AccountOffers,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's currency exchange offers.",
 		Description: "The `account_offers` method retrieves a list of [offers](https://xrpl.org/offers.html) made by a given [account](https://xrpl.org/accounts.html) that are outstanding as of a particular [ledger version](https://xrpl.org/ledgers.html).",
 	},
 	{
 		Name:        AccountTx,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get info about an account's transactions.",
 		Description: "The `account_tx` method retrieves a list of transactions that involved the specified account.",
 	},
 	{
 		Name:        GatewayBalances,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Calculate total amounts issued by an account.",
 		Description: "The `gateway_balances` command calculates the total balances issued by a given account, optionally excluding amounts held by [operational addresses](https://xrpl.org/issuing-and-operational-addresses.html).",
 	},
 	{
 		Name:        NorippleCheck,
-		Category:    CategoryAccount,
+		Category:    Category{Name: CategoryAccount},
 		Summary:     "Get recommended changes to an account's Default Ripple and No Ripple settings.",
 		Description: "The `noripple_check` command provides a quick way to check the status of [the Default Ripple field for an account and the No Ripple flag of its trust lines](https://xrpl.org/rippling.html), compared with the recommended settings.",
 	},
@@ -208,31 +227,31 @@ var accountMethods = []Method{
 var ledgerMethods = []Method{
 	{
 		Name:        Ledger,
-		Category:    CategoryLedger,
+		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get info about a ledger version.",
 		Description: "Retrieve information about the public [ledger](https://xrpl.org/ledgers.html).",
 	},
 	{
 		Name:        LedgerClosed,
-		Category:    CategoryLedger,
+		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the latest closed ledger version.",
 		Description: "The `ledger_closed` method returns the unique identifiers of the most recently closed ledger. (This ledger is not necessarily validated and immutable yet.)",
 	},
 	{
 		Name:        LedgerCurrent,
-		Category:    CategoryLedger,
+		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the current working ledger version.",
 		Description: "The ledger_current method returns the unique identifiers of the current in-progress [ledger](https://xrpl.org/ledgers.html). This command is mostly useful for testing, because the ledger returned is still in flux.",
 	},
 	{
 		Name:        LedgerData,
-		Category:    CategoryLedger,
+		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get the raw contents of a ledger version.",
 		Description: "The `ledger_data` method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.",
 	},
 	{
 		Name:        LedgerEntry,
-		Category:    CategoryLedger,
+		Category:    Category{Name: CategoryLedger},
 		Summary:     "Get one element from a ledger version.",
 		Description: "The `ledger_data` method retrieves contents of the specified ledger. You can iterate through several calls to retrieve the entire contents of a single ledger version.",
 	},
@@ -241,14 +260,56 @@ var ledgerMethods = []Method{
 var paymentChannelMethods = []Method{
 	{
 		Name:        ChannelAuthorize,
-		Category:    CategoryPaymentChannel,
+		Category:    Category{Name: CategoryPaymentChannel},
 		Summary:     "Sign a claim for money from a payment channel.",
 		Description: "The `channel_authorize` method creates a signature that can be used to redeem a specific amount of XRP from a payment channel.",
 	},
 	{
 		Name:        ChannelVerify,
-		Category:    CategoryPaymentChannel,
+		Category:    Category{Name: CategoryPaymentChannel},
 		Summary:     "Check a payment channel claim's signature.",
 		Description: "The `channel_verify` method checks the validity of a signature that can be used to redeem a specific amount of XRP from a payment channel.",
+	},
+}
+
+var subscriptionMethods = []Method{
+	{
+		Name:        Subscribe,
+		Category:    Category{Name: CategorySubscription},
+		Summary:     "Listen for updates about a particular subject.",
+		Description: "The `subscribe` method requests periodic notifications from the server when certain events happen.",
+	},
+	{
+		Name:        Unsubscribe,
+		Category:    Category{Name: CategorySubscription},
+		Summary:     "Stop listening for updates about a particular subject.",
+		Description: "The `unsubscribe` command tells the server to stop sending messages for a particular subscription or set of subscriptions.",
+	},
+}
+
+var serverInfoMethods = []Method{
+	{
+		Name:        Fee,
+		Category:    Category{Name: CategoryServerInfo},
+		Summary:     "Get information about transaction cost.",
+		Description: "The `fee` command reports the current state of the open-ledger requirements for the [transaction cost](https://xrpl.org/transaction-cost.html). This requires the FeeEscalation amendment to be enabled.",
+	},
+	{
+		Name:        Manifest,
+		Category:    Category{Name: CategoryServerInfo},
+		Summary:     "Look up the public information about a known validator.",
+		Description: "The `manifest` method reports the current \"manifest\" information for a given validator public key. The \"manifest\" is the public portion of that validator's configured token.",
+	},
+	{
+		Name:        ServerInfo,
+		Category:    Category{Name: CategoryServerInfo},
+		Summary:     "Retrieve status of the server in human-readable format.",
+		Description: "The `server_info` command asks the server for a human-readable version of various information about the rippled server being queried.",
+	},
+	{
+		Name:        ServerState,
+		Category:    Category{Name: CategoryServerInfo},
+		Summary:     "Retrieve status of the server in machine-readable format.",
+		Description: "The `server_state` command asks the server for various machine-readable information about the rippled server's current state. The response is almost the same as the [`server_info` method](https://xrpl.org/server_info.html), but uses units that are easier to process instead of easier to read. (For example, XRP values are given in integer drops instead of scientific notation or decimal values, and time is given in milliseconds instead of seconds.)",
 	},
 }

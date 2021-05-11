@@ -63,6 +63,51 @@ const (
 	TypeAdmin  = "admin"
 )
 
+type MethodsSet struct {
+	mapMethods      map[string]Method
+	mapCategories   map[string]Category
+	categoriesOrder []string
+}
+
+func NewMethodsSet() MethodsSet {
+	set := MethodsSet{
+		mapCategories:   map[string]Category{},
+		mapMethods:      map[string]Method{},
+		categoriesOrder: []string{}}
+	methods := Methods()
+	for _, method := range methods {
+		method.Name = strings.TrimSpace(method.Name)
+		if len(method.Name) == 0 {
+			panic("empty method name")
+		}
+		set.mapMethods[method.Name] = method
+	}
+	categories := Categories()
+	for _, category := range categories {
+		category.Name = strings.TrimSpace(category.Name)
+		if len(category.Name) == 0 {
+			panic("empty category name")
+		}
+		set.categoriesOrder = append(set.categoriesOrder, category.Name)
+		set.mapCategories[category.Name] = category
+	}
+	return set
+}
+
+func (set *MethodsSet) GetMethod(methodName string) (Method, error) {
+	if m, ok := set.mapMethods[strings.TrimSpace(methodName)]; ok {
+		return m, nil
+	}
+	return Method{}, fmt.Errorf("no method for [%s]", methodName)
+}
+
+func (set *MethodsSet) GetCategory(categoryName string) (Method, error) {
+	if m, ok := set.mapMethods[strings.TrimSpace(categoryName)]; ok {
+		return m, nil
+	}
+	return Method{}, fmt.Errorf("no category for [%s]", categoryName)
+}
+
 func Methods() []Method {
 	methods := []Method{}
 	methods = append(methods, accountMethods...)

@@ -33,13 +33,13 @@ $ cd cmd/rippledapiexample
 $ go run main.go --method account_info --exec
 ```
 
- [build-status-svg]: https://github.com/go-xrp/go-rippled/workflows/go%20build/badge.svg?branch=master
- [build-status-url]: https://github.com/go-xrp/go-rippled/actions
- [goreport-svg]: https://goreportcard.com/badge/github.com/go-xrp/go-rippled
- [goreport-url]: https://goreportcard.com/report/github.com/go-xrp/go-rippled
- [codeclimate-status-svg]: https://codeclimate.com/github/go-xrp/go-rippled/badges/gpa.svg
- [codeclimate-status-url]: https://codeclimate.com/github/go-xrp/go-rippled
- [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/go-xrp/go-rippled
- [docs-godoc-url]: https://pkg.go.dev/github.com/go-xrp/go-rippled
+ [build-status-svg]: https://github.com/goxrp/go-rippled/workflows/go%20build/badge.svg?branch=master
+ [build-status-url]: https://github.com/goxrp/go-rippled/actions
+ [goreport-svg]: https://goreportcard.com/badge/github.com/goxrp/go-rippled
+ [goreport-url]: https://goreportcard.com/report/github.com/goxrp/go-rippled
+ [codeclimate-status-svg]: https://codeclimate.com/github/goxrp/go-rippled/badges/gpa.svg
+ [codeclimate-status-url]: https://codeclimate.com/github/goxrp/go-rippled
+ [docs-godoc-svg]: https://pkg.go.dev/badge/github.com/goxrp/go-rippled
+ [docs-godoc-url]: https://pkg.go.dev/github.com/goxrp/go-rippled
  [license-svg]: https://img.shields.io/badge/license-MIT-blue.svg
- [license-url]: https://github.com/go-xrp/go-rippled/blob/master/LICENSE
+ [license-url]: https://github.com/goxrp/go-rippled/blob/master/LICENSE

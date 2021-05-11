@@ -5,7 +5,7 @@ import (
 	"path/filepath"
 	"strings"
 
-	gorippled "github.com/go-xrp/go-rippled"
+	gorippled "github.com/goxrp/go-rippled"
 )
 
 const (

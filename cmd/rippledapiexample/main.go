@@ -12,8 +12,8 @@ import (
 	"github.com/grokify/simplego/net/http/httpsimple"
 	"github.com/jessevdk/go-flags"
 
-	gorippled "github.com/go-xrp/go-rippled"
-	"github.com/go-xrp/go-rippled/data"
+	gorippled "github.com/goxrp/go-rippled"
+	"github.com/goxrp/go-rippled/data"
 )
 
 type Options struct {

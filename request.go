@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	ripplenetwork "github.com/go-xrp/ripple-network"
+	ripplenetwork "github.com/goxrp/ripple-network"
 	"github.com/grokify/simplego/net/http/httpsimple"
 )
 

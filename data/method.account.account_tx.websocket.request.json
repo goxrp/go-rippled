@@ -1,0 +1,10 @@
+{
+	"id": 2,
+	"command": "account_tx",
+	"account": "rLNaPoKeeBjZe2qs6x52yVPZpZ8td4dc6w",
+	"ledger_index_min": -1,
+	"ledger_index_max": -1,
+	"binary": false,
+	"limit": 2,
+	"forward": false
+}

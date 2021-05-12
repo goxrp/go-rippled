@@ -150,6 +150,20 @@ func (m *Method) APIReferenceURL() string {
 	return ""
 }
 
+func MethodToCategory(methodName string) (string, error) {
+	methods := Methods()
+	for _, tryMethod := range methods {
+		if tryMethod.Name == methodName {
+			if len(tryMethod.Category.Name) > 0 {
+				return tryMethod.Category.Name, nil
+			} else {
+				return "", fmt.Errorf("method has no category name: method [%s]", tryMethod.Name)
+			}
+		}
+	}
+	return "", fmt.Errorf("method not found for methodName[%s]", methodName)
+}
+
 type Category struct {
 	Name        string
 	Type        string

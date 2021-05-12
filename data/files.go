@@ -25,13 +25,12 @@ func examplespath(filename string) string {
 	return filepath.Join("./", filename)
 }
 
-func GetMethodCategory(method string) string {
-	methodToAccount := gorippled.MethodsPlusToAccount()
-	method = strings.ToLower(strings.TrimSpace(method))
-	if category, ok := methodToAccount[method]; ok {
-		return strings.ToLower(strings.TrimSpace(category))
+func GetMethodCategory(methodName string) string {
+	categoryName, err := gorippled.MethodToCategory(methodName)
+	if err != nil {
+		return ""
 	}
-	return ""
+	return categoryName
 }
 
 func ExampleJsonRequestFilename(method, category string) (string, error) {

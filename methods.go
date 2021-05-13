@@ -122,7 +122,7 @@ func Methods() []Method {
 	for i, method := range methods {
 		cat, err := GetCategory(method.Category.Name)
 		if err != nil {
-			panic(fmt.Sprintf("category not found [%s]", method.Category))
+			panic(fmt.Sprintf("category not found [%s]", method.Category.Name))
 		}
 		method.Category = cat
 		methods[i] = method
@@ -170,6 +170,7 @@ type Category struct {
 	DisplayName string
 	Type        string
 	Description string
+	IsReadOnly  bool
 }
 
 func (cat *Category) APIReferenceURL() string {
@@ -186,41 +187,49 @@ func Categories() []Category {
 			Name:        CategoryAccount,
 			DisplayName: "Account",
 			Type:        TypePublic,
+			IsReadOnly:  true,
 			Description: "An account in the XRP Ledger represents a holder of XRP and a sender of transactions. Use these methods to work with account info."},
 		{
 			Name:        CategoryLedger,
 			DisplayName: "Ledger",
 			Type:        TypePublic,
+			IsReadOnly:  true,
 			Description: "A ledger version contains a header, a transaction tree, and a state tree, which contain account settings, trustlines, balances, transactions, and other data. Use these methods to retrieve ledger info."},
 		{
 			Name:        CategoryTransaction,
 			DisplayName: "Transaction",
 			Type:        TypePublic,
+			IsReadOnly:  false,
 			Description: "Transactions are the only thing that can modify the shared state of the XRP Ledger. All business on the XRP Ledger takes the form of transactions. Use these methods to work with transactions."},
 		{
 			Name:        CategoryPathAndOrderBook,
 			DisplayName: "Path and Order Book",
 			Type:        TypePublic,
+			IsReadOnly:  true,
 			Description: "Paths define a way for payments to flow through intermediary steps on their way from sender to receiver. Paths enable cross-currency payments by connecting sender and receiver through order books. Use these methods to work with paths and other books."},
 		{
 			Name:        CategoryPaymentChannel,
 			DisplayName: "Payment Channel",
 			Type:        TypePublic,
+			IsReadOnly:  false,
 			Description: "Payment channels are a tool for facilitating repeated, unidirectional payments, or temporary credit between two parties. Use these methods to work with payment channels."},
 		{
 			Name:        CategorySubscription,
 			DisplayName: "Subscription",
 			Type:        TypePublic,
+			IsReadOnly:  false,
 			Description: "Use these methods to enable the server to push updates to your client when various events happen, so that you can know and react right away. WebSocket API only."},
 		{
 			Name:        CategoryServerInfo,
 			DisplayName: "Server Info",
 			Type:        TypePublic,
+			IsReadOnly:  true,
 			Description: "Use these methods to retrieve information about the current state of the rippled server."},
 		{
 			Name:        CategoryUtility,
 			DisplayName: "Utility",
 			Type:        TypePublic,
+			IsReadOnly:  true,
 			Description: "Use these methods to perform convenient tasks, such as ping and random number generation."},
 		{
 			Name:        CategoryKeyGeneration,

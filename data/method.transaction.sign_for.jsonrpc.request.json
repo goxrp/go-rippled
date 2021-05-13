@@ -1,0 +1,23 @@
+{
+	"method": "sign_for",
+	"params": [
+		{
+			"account": "rLFd1FzHMScFhLsXeaxStzv3UC97QHGAbM",
+			"seed": "s████████████████████████████",
+			"key_type": "ed25519",
+			"tx_json": {
+				"TransactionType": "TrustSet",
+				"Account": "rEuLyBCvcw4CFmzv8RepSiAoNgF8tTGJQC",
+				"Flags": 262144,
+				"LimitAmount": {
+					"currency": "USD",
+					"issuer": "rHb9CJAWyB4rj91VRWn96DkukG4bwdtyTh",
+					"value": "100"
+				},
+				"Sequence": 2,
+				"SigningPubKey": "",
+				"Fee": "30000"
+			}
+		}
+	]
+}

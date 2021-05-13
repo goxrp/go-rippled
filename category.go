@@ -125,6 +125,7 @@ func AdminCategories() []Category {
 			Name:        CategoryStatusAndDebugging,
 			DisplayName: "Status and Debugging",
 			Type:        TypeAdmin,
+			IsReadOnly:  true,
 			Description: "Use these methods to check the status of the network and server."},
 	}
 }

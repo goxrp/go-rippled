@@ -6,9 +6,10 @@ import (
 	"sort"
 	"strings"
 
-	ripplenetwork "github.com/goxrp/ripple-network"
 	"github.com/grokify/simplego/net/http/httpsimple"
 )
+
+const JsonRpcUrlDefault = "https://xrpl.ws/"
 
 type JsonRpcRequest struct {
 	Method string                   `json:"method"`
@@ -44,7 +45,7 @@ func DoApiJsonRpcSplit(jrpcURL, rippledMethod string, paramsBodyBytes []byte) (*
 // an API method and request params.
 func DoApiJsonRpc(jrpcURL string, reqBody interface{}) (*http.Response, error) {
 	if len(strings.TrimSpace(jrpcURL)) == 0 {
-		jrpcURL = ripplenetwork.GetMainnetPublicJsonRpcUrl()
+		jrpcURL = JsonRpcUrlDefault
 	}
 
 	return httpsimple.Do(httpsimple.SimpleRequest{

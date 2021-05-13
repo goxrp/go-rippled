@@ -1,0 +1,5 @@
+{
+	"id": 90,
+	"command": "get_counts",
+	"min_count": 100
+}

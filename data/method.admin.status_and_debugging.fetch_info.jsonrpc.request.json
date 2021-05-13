@@ -1,0 +1,8 @@
+{
+	"method": "fetch_info",
+	"params": [
+		{
+			"clear": false
+		}
+	]
+}

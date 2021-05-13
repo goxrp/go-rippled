@@ -1,0 +1,15 @@
+{
+	"id": 5,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"validator_sites": [
+			{
+				"last_refresh_status": "accepted",
+				"last_refresh_time": "2017-Oct-13 21:26:37",
+				"refresh_interval_min": 5,
+				"uri": "http://127.0.0.1:51447/validators"
+			}
+		]
+	}
+}

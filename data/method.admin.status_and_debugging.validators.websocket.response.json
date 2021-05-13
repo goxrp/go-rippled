@@ -1,0 +1,29 @@
+{
+	"id": 5,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"local_static_keys": [],
+		"publisher_lists": [
+			{
+				"available": true,
+				"expiration": "2017-Oct-13 14:56:00",
+				"list": [
+					"n9Ltz6ZxPRWTkqwBbpvgbaXPgm6GYCxCJRqFgNXhWVUebgezo28H",
+					"n94D73ZKSUaTDCnUqYW5ugJ9fHPNxda9GQVoWA6BGtcKuuhozrD1"
+				],
+				"pubkey_publisher": "ED58ED4AA543B524F16771F6E1367BAA220D99DCF22CD8CF7A11309E9EAB1B647B",
+				"seq": 1,
+				"version": 1
+			}
+		],
+		"signing_keys": {},
+		"status": "success",
+		"trusted_validator_keys": [
+			"n94D73ZKSUaTDCnUqYW5ugJ9fHPNxda9GQVoWA6BGtcKuuhozrD1",
+			"n9Ltz6ZxPRWTkqwBbpvgbaXPgm6GYCxCJRqFgNXhWVUebgezo28H"
+		],
+		"validation_quorum": 2,
+		"validator_list_expires": "2017-Oct-13 14:56:00"
+	}
+}

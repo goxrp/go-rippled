@@ -1,0 +1,8 @@
+{
+	"method": "get_counts",
+	"params": [
+		{
+			"min_count": 100
+		}
+	]
+}

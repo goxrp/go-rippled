@@ -7,13 +7,22 @@
 
 This package is designed to provide[`rippled` server](https://github.com/ripple/rippled) utilities including:
 
-* OpenAPI specifcation: partial OAS3 specification files are provided
-* Simple JSON RPC request handling
+1. API Method and Category information
+1. API example request and response JSON objects
+1. Simple JSON RPC request handling
 
-## Models
+## API Method and Category Information
 
-* [AccountRoot](spec.model.accountroot.json)
-* [PayChannel](spec.model.paychannel.json)
+Method and Category information is provided programmatically.
+
+See:
+
+* [`category.go`](category.go)
+* [`method.go`](method.go)
+
+## Example Requests and Responses
+
+Request and response samples are provided in the `data` folder and available programmatically.
 
 ## Test Client
 
@@ -32,6 +41,11 @@ Display example request and response:
 $ cd cmd/rippledapiexample
 $ go run main.go --method account_info --exec
 ```
+
+## Models
+
+* [AccountRoot](spec.model.accountroot.json)
+* [PayChannel](spec.model.paychannel.json)
 
  [build-status-svg]: https://github.com/goxrp/go-rippled/workflows/go%20build/badge.svg?branch=master
  [build-status-url]: https://github.com/goxrp/go-rippled/actions

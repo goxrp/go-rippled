@@ -19,10 +19,10 @@ type AccountInfoResponse struct {
 }
 
 type AccountInfoResult struct {
-	AccountData       AccountRoot `json:"account_data"`
-	LedgerCurrentData string      `json:"ledger_current_index"`
-	Status            string      `json:"status"`
-	Validated         bool        `json:"validated"`
+	AccountData        AccountRoot `json:"account_data"`
+	LedgerCurrentIndex int64       `json:"ledger_current_index"`
+	Status             string      `json:"status"`
+	Validated          bool        `json:"validated"`
 }
 
 type AccountRoot struct {

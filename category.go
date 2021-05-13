@@ -43,6 +43,10 @@ func (cat *Category) APIReferenceURL() string {
 }
 
 func Categories() []Category {
+	return append(PublicCategories(), AdminCategories()...)
+}
+
+func PublicCategories() []Category {
 	return []Category{
 		{
 			Name:        CategoryAccount,
@@ -92,6 +96,11 @@ func Categories() []Category {
 			Type:        TypePublic,
 			IsReadOnly:  true,
 			Description: "Use these methods to perform convenient tasks, such as ping and random number generation."},
+	}
+}
+
+func AdminCategories() []Category {
+	return []Category{
 		{
 			Name:        CategoryKeyGeneration,
 			DisplayName: "Key Generation",

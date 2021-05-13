@@ -8,7 +8,7 @@
 This package is designed to provide[`rippled` server](https://github.com/ripple/rippled) utilities including:
 
 1. API Method and Category information
-1. API example request and response JSON objects
+1. API example request and response JSON objects ([`data`](data) folder)
 1. Simple JSON RPC request handling
 
 ## API Method and Category Information

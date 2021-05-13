@@ -142,22 +142,24 @@ func GetCategory(categoryName string) (Category, error) {
 
 func GetCategoryMethods(categoryName string) ([]Method, error) {
 	switch strings.ToLower(strings.TrimSpace(categoryName)) {
-	case strings.ToLower(CategoryAccount):
+	case CategoryAccount:
 		return AccountMethods(), nil
-	case strings.ToLower(CategoryLedger):
+	case CategoryLedger:
 		return LedgerMethods(), nil
-	case strings.ToLower(CategoryTransaction):
+	case CategoryTransaction:
 		return TransactionMethods(), nil
-	case strings.ToLower(CategoryPathAndOrderBook):
+	case CategoryPathAndOrderBook:
 		return PathAndOrderBookMethods(), nil
-	case strings.ToLower(CategoryPaymentChannel):
+	case CategoryPaymentChannel:
 		return PaymentChannelMethods(), nil
-	case strings.ToLower(CategorySubscription):
+	case CategorySubscription:
 		return SubscriptionMethods(), nil
-	case strings.ToLower(CategoryServerInfo):
+	case CategoryServerInfo:
 		return ServerInfoMethods(), nil
-	case strings.ToLower(CategoryUtility):
+	case CategoryUtility:
 		return UtilityMethods(), nil
+	case CategoryStatusAndDebugging:
+		return StatusAndDebuggingMethods(), nil
 	default:
 		return AccountMethods(), fmt.Errorf("category not found [%s]", categoryName)
 	}

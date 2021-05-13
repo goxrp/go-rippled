@@ -10,6 +10,31 @@ import (
 	gorippled "github.com/goxrp/go-rippled"
 )
 
+func TestBindata(t *testing.T) {
+	accountMethods := gorippled.AccountMethods()
+	for _, method := range accountMethods {
+		if method.Name == gorippled.MethodAccountObjects {
+			continue
+		}
+		_, err := ExampleJsonRequest(method.Name, "")
+		if err != nil {
+			t.Errorf("data.ExampleJsonRequest(\"%s\",\"\") No data err[%s]",
+				method.Name, err.Error())
+		}
+	}
+	ledgerMethods := gorippled.LedgerMethods()
+	for _, method := range ledgerMethods {
+		if method.Name == gorippled.MethodLedgerEntry {
+			continue
+		}
+		_, err := ExampleJsonRequest(method.Name, "")
+		if err != nil {
+			t.Errorf("data.ExampleJsonRequest(\"%s\",\"\") No data err[%s]",
+				method.Name, err.Error())
+		}
+	}
+}
+
 // TestRequest tests API requests.
 func TestRequest(t *testing.T) {
 	if os.Getenv("GORIPPLED_TEST") != "LIVE" {

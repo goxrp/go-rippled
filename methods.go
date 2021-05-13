@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/grokify/simplego/database"
+	"github.com/grokify/simplego/text/stringcase"
 )
 
 const (
@@ -45,19 +46,33 @@ const (
 	MethodPing              = "ping"
 	MethodRandom            = "random"
 
-	CategoryAccount                  = "Account"
-	CategoryLedger                   = "Ledger"
-	CategoryTransaction              = "Transaction"
-	CategoryPathAndOrderBook         = "Path And Order Book"
-	CategoryPaymentChannel           = "PaymentChannel"
-	CategorySubscription             = "Subscription"
-	CategoryServerInfo               = "Server Info"
-	CategoryUtility                  = "Utility"
-	CategoryKeyGeneration            = "Key Generation"
-	CategoryLoggingAndDataManagement = "Logging and Data Management"
-	CategoryServerControl            = "Server Control"
-	CategoryPeerManagement           = "Peer Management"
-	CategoryStatusAndDebugging       = "Status and Debugging"
+	CategoryAccount                  = "account"
+	CategoryLedger                   = "ledger"
+	CategoryTransaction              = "transaction"
+	CategoryPathAndOrderBook         = "path_and_order_book"
+	CategoryPaymentChannel           = "payment_channel"
+	CategorySubscription             = "subscription"
+	CategoryServerInfo               = "server_info"
+	CategoryUtility                  = "utility"
+	CategoryKeyGeneration            = "key_generation"
+	CategoryLoggingAndDataManagement = "logging_and_data_management"
+	CategoryServerControl            = "server_control"
+	CategoryPeerManagement           = "peer_management"
+	CategoryStatusAndDebugging       = "status_and_debugging"
+
+	CategoryDisplayAccount                  = "Account"
+	CategoryDisplayLedger                   = "Ledger"
+	CategoryDisplayTransaction              = "Transaction"
+	CategoryDisplayPathAndOrderBook         = "Path And Order Book"
+	CategoryDisplayPaymentChannel           = "PaymentChannel"
+	CategoryDisplaySubscription             = "Subscription"
+	CategoryDisplayServerInfo               = "Server Info"
+	CategoryDisplayUtility                  = "Utility"
+	CategoryDisplayKeyGeneration            = "Key Generation"
+	CategoryDisplayLoggingAndDataManagement = "Logging and Data Management"
+	CategoryDisplayServerControl            = "Server Control"
+	CategoryDisplayPeerManagement           = "Peer Management"
+	CategoryDisplayStatusAndDebugging       = "Status and Debugging"
 
 	TypePublic = "public"
 	TypeAdmin  = "admin"
@@ -168,6 +183,14 @@ type Category struct {
 	Name        string
 	Type        string
 	Description string
+}
+
+func (cat *Category) APIReferenceURL() string {
+	cat.Name = strings.TrimSpace(cat.Name)
+	if len(cat.Name) > 0 {
+		return fmt.Sprintf("https: //xrpl.org/%s.html", stringcase.CaseSnakeToKebab(cat.Name))
+	}
+	return ""
 }
 
 func Categories() []Category {

@@ -212,7 +212,7 @@ func TransactionMethods() []Method {
 			Name:            MethodTx,
 			Category:        Category{Name: CategoryTransaction},
 			Summary:         "Retrieve info about a transaction from all the ledgers on hand.",
-			Description:     "The `tx` method retrieves information on a single [transaction](https://xrpl.org/transaction-formats.html), by its [identifying hash](https://xrpl.org/transaction-basics.html#identifying-transactions).",
+			Description:     "The `tx` method retrieves information on a single [transaction](https://xrpl.org/transaction-formats.html), by its [identifying hash](https://xrpl.org/transaction-basics.html#identifying-transactions).\n\nThis command may successfully find the transaction even if it is included in a ledger outside the range of `min_ledger` to `max_ledger`.",
 			FunctionType:    database.FunctionRead,
 			HasApiWebsocket: true,
 			HasApiJsonRpc:   true,

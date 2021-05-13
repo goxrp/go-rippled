@@ -33,15 +33,22 @@ func GetMethodCategory(methodName string) string {
 	return categoryName
 }
 
-func ExampleJsonRequestFilename(method, category string) (string, error) {
-	category = strings.ToLower(strings.TrimSpace(category))
-	if len(category) == 0 {
-		category = GetMethodCategory(method)
+func ExampleJsonRequestFilename(methodName, categoryName string) (string, error) {
+	categoryName = strings.ToLower(strings.TrimSpace(categoryName))
+	if len(categoryName) == 0 {
+		categoryName = GetMethodCategory(methodName)
 	}
-	if len(category) == 0 {
-		return "", fmt.Errorf("no category for method [%s]", method)
+	if len(categoryName) == 0 {
+		return "", fmt.Errorf("no category for method [%s]", methodName)
 	}
-	return fmt.Sprintf("method.%s.%s.jsonrpc.request.json", category, method), nil
+	cat, err := gorippled.GetCategory(categoryName)
+	if err != nil {
+		return "", fmt.Errorf("no category for categoryName [%s]", categoryName)
+	}
+	if cat.Type == gorippled.TypeAdmin {
+		return fmt.Sprintf("method.admin.%s.%s.jsonrpc.request.json", categoryName, methodName), nil
+	}
+	return fmt.Sprintf("method.%s.%s.jsonrpc.request.json", categoryName, methodName), nil
 }
 
 func ExampleJsonRequest(method, category string) ([]byte, error) {

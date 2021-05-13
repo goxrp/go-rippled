@@ -1,0 +1,8 @@
+{
+	"id": 1,
+	"status": "success",
+	"type": "response",
+	"result": {
+		"signature_verified": true
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"method": "tx",
+	"params": [
+		{
+			"transaction": "C53ECF838647FA5A4C780377025FEC7999AB4182590510CA461444B207AB74A9",
+			"binary": false
+		}
+	]
+}

@@ -1,0 +1,8 @@
+{
+	"method": "tx_history",
+	"params": [
+		{
+			"start": 0
+		}
+	]
+}

@@ -139,8 +139,9 @@ type Method struct {
 	FunctionType    string
 	IsOneOf         bool
 	IsDeprecated    bool
-	IsCLIOnly       bool
-	IsWebsocketOnly bool
+	HasApiCli       bool
+	HasApiJsonRpc   bool
+	HasApiWebsocket bool
 }
 
 func (m *Method) APIReferenceURL() string {

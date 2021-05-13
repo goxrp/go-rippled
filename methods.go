@@ -60,20 +60,6 @@ const (
 	CategoryPeerManagement           = "peer_management"
 	CategoryStatusAndDebugging       = "status_and_debugging"
 
-	CategoryDisplayAccount                  = "Account"
-	CategoryDisplayLedger                   = "Ledger"
-	CategoryDisplayTransaction              = "Transaction"
-	CategoryDisplayPathAndOrderBook         = "Path And Order Book"
-	CategoryDisplayPaymentChannel           = "PaymentChannel"
-	CategoryDisplaySubscription             = "Subscription"
-	CategoryDisplayServerInfo               = "Server Info"
-	CategoryDisplayUtility                  = "Utility"
-	CategoryDisplayKeyGeneration            = "Key Generation"
-	CategoryDisplayLoggingAndDataManagement = "Logging and Data Management"
-	CategoryDisplayServerControl            = "Server Control"
-	CategoryDisplayPeerManagement           = "Peer Management"
-	CategoryDisplayStatusAndDebugging       = "Status and Debugging"
-
 	TypePublic = "public"
 	TypeAdmin  = "admin"
 )
@@ -181,6 +167,7 @@ func MethodToCategory(methodName string) (string, error) {
 
 type Category struct {
 	Name        string
+	DisplayName string
 	Type        string
 	Description string
 }
@@ -197,54 +184,67 @@ func Categories() []Category {
 	return []Category{
 		{
 			Name:        CategoryAccount,
+			DisplayName: "Account",
 			Type:        TypePublic,
 			Description: "An account in the XRP Ledger represents a holder of XRP and a sender of transactions. Use these methods to work with account info."},
 		{
 			Name:        CategoryLedger,
+			DisplayName: "Ledger",
 			Type:        TypePublic,
 			Description: "A ledger version contains a header, a transaction tree, and a state tree, which contain account settings, trustlines, balances, transactions, and other data. Use these methods to retrieve ledger info."},
 		{
 			Name:        CategoryTransaction,
+			DisplayName: "Transaction",
 			Type:        TypePublic,
 			Description: "Transactions are the only thing that can modify the shared state of the XRP Ledger. All business on the XRP Ledger takes the form of transactions. Use these methods to work with transactions."},
 		{
 			Name:        CategoryPathAndOrderBook,
+			DisplayName: "Path and Order Book",
 			Type:        TypePublic,
 			Description: "Paths define a way for payments to flow through intermediary steps on their way from sender to receiver. Paths enable cross-currency payments by connecting sender and receiver through order books. Use these methods to work with paths and other books."},
 		{
 			Name:        CategoryPaymentChannel,
+			DisplayName: "Payment Channel",
 			Type:        TypePublic,
 			Description: "Payment channels are a tool for facilitating repeated, unidirectional payments, or temporary credit between two parties. Use these methods to work with payment channels."},
 		{
 			Name:        CategorySubscription,
+			DisplayName: "Subscription",
 			Type:        TypePublic,
 			Description: "Use these methods to enable the server to push updates to your client when various events happen, so that you can know and react right away. WebSocket API only."},
 		{
 			Name:        CategoryServerInfo,
+			DisplayName: "Server Info",
 			Type:        TypePublic,
 			Description: "Use these methods to retrieve information about the current state of the rippled server."},
 		{
 			Name:        CategoryUtility,
+			DisplayName: "Utility",
 			Type:        TypePublic,
 			Description: "Use these methods to perform convenient tasks, such as ping and random number generation."},
 		{
 			Name:        CategoryKeyGeneration,
+			DisplayName: "Key Generation",
 			Type:        TypeAdmin,
 			Description: "Use these methods to generate and manage keys."},
 		{
 			Name:        CategoryLoggingAndDataManagement,
+			DisplayName: "Logging and Data Management",
 			Type:        TypeAdmin,
 			Description: "Use these methods to manage log levels and other data, such as ledgers."},
 		{
 			Name:        CategoryServerControl,
+			DisplayName: "Server Control",
 			Type:        TypeAdmin,
 			Description: "Use these methods to manage the rippled server."},
 		{
 			Name:        CategoryPeerManagement,
+			DisplayName: "Peer Management",
 			Type:        TypeAdmin,
 			Description: "Use these methods to manage your server's peer-to-peer connections."},
 		{
 			Name:        CategoryStatusAndDebugging,
+			DisplayName: "Status and Debugging",
 			Type:        TypeAdmin,
 			Description: "Use these methods to check the status of the network and server."},
 	}

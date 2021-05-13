@@ -1,0 +1,7 @@
+{
+	"id": 1,
+	"command": "deposit_authorized",
+	"source_account": "rEhxGqkqPPSxQ3P25J66ft5TwpzV14k2de",
+	"destination_account": "rsUiUMpnrgxQp24dJYZDhmV4bE3aBtQyt8",
+	"ledger_index": "validated"
+}

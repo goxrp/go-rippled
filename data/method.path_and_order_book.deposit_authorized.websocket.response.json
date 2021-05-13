@@ -1,0 +1,13 @@
+{
+	"id": 1,
+	"result": {
+		"deposit_authorized": true,
+		"destination_account": "rsUiUMpnrgxQp24dJYZDhmV4bE3aBtQyt8",
+		"ledger_hash": "BD03A10653ED9D77DCA859B7A735BF0580088A8F287FA2C5403E0A19C58EF322",
+		"ledger_index": 8,
+		"source_account": "rEhxGqkqPPSxQ3P25J66ft5TwpzV14k2de",
+		"validated": true
+	},
+	"status": "success",
+	"type": "response"
+}

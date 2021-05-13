@@ -1,0 +1,159 @@
+{
+	"id": 1,
+	"result": {
+		"state": {
+			"build_version": "1.5.0-rc1",
+			"complete_ledgers": "54300020-54300697",
+			"io_latency_ms": 1,
+			"jq_trans_overflow": "0",
+			"last_close": {
+				"converge_time": 3001,
+				"proposers": 34
+			},
+			"load": {
+				"job_types": [
+					{
+						"avg_time": 5,
+						"job_type": "untrustedValidation",
+						"peak_time": 21
+					},
+					{
+						"job_type": "ledgerRequest",
+						"peak_time": 9,
+						"per_second": 3
+					},
+					{
+						"job_type": "untrustedProposal",
+						"peak_time": 26,
+						"per_second": 45
+					},
+					{
+						"avg_time": 15,
+						"job_type": "ledgerData",
+						"peak_time": 105,
+						"per_second": 1
+					},
+					{
+						"in_progress": 1,
+						"job_type": "clientCommand",
+						"peak_time": 50,
+						"per_second": 8
+					},
+					{
+						"avg_time": 1,
+						"job_type": "transaction",
+						"peak_time": 35,
+						"per_second": 8
+					},
+					{
+						"job_type": "batch",
+						"peak_time": 5,
+						"per_second": 6
+					},
+					{
+						"avg_time": 4,
+						"job_type": "advanceLedger",
+						"peak_time": 65,
+						"per_second": 2
+					},
+					{
+						"job_type": "fetchTxnData",
+						"per_second": 3
+					},
+					{
+						"avg_time": 7,
+						"job_type": "trustedValidation",
+						"peak_time": 49,
+						"per_second": 6
+					},
+					{
+						"job_type": "trustedProposal",
+						"peak_time": 20,
+						"per_second": 14
+					},
+					{
+						"job_type": "clusterReport",
+						"peak_time": 2
+					},
+					{
+						"job_type": "heartbeat",
+						"peak_time": 1
+					},
+					{
+						"job_type": "peerCommand",
+						"per_second": 1334
+					},
+					{
+						"job_type": "processTransaction",
+						"per_second": 8
+					},
+					{
+						"job_type": "SyncReadNode",
+						"peak_time": 6,
+						"per_second": 35
+					},
+					{
+						"job_type": "AsyncReadNode",
+						"peak_time": 13,
+						"per_second": 1104
+					},
+					{
+						"job_type": "WriteNode",
+						"peak_time": 12,
+						"per_second": 976
+					}
+				],
+				"threads": 6
+			},
+			"load_base": 256,
+			"load_factor": 256,
+			"load_factor_fee_escalation": 256,
+			"load_factor_fee_queue": 256,
+			"load_factor_fee_reference": 256,
+			"load_factor_server": 256,
+			"peer_disconnects": "55",
+			"peer_disconnects_resources": "1",
+			"peers": 21,
+			"pubkey_node": "n9KUjqxCr5FKThSNXdzb7oqN8rYwScB2dUnNqxQxbEA17JkaWy5x",
+			"pubkey_validator": "nHBk5DPexBjinXV8qHn7SEKzoxh2W92FxSbNTPgGtQYBzEF4msn9",
+			"server_state": "proposing",
+			"server_state_duration_us": "1727270915",
+			"state_accounting": {
+				"connected": {
+					"duration_us": "128124609",
+					"transitions": 1
+				},
+				"disconnected": {
+					"duration_us": "2290325",
+					"transitions": 1
+				},
+				"full": {
+					"duration_us": "1727270915",
+					"transitions": 1
+				},
+				"syncing": {
+					"duration_us": "3083023",
+					"transitions": 1
+				},
+				"tracking": {
+					"duration_us": "0",
+					"transitions": 1
+				}
+			},
+			"time": "2020-Mar-24 01:25:38.448364 UTC",
+			"uptime": 1860,
+			"validated_ledger": {
+				"base_fee": 10,
+				"close_time": 638328331,
+				"hash": "A63E850343B9F06CFE637648FF3D46DBAB7B1E41BA6B9A26FA72AA706D82233D",
+				"reserve_base": 20000000,
+				"reserve_inc": 5000000,
+				"seq": 54300697
+			},
+			"validation_quorum": 29,
+			"validator_list_expires": 639792000
+		}
+	},
+	"status": "success",
+	"type": "response"
+}

@@ -1,18 +1,16 @@
 package gorippled
 
-/*
-{
-    "method": "account_info",
-    "params": [
-        {
-            "account": "rG1QQv2nh2gr7RCZ1P8YYcBUKCCN633jCn",
-            "strict": true,
-            "ledger_index": "current",
-            "queue": true
-        }
-    ]
+func AccountInfoRequestSimple(account string) JsonRpcRequest {
+	return JsonRpcRequest{
+		Method: MethodAccountInfo,
+		Params: []map[string]interface{}{{
+			"account":      account,
+			"strict":       true,
+			"ledger_index": "current",
+			"queue":        true,
+		}},
+	}
 }
-*/
 
 type AccountInfoResponse struct {
 	Result AccountInfoResult `json:"result"`

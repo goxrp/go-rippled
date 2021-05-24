@@ -118,6 +118,7 @@ func Methods() []Method {
 	methods = append(methods, SubscriptionMethods()...)
 	methods = append(methods, ServerInfoMethods()...)
 	methods = append(methods, UtilityMethods()...)
+	methods = append(methods, KeyGenerationMethods()...)
 	methods = append(methods, StatusAndDebuggingMethods()...)
 	for i, method := range methods {
 		cat, err := GetCategory(method.Category.Name)
@@ -132,6 +133,8 @@ func Methods() []Method {
 
 type Method struct {
 	Name            string
+	ExampleName     string
+	ExampleSlug     string
 	Category        Category
 	Type            string
 	Summary         string

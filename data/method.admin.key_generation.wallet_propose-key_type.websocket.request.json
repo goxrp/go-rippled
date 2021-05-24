@@ -1,0 +1,5 @@
+{
+	"command": "wallet_propose",
+	"seed": "snoPBrXtMeMyMHUVTgbuqAfg1SUTb",
+	"key_type": "secp256k1"
+}

@@ -1,0 +1,8 @@
+{
+	"method": "wallet_propose",
+	"params": [
+		{
+			"passphrase": "snoPBrXtMeMyMHUVTgbuqAfg1SUTb"
+		}
+	]
+}

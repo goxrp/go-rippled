@@ -1,0 +1,4 @@
+{
+	"command": "wallet_propose",
+	"passphrase": "masterpassphrase"
+}

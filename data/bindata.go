@@ -37,6 +37,14 @@
 // method.account.noripple_check.jsonrpc.response.json
 // method.account.noripple_check.websocket.request.json
 // method.account.noripple_check.websocket.response.json
+// method.admin.key_generation.validation_create.commandline.response.json
+// method.admin.key_generation.validation_create.jsonrpc.request.json
+// method.admin.key_generation.validation_create.jsonrpc.response.json
+// method.admin.key_generation.validation_create.websocket.request.json
+// method.admin.key_generation.wallet_propose-key_type.jsonrpc.request.json
+// method.admin.key_generation.wallet_propose-key_type.websocket.request.json
+// method.admin.key_generation.wallet_propose-passphrase.jsonrpc.request.json
+// method.admin.key_generation.wallet_propose-passphrase.websocket.request.json
 // method.admin.status_and_debugging.consensus_info.jsonrpc.request.json
 // method.admin.status_and_debugging.consensus_info.jsonrpc.response.json
 // method.admin.status_and_debugging.consensus_info.websocket.request.json
@@ -1000,6 +1008,166 @@ func methodAccountNoripple_checkWebsocketResponseJson() (*asset, error) {
 	}
 
 	info := bindataFileInfo{name: "method.account.noripple_check.websocket.response.json", size: 1147, mode: os.FileMode(420), modTime: time.Unix(1620859704, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationValidation_createCommandlineResponseJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x64\xcf\x41\x6f\x82\x30\x18\xc6\xf1\x33\x7c\x8a\x37\x3d\xef\x62\x06\x26\xf3\xf6\x8a\xb5\xd8\x00\xd1\x12\xc4\x71\x59\x5a\x78\x97\x30\x09\xa0\xa5\xdb\x8c\xf1\xbb\x2f\x2e\xf1\xe4\xf5\x79\x92\x5f\xf2\xbf\xfa\x1e\x3b\x93\x75\xdd\xc4\x16\x70\xf5\x3d\x8f\xd9\x49\x4f\xce\xb2\x05\x30\xeb\xea\x9a\xac\x65\x2f\xf7\xf9\x5b\x77\x6d\xa3\xa7\x76\xe8\x3f\x8e\x74\xb9\xdf\x6b\x2c\x33\x90\xb8\x47\x90\xb8\xe2\x10\x73\x4c\x60\x8f\xea\x1d\x62\xae\x40\x71\x9e\x40\x1e\x63\x09\x02\x37\x09\xa0\x8a\x62\x58\xf2\x0c\x36\x2a\xc5\x27\x70\x74\xa6\x6b\xeb\x87\xdb\xbf\xa5\xbf\x9f\xf3\xd3\x2a\x90\x61\x78\xa0\x24\x8f\xf8\x78\xd2\xb4\x2d\x03\xf1\x35\x44\x2a\x2c\x66\x15\x89\x4a\xc8\x22\xca\xe8\xd5\xec\x74\x70\xd9\x19\xf1\x44\x5a\xa2\xe6\xbf\xc1\x56\xc7\xe6\xa7\x50\xeb\x74\x79\xa0\x5e\x6e\xcd\x79\xe4\xb3\xc0\xcc\xfb\x41\xe6\x8e\xf9\xde\xcd\xbf\xfd\x05\x00\x00\xff\xff\xef\x71\xaa\xd6\x03\x01\x00\x00")
+
+func methodAdminKey_generationValidation_createCommandlineResponseJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationValidation_createCommandlineResponseJson,
+		"method.admin.key_generation.validation_create.commandline.response.json",
+	)
+}
+
+func methodAdminKey_generationValidation_createCommandlineResponseJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationValidation_createCommandlineResponseJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.validation_create.commandline.response.json", size: 259, mode: os.FileMode(420), modTime: time.Unix(1621841744, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationValidation_createJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x14\xcb\x41\xaa\xc2\x30\x10\x06\xe0\xf5\xcc\x29\x7e\x66\xfd\x4e\xd0\x5d\x1e\x09\x55\x69\x32\xa0\x62\x16\x22\x12\xda\x80\x05\x6b\x25\x0d\x6e\x4a\xef\x2e\x1e\xe0\x5b\x99\x64\xca\xf5\x31\x0f\xd2\x40\x3e\xe9\x39\x0e\xa9\x8e\xf3\xeb\xde\x97\x9c\x6a\x96\x3f\x26\x79\xa7\x92\xa6\x45\x1a\x5c\x99\x68\x65\x22\x92\x25\xf7\x25\xd7\x1f\xf9\x37\xb1\x83\x37\x01\x07\x63\x1d\xbc\x6a\x80\xd5\x8b\x43\xeb\x3c\x4e\x1a\x10\x34\x62\x67\x2c\x8c\x75\x01\x6d\xa7\x11\xe7\xfd\xd1\x09\x13\x6d\x4c\x37\xde\xbe\x01\x00\x00\xff\xff\xf6\x75\x07\x5a\x81\x00\x00\x00")
+
+func methodAdminKey_generationValidation_createJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationValidation_createJsonrpcRequestJson,
+		"method.admin.key_generation.validation_create.jsonrpc.request.json",
+	)
+}
+
+func methodAdminKey_generationValidation_createJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationValidation_createJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.validation_create.jsonrpc.request.json", size: 129, mode: os.FileMode(420), modTime: time.Unix(1621841641, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationValidation_createJsonrpcResponseJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x64\xcf\x41\x6f\x82\x30\x18\xc6\xf1\x33\x7c\x8a\x37\x3d\xef\x62\x06\x26\xf3\xf6\x8a\xb5\xd8\x00\xd1\x12\xc4\x71\x59\x5a\x78\x97\x30\x09\xa0\xa5\xdb\x8c\xf1\xbb\x2f\x2e\xf1\xe4\xf5\x79\x92\x5f\xf2\xbf\xfa\x1e\x3b\x93\x75\xdd\xc4\x16\x70\xf5\x3d\x8f\xd9\x49\x4f\xce\xb2\x05\x30\xeb\xea\x9a\xac\x65\x2f\xf7\xf9\x5b\x77\x6d\xa3\xa7\x76\xe8\x3f\x8e\x74\xb9\xdf\x6b\x2c\x33\x90\xb8\x47\x90\xb8\xe2\x10\x73\x4c\x60\x8f\xea\x1d\x62\xae\x40\x71\x9e\x40\x1e\x63\x09\x02\x37\x09\xa0\x8a\x62\x58\xf2\x0c\x36\x2a\xc5\x27\x70\x74\xa6\x6b\xeb\x87\xdb\xbf\xa5\xbf\x9f\xf3\xd3\x2a\x90\x61\x78\xa0\x24\x8f\xf8\x78\xd2\xb4\x2d\x03\xf1\x35\x44\x2a\x2c\x66\x15\x89\x4a\xc8\x22\xca\xe8\xd5\xec\x74\x70\xd9\x19\xf1\x44\x5a\xa2\xe6\xbf\xc1\x56\xc7\xe6\xa7\x50\xeb\x74\x79\xa0\x5e\x6e\xcd\x79\xe4\xb3\xc0\xcc\xfb\x41\xe6\x8e\xf9\xde\xcd\xbf\xfd\x05\x00\x00\xff\xff\xef\x71\xaa\xd6\x03\x01\x00\x00")
+
+func methodAdminKey_generationValidation_createJsonrpcResponseJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationValidation_createJsonrpcResponseJson,
+		"method.admin.key_generation.validation_create.jsonrpc.response.json",
+	)
+}
+
+func methodAdminKey_generationValidation_createJsonrpcResponseJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationValidation_createJsonrpcResponseJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.validation_create.jsonrpc.response.json", size: 259, mode: os.FileMode(420), modTime: time.Unix(1621841658, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationValidation_createWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x14\xca\xb1\x0a\xc2\x30\x10\x87\xf1\xb9\x7d\x8a\x3f\x37\x3b\x38\xbb\x9d\xe4\xa8\x4a\x73\x07\x2a\x66\x94\x90\x66\x08\xd8\x16\x6a\x70\x11\xdf\x5d\x32\x7e\x7c\xbf\x6f\xdf\x51\x99\xe8\x80\xfd\xae\xef\x28\xad\xf3\x1c\x97\x96\xf4\x89\xaf\x32\xc5\x5a\xd6\xe5\x99\xb6\x1c\x6b\xa6\x06\xde\x39\x6d\xb9\xb6\x7f\xe4\x30\xc2\xb3\xe2\xc2\x4e\xe0\xcd\x14\xce\x1e\x82\x41\x3c\x6e\xa6\x50\x0b\x38\xb1\x03\x3b\x51\x0c\xa3\x05\xdc\xcf\x57\xa1\xfe\xf7\x0f\x00\x00\xff\xff\x90\xa7\x4e\xd9\x72\x00\x00\x00")
+
+func methodAdminKey_generationValidation_createWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationValidation_createWebsocketRequestJson,
+		"method.admin.key_generation.validation_create.websocket.request.json",
+	)
+}
+
+func methodAdminKey_generationValidation_createWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationValidation_createWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.validation_create.websocket.request.json", size: 114, mode: os.FileMode(420), modTime: time.Unix(1621841686, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\x1c\xcb\xc1\x0a\x82\x40\x10\x06\xe0\xf3\x3f\x4f\x21\x73\xee\x62\x50\x07\x6f\x75\xea\xb2\x10\xa4\x11\x44\xc8\x5a\x93\x81\xda\x4e\xbb\x1b\xb1\x88\xef\x1e\x7a\xff\xbe\x91\xc0\x83\xc4\x97\x7b\x70\x91\xf1\xcf\xf6\xbd\xc4\x5a\xbd\x53\x17\x84\x57\x04\x56\xeb\xed\x10\xb8\xc8\xae\x04\x8c\x04\x80\x83\xc8\xa2\xc3\xdb\x1d\xf7\xfe\x12\x8d\x98\x64\x0e\xd5\xb9\x6c\x9b\xef\x67\xf7\x6c\xf3\x53\x55\x36\x73\x06\xb8\x93\x54\xc7\xa4\xb2\x78\xb9\xeb\x7a\xb3\xed\x72\x26\x60\x22\xdc\x68\xfa\x07\x00\x00\xff\xff\xa5\xd4\xa0\xd5\x7f\x00\x00\x00")
+
+func methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJson,
+		"method.admin.key_generation.wallet_propose-key_type.jsonrpc.request.json",
+	)
+}
+
+func methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.wallet_propose-key_type.jsonrpc.request.json", size: 127, mode: os.FileMode(420), modTime: time.Unix(1621842129, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xaa\xe6\xe2\x54\x4a\xce\xcf\xcd\x4d\xcc\x4b\x51\xb2\x52\x50\x2a\x4f\xcc\xc9\x49\x2d\x89\x2f\x28\xca\x2f\xc8\x2f\x4e\x55\xd2\xe1\xe2\x54\x2a\x4e\x4d\x05\x4b\x15\xe7\xe5\x07\x38\x15\x45\x94\xf8\xa6\xfa\x56\xfa\x7a\x84\x86\x85\xa4\x27\x95\x16\x3a\xa6\xa5\x1b\x06\x87\x86\x24\x81\x55\x66\xa7\x56\xc6\x97\x54\x16\xa4\x82\x55\xa7\x26\x17\x18\x99\x9a\x65\x1b\x2a\x71\xd5\x02\x02\x00\x00\xff\xff\x08\x56\xf1\x4c\x64\x00\x00\x00")
+
+func methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJson,
+		"method.admin.key_generation.wallet_propose-key_type.websocket.request.json",
+	)
+}
+
+func methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.wallet_propose-key_type.websocket.request.json", size: 100, mode: os.FileMode(420), modTime: time.Unix(1621842183, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xaa\xe6\xe2\x54\xca\x4d\x2d\xc9\xc8\x4f\x51\xb2\x52\x50\x2a\x4f\xcc\xc9\x49\x2d\x89\x2f\x28\xca\x2f\xc8\x2f\x4e\x55\xd2\xe1\xe2\x54\x2a\x48\x2c\x4a\xcc\x2d\x56\xb2\x52\x88\xe6\xe2\xe4\xac\xe6\xe2\xe4\x04\x09\x15\x17\x17\x64\x14\x25\x16\xa7\x82\xf4\x14\xe7\xe5\x07\x38\x15\x45\x94\xf8\xa6\xfa\x56\xfa\x7a\x84\x86\x85\xa4\x27\x95\x16\x3a\xa6\xa5\x1b\x06\x87\x86\x24\x29\x71\x71\x72\xd6\x72\x71\xc6\x72\xd5\x02\x02\x00\x00\xff\xff\x9e\x88\xec\xbf\x69\x00\x00\x00")
+
+func methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJson,
+		"method.admin.key_generation.wallet_propose-passphrase.jsonrpc.request.json",
+	)
+}
+
+func methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.wallet_propose-passphrase.jsonrpc.request.json", size: 105, mode: os.FileMode(420), modTime: time.Unix(1621842152, 0)}
+	a := &asset{bytes: bytes, info: info}
+	return a, nil
+}
+
+var _methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJson = []byte("\x1f\x8b\x08\x00\x00\x00\x00\x00\x00\xff\xaa\xe6\xe2\x54\x4a\xce\xcf\xcd\x4d\xcc\x4b\x51\xb2\x52\x50\x2a\x4f\xcc\xc9\x49\x2d\x89\x2f\x28\xca\x2f\xc8\x2f\x4e\x55\xd2\xe1\xe2\x54\x2a\x48\x2c\x2e\x2e\xc8\x28\x4a\x2c\x4e\x05\x29\xc8\x4d\x2c\x2e\x49\x2d\x42\x12\xe3\xaa\x05\x04\x00\x00\xff\xff\x3f\xca\x9b\x38\x43\x00\x00\x00")
+
+func methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJsonBytes() ([]byte, error) {
+	return bindataRead(
+		_methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJson,
+		"method.admin.key_generation.wallet_propose-passphrase.websocket.request.json",
+	)
+}
+
+func methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJson() (*asset, error) {
+	bytes, err := methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJsonBytes()
+	if err != nil {
+		return nil, err
+	}
+
+	info := bindataFileInfo{name: "method.admin.key_generation.wallet_propose-passphrase.websocket.request.json", size: 67, mode: os.FileMode(420), modTime: time.Unix(1621842208, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -4113,6 +4281,14 @@ var _bindata = map[string]func() (*asset, error){
 	"method.account.noripple_check.jsonrpc.response.json":                            methodAccountNoripple_checkJsonrpcResponseJson,
 	"method.account.noripple_check.websocket.request.json":                           methodAccountNoripple_checkWebsocketRequestJson,
 	"method.account.noripple_check.websocket.response.json":                          methodAccountNoripple_checkWebsocketResponseJson,
+	"method.admin.key_generation.validation_create.commandline.response.json":        methodAdminKey_generationValidation_createCommandlineResponseJson,
+	"method.admin.key_generation.validation_create.jsonrpc.request.json":             methodAdminKey_generationValidation_createJsonrpcRequestJson,
+	"method.admin.key_generation.validation_create.jsonrpc.response.json":            methodAdminKey_generationValidation_createJsonrpcResponseJson,
+	"method.admin.key_generation.validation_create.websocket.request.json":           methodAdminKey_generationValidation_createWebsocketRequestJson,
+	"method.admin.key_generation.wallet_propose-key_type.jsonrpc.request.json":       methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJson,
+	"method.admin.key_generation.wallet_propose-key_type.websocket.request.json":     methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJson,
+	"method.admin.key_generation.wallet_propose-passphrase.jsonrpc.request.json":     methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJson,
+	"method.admin.key_generation.wallet_propose-passphrase.websocket.request.json":   methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJson,
 	"method.admin.status_and_debugging.consensus_info.jsonrpc.request.json":          methodAdminStatus_and_debuggingConsensus_infoJsonrpcRequestJson,
 	"method.admin.status_and_debugging.consensus_info.jsonrpc.response.json":         methodAdminStatus_and_debuggingConsensus_infoJsonrpcResponseJson,
 	"method.admin.status_and_debugging.consensus_info.websocket.request.json":        methodAdminStatus_and_debuggingConsensus_infoWebsocketRequestJson,
@@ -4344,6 +4520,14 @@ var _bintree = &bintree{nil, map[string]*bintree{
 	"method.account.noripple_check.jsonrpc.response.json":                            &bintree{methodAccountNoripple_checkJsonrpcResponseJson, map[string]*bintree{}},
 	"method.account.noripple_check.websocket.request.json":                           &bintree{methodAccountNoripple_checkWebsocketRequestJson, map[string]*bintree{}},
 	"method.account.noripple_check.websocket.response.json":                          &bintree{methodAccountNoripple_checkWebsocketResponseJson, map[string]*bintree{}},
+	"method.admin.key_generation.validation_create.commandline.response.json":        &bintree{methodAdminKey_generationValidation_createCommandlineResponseJson, map[string]*bintree{}},
+	"method.admin.key_generation.validation_create.jsonrpc.request.json":             &bintree{methodAdminKey_generationValidation_createJsonrpcRequestJson, map[string]*bintree{}},
+	"method.admin.key_generation.validation_create.jsonrpc.response.json":            &bintree{methodAdminKey_generationValidation_createJsonrpcResponseJson, map[string]*bintree{}},
+	"method.admin.key_generation.validation_create.websocket.request.json":           &bintree{methodAdminKey_generationValidation_createWebsocketRequestJson, map[string]*bintree{}},
+	"method.admin.key_generation.wallet_propose-key_type.jsonrpc.request.json":       &bintree{methodAdminKey_generationWallet_proposeKey_typeJsonrpcRequestJson, map[string]*bintree{}},
+	"method.admin.key_generation.wallet_propose-key_type.websocket.request.json":     &bintree{methodAdminKey_generationWallet_proposeKey_typeWebsocketRequestJson, map[string]*bintree{}},
+	"method.admin.key_generation.wallet_propose-passphrase.jsonrpc.request.json":     &bintree{methodAdminKey_generationWallet_proposePassphraseJsonrpcRequestJson, map[string]*bintree{}},
+	"method.admin.key_generation.wallet_propose-passphrase.websocket.request.json":   &bintree{methodAdminKey_generationWallet_proposePassphraseWebsocketRequestJson, map[string]*bintree{}},
 	"method.admin.status_and_debugging.consensus_info.jsonrpc.request.json":          &bintree{methodAdminStatus_and_debuggingConsensus_infoJsonrpcRequestJson, map[string]*bintree{}},
 	"method.admin.status_and_debugging.consensus_info.jsonrpc.response.json":         &bintree{methodAdminStatus_and_debuggingConsensus_infoJsonrpcResponseJson, map[string]*bintree{}},
 	"method.admin.status_and_debugging.consensus_info.websocket.request.json":        &bintree{methodAdminStatus_and_debuggingConsensus_infoWebsocketRequestJson, map[string]*bintree{}},

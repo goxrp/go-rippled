@@ -1,0 +1,9 @@
+{
+	"method": "wallet_propose",
+	"params": [
+		{
+			"seed": "snoPBrXtMeMyMHUVTgbuqAfg1SUTb",
+			"key_type": "secp256k1"
+		}
+	]
+}

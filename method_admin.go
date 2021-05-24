@@ -4,6 +4,45 @@ import (
 	"github.com/grokify/simplego/database"
 )
 
+func KeyGenerationMethods() []Method {
+	return []Method{
+		{
+			Name:            MethodValidationCreate,
+			Category:        Category{Name: CategoryKeyGeneration},
+			Summary:         "Generate keys for a new rippled validator.",
+			Description:     "Use the `validation_create` command to generate [cryptographic keys a rippled server can use to identify itself to the network](https://xrpl.org/peer-protocol.html#node-key-pair). Similar to the [`wallet_propose` method](https://xrpl.org/wallet_propose.html), this method only generates a set of keys in the proper format. It does not any makes changes to the XRP Ledger data or server configuration.\n\n*The `validation_create` method is an [admin method](https://xrpl.org/admin-rippled-methods.html) that cannot be run by unprivileged users.*\n\nYou can configure your server to use the generated key pair to sign validations (validation key pair) or regular peer-to-peer communications ([node key pair](https://xrpl.org/peer-protocol.html#node-key-pair)).\n\nTip: For configuring a robust validator, you should use the `validator-keys` tool (included in the `rippled` RPM) to generate validator tokens (which can be rotated) with an offline master key. For more information, see [Validator Setup](https://xrpl.org/run-rippled-as-a-validator.html#3-enable-validation-on-your-rippled-server).",
+			FunctionType:    database.FunctionOther,
+			HasApiWebsocket: true,
+			HasApiJsonRpc:   true,
+			HasApiCli:       true,
+		},
+		{
+			Name:            MethodWalletPropose,
+			ExampleName:     "with key type",
+			ExampleSlug:     "key_type",
+			Category:        Category{Name: CategoryKeyGeneration},
+			Summary:         "Generate keys for a new account.",
+			Description:     "Use the `wallet_propose` method to generate a key pair and XRP Ledger address. This command only generates key and address values, and does not affect the XRP Ledger itself in any way. To become a funded address stored in the ledger, the address must [receive a Payment transaction](https://xrpl.org/accounts.html#creating-accounts) that provides enough XRP to meet the [reserve requirement](https://xrpl.org/reserves.html).\n\n*The `wallet_propose` method is an [admin method](https://xrpl.org/admin-rippled-methods.html) that cannot be run by unprivileged users!* (This command is restricted to protect against people sniffing network traffic for account secrets, since admin commands are not usually transmitted over the outside network.).",
+			FunctionType:    database.FunctionOther,
+			HasApiWebsocket: true,
+			HasApiJsonRpc:   true,
+			HasApiCli:       true,
+		},
+		{
+			Name:            MethodWalletPropose,
+			ExampleName:     "with passphrase",
+			ExampleSlug:     "passphrase",
+			Category:        Category{Name: CategoryKeyGeneration},
+			Summary:         "Generate keys for a new account.",
+			Description:     "Use the `wallet_propose` method to generate a key pair and XRP Ledger address. This command only generates key and address values, and does not affect the XRP Ledger itself in any way. To become a funded address stored in the ledger, the address must [receive a Payment transaction](https://xrpl.org/accounts.html#creating-accounts) that provides enough XRP to meet the [reserve requirement](https://xrpl.org/reserves.html).\n\n*The `wallet_propose` method is an [admin method](https://xrpl.org/admin-rippled-methods.html) that cannot be run by unprivileged users!* (This command is restricted to protect against people sniffing network traffic for account secrets, since admin commands are not usually transmitted over the outside network.).",
+			FunctionType:    database.FunctionOther,
+			HasApiWebsocket: true,
+			HasApiJsonRpc:   true,
+			HasApiCli:       true,
+		},
+	}
+}
+
 func StatusAndDebuggingMethods() []Method {
 	return []Method{
 		{

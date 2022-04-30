@@ -1,7 +1,7 @@
 package gorippled
 
 import (
-	"github.com/grokify/simplego/database"
+	"github.com/grokify/mogo/database"
 )
 
 func AccountMethods() []Method {

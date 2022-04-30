@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/grokify/simplego/text/stringcase"
+	"github.com/grokify/mogo/text/stringcase"
 )
 
 const (

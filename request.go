@@ -6,7 +6,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/grokify/simplego/net/http/httpsimple"
+	"github.com/grokify/gohttp/httpsimple"
 )
 
 const JsonRpcUrlDefault = "https://xrpl.ws/"

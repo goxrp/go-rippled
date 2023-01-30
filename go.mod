@@ -4,6 +4,6 @@ go 1.16
 
 require (
 	github.com/grokify/gohttp v0.2.1
-	github.com/grokify/mogo v0.40.4
+	github.com/grokify/mogo v0.46.0
 	github.com/jessevdk/go-flags v1.5.0
 )

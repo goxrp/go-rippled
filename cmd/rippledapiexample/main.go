@@ -8,7 +8,6 @@ import (
 	"strings"
 
 	"github.com/grokify/gohttp/httpsimple"
-	"github.com/grokify/mogo/encoding/jsonutil"
 	"github.com/grokify/mogo/fmt/fmtutil"
 	"github.com/jessevdk/go-flags"
 
@@ -59,7 +58,10 @@ func main() {
 		if err != nil {
 			log.Fatal(err)
 		}
-		fmt.Println(string(jsonutil.PrettyPrint(bytes, "", "  ")))
+		err = fmtutil.PrintJSONMore(bytes, "", "  ")
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 	fmt.Println("DONE")
 }

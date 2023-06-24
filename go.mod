@@ -4,7 +4,7 @@ go 1.18
 
 require (
 	github.com/grokify/gohttp v0.2.4
-	github.com/grokify/mogo v0.49.1
+	github.com/grokify/mogo v0.50.0
 	github.com/jessevdk/go-flags v1.5.0
 )
 

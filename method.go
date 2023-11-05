@@ -132,19 +132,20 @@ func Methods() []Method {
 }
 
 type Method struct {
-	Name            string
-	ExampleName     string
-	ExampleSlug     string
-	Category        Category
-	Type            string
-	Summary         string
-	Description     string
-	FunctionType    string
-	IsOneOf         bool
-	IsDeprecated    bool
-	HasApiCli       bool
-	HasApiJsonRpc   bool
-	HasApiWebsocket bool
+	Name              string
+	ExampleName       string
+	ExampleSlug       string
+	Category          Category
+	Type              string
+	Summary           string
+	Description       string
+	FunctionType      string
+	IsOneOf           bool
+	IsDeprecated      bool
+	HasApiCli         bool
+	HasApiJsonRpc     bool
+	HasApiWebsocket   bool
+	VersionIntroduced string
 }
 
 func (m *Method) APIReferenceURL() string {

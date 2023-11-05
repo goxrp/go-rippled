@@ -47,7 +47,7 @@ $ go run main.go --method account_info --exec
 * [AccountRoot](spec.model.accountroot.json)
 * [PayChannel](spec.model.paychannel.json)
 
- [build-status-svg]: https://github.com/goxrp/go-rippled/workflows/go%20build/badge.svg?branch=master
+ [build-status-svg]: https://github.com/goxrp/go-rippled/workflows/test/badge.svg?branch=master
  [build-status-url]: https://github.com/goxrp/go-rippled/actions
  [goreport-svg]: https://goreportcard.com/badge/github.com/goxrp/go-rippled
  [goreport-url]: https://goreportcard.com/report/github.com/goxrp/go-rippled

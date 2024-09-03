@@ -6,7 +6,7 @@ toolchain go1.22.5
 
 require (
 	github.com/grokify/gohttp v0.2.7
-	github.com/grokify/mogo v0.64.9
+	github.com/grokify/mogo v0.64.10
 	github.com/jessevdk/go-flags v1.6.1
 )
 

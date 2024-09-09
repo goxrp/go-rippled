@@ -6,7 +6,7 @@ toolchain go1.22.5
 
 require (
 	github.com/grokify/gohttp v0.2.7
-	github.com/grokify/mogo v0.64.9
+	github.com/grokify/mogo v0.64.11
 	github.com/jessevdk/go-flags v1.6.1
 )
 
@@ -22,7 +22,7 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/valyala/bytebufferpool v1.0.0 // indirect
 	github.com/valyala/fasthttp v1.55.0 // indirect
-	golang.org/x/exp v0.0.0-20240823005443-9b4947da3948 // indirect
-	golang.org/x/sys v0.24.0 // indirect
-	golang.org/x/text v0.17.0 // indirect
+	golang.org/x/exp v0.0.0-20240904232852-e7e105dedf7e // indirect
+	golang.org/x/sys v0.25.0 // indirect
+	golang.org/x/text v0.18.0 // indirect
 )
